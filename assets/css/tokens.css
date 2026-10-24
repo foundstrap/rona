@@ -1,0 +1,110 @@
+/* =========================================================
+   RONA marketing site · Version B · Design tokens
+   Style: cyberbougie (sleek tech Memphis) + bento + Swiss grid.
+   Dark only. Sharp corners. Texture on shapes and surfaces.
+   ========================================================= */
+:root {
+  color-scheme: dark;
+
+  /* ---- Base: near-black, Outer Space for surfaces ---- */
+  --color-void:        #0B1012;  /* page ground */
+  --color-bg:          var(--color-void);
+  --color-bg-raised:   #111819;  /* alternate bands */
+  --color-surface:     #1D282B;  /* Outer Space: bento tiles */
+  --color-surface-2:   #26353A;  /* tile hover, inputs */
+  --color-line:        #2E3D41;  /* hairlines, decorative only */
+  --color-line-strong: #4A6066;  /* tile borders */
+  --color-outline:     #8FA3A6;  /* input and control borders (3:1+) */
+
+  /* ---- Text ---- */
+  --color-text:        #F4F0E8;  /* Paper  16.8:1 on void */
+  --color-text-muted:  #A3B2B4;  /* Fog     8.7:1 on void, 6.9:1 on surface */
+  --color-text-faint:  #748689;  /* Dust    5.0:1 on void. Not on surface-2 */
+
+  /* ---- Accents: galactic, new for B ---- */
+  --color-pulsar:  #7B93FF;  /* brand, primary action. 6.8:1 void, 5.4:1 surface */
+  --color-plasma:  #E07BFF;  /* secondary, highlights.  7.7:1 void, 6.1:1 surface */
+  --color-ion:     #3FEFC4;  /* success, v1, live.      13.1:1 void */
+  --color-flare:   #FF9E64;  /* attention, roadmap.     9.4:1 void */
+  --color-on-accent: #0B1012;
+
+  --color-primary:       var(--color-pulsar);
+  --color-primary-hover: #9DAFFF;
+  --color-danger:        #FF7A85;
+  --color-focus:         var(--color-ion);
+
+  /* ---- Gradients (always with grain, see --noise) ---- */
+  --grad-horizon: linear-gradient(120deg, #7B93FF 0%, #E07BFF 100%);           /* Pulsar to Plasma */
+  --grad-drift:   linear-gradient(120deg, #3FEFC4 0%, #7B93FF 100%);           /* Ion to Pulsar */
+  --grad-corona:  linear-gradient(120deg, #FF9E64 0%, #E07BFF 100%);           /* Flare to Plasma */
+  --grad-deep:    radial-gradient(120% 90% at 85% 0%, #2A2F6B 0%, rgba(42,47,107,0) 60%),
+                  radial-gradient(90% 80% at 0% 100%, #3B1E52 0%, rgba(59,30,82,0) 60%),
+                  #0E1416;                                                     /* dark nebula panel */
+
+  /* ---- Type ---- */
+  --font-display: "Funnel Display", "Atkinson Hyperlegible Next", system-ui, sans-serif;
+  --font-body:    "Atkinson Hyperlegible Next", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:    "Atkinson Hyperlegible Mono", ui-monospace, "SFMono-Regular", Menlo, monospace; /* labels and data only */
+
+  /* Swiss scale: big steps, tight display leading */
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1.0625rem;
+  --text-lg:   clamp(1.125rem, 1.05rem + 0.35vw, 1.3125rem);
+  --text-xl:   clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem);
+  --text-2xl:  clamp(1.75rem, 1.4rem + 1.6vw, 2.5rem);
+  --text-3xl:  clamp(2.25rem, 1.6rem + 3vw, 3.75rem);
+  --text-4xl:  clamp(2.75rem, 1.6rem + 5.4vw, 5.75rem);
+  --text-5xl:  clamp(3.25rem, 1.4rem + 8.4vw, 8.5rem);
+
+  --weight-regular: 400;
+  --weight-medium:  500;
+  --weight-bold:    700;
+  --leading-tight:  0.95;
+  --leading-snug:   1.1;
+  --leading-body:   1.6;
+  --tracking-display: -0.035em;
+  --tracking-label:   0.08em;
+
+  /* ---- Space: 4px base ---- */
+  --space-1: 0.25rem; --space-2: 0.5rem;  --space-3: 0.75rem;
+  --space-4: 1rem;    --space-5: 1.5rem;  --space-6: 2rem;
+  --space-7: 3rem;    --space-8: 4rem;    --space-9: 6rem;  --space-10: 8rem;
+
+  /* ---- Layout: 12-column Swiss grid ---- */
+  --container: 88rem;
+  --gutter: clamp(1rem, 0.5rem + 2vw, 2rem);
+  --columns: 12;
+  --bento-gap: clamp(0.5rem, 0.3rem + 0.6vw, 0.875rem);
+  --tile-pad: clamp(1.25rem, 0.9rem + 1.2vw, 2rem);
+
+  /* ---- Shape: sharp ---- */
+  --radius: 0;
+  --hair: 1px;
+  --border-w: 1px;
+  --rule-w: 2px;
+
+  /* ---- Elevation: no drop shadows. Light edge + glow ---- */
+  --edge-light: inset 0 1px 0 0 rgba(244, 240, 232, 0.08);
+  --glow-pulsar: 0 0 0 1px rgba(123, 147, 255, 0.6), 0 0 32px -6px rgba(123, 147, 255, 0.55);
+  --glow-plasma: 0 0 0 1px rgba(224, 123, 255, 0.6), 0 0 32px -6px rgba(224, 123, 255, 0.5);
+
+  /* ---- Texture ---- */
+  --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --noise-opacity: 0.08;       /* page */
+  --noise-strong: 0.32;        /* gradient panels and shapes */
+  --pattern-grid: linear-gradient(rgba(244,240,232,0.045) 1px, transparent 1px) 0 0 / 24px 24px,
+                  linear-gradient(90deg, rgba(244,240,232,0.045) 1px, transparent 1px) 0 0 / 24px 24px;
+  --pattern-dots: radial-gradient(circle at 1px 1px, rgba(244,240,232,0.12) 1px, transparent 1.4px) 0 0 / 14px 14px;
+  --pattern-scan: repeating-linear-gradient(0deg, rgba(244,240,232,0.035) 0 1px, transparent 1px 4px);
+
+  /* ---- Motion: sleek, short ---- */
+  --dur-fast: 140ms;
+  --dur-base: 240ms;
+  --dur-slow: 520ms;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --z-content: 1;
+  --z-header: 50;
+}

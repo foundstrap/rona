@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Design System B · RONA</title>
+  <meta name="description" content="Version B design system and UI kit for the RONA marketing site.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Atkinson+Hyperlegible+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/styleguide.css">
+</head>
+<body>
+<a class="btn btn--sm skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="logo" href="index.html" aria-label="Home"><svg class="logo__mark" aria-hidden="true"><use href="partials/sprite.svg#logo-mark"/></svg><span data-brand>RONA</span></a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="how-it-works.html">How it works</a>
+      <a href="features.html">Features</a>
+      <a href="roadmap.html">Roadmap</a>
+      <a href="faq.html">FAQ</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="cluster">
+      <a class="btn btn--sm header-cta" href="index.html#waitlist">Join the waitlist</a>
+      <button class="btn btn--outline btn--sm btn--icon nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><svg aria-hidden="true"><use href="partials/sprite.svg#i-menu"/></svg><span class="visually-hidden">Menu</span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="sg-hero">
+    <svg class="shape sg-hero__floor" style="" aria-hidden="true"><use href="partials/sprite.svg#b-grid"/></svg>
+    <div class="container">
+      <div class="bento">
+        <div class="tile tile--void sg-hero__title" style="--w:8;--h:2;--w-md:12">
+          <span class="label label--dot">Milestone B1 · Design system and UI kit</span>
+          <h1 class="display">Sleek.<br>Gridded.<br><span class="grad-text">Textured.</span></h1>
+          <p class="lead">Version B of the <span data-brand>RONA</span> marketing site. Corporate Memphis with a cyber twist, set on a Swiss grid, built from bento tiles.</p>
+        </div>
+        <div class="tile tile--deep sg-hero__art" style="--w:4;--h:2;--w-md:12">
+          <svg class="" style="position:absolute;width:62%;left:6%;top:8%;color:var(--color-text-muted)" aria-hidden="true"><use href="partials/sprite.svg#b-orbit"/></svg>
+          <svg class="" style="position:absolute;width:40%;right:6%;top:30%" aria-hidden="true"><use href="partials/sprite.svg#b-sphere"/></svg>
+          <svg class="" style="position:absolute;width:20%;left:12%;top:44%" aria-hidden="true"><use href="partials/sprite.svg#b-gem"/></svg>
+          <svg class="" style="position:absolute;width:52%;left:30%;bottom:14%" aria-hidden="true"><use href="partials/sprite.svg#b-torus"/></svg>
+          <svg class="" style="position:absolute;width:12%;right:14%;top:10%;color:var(--color-ion)" aria-hidden="true"><use href="partials/sprite.svg#b-star"/></svg>
+          <span class="label" style="position:relative;margin-top:auto">Shapes have gradient and grain</span>
+        </div>
+        <div class="tile" style="--w:3;--w-md:6"><span class="label"><span class="label__idx">R1</span>Base</span><p>Near-black ground. Outer Space tiles.</p></div>
+        <div class="tile" style="--w:3;--w-md:6"><span class="label"><span class="label__idx">R2</span>Grid</span><p>12 columns. Flush left. Big type, mono labels.</p></div>
+        <div class="tile" style="--w:3;--w-md:6"><span class="label"><span class="label__idx">R3</span>Bento</span><p>Content lives in tiles of 2 to 12 columns.</p></div>
+        <div class="tile" style="--w:3;--w-md:6"><span class="label"><span class="label__idx">R4</span>Texture</span><p>Grain on gradients. Fine grid on tiles. Sharp corners.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sitemap" aria-labelledby="sitemap-title">
+    <div class="container">
+      <header class="shead">
+        <span class="label"><span class="label__idx">[00]</span>Sitemap</span>
+        <h2 id="sitemap-title">Sitemap</h2>
+        <p class="lead">The same 9 pages as Version A. The copy stays the same. Only the style changes.</p>
+      </header>
+      <div class="bento">
+        <a class="tile tile--link tile--deep" href="#sitemap" style="--w:6;--h:2">
+          <div class="tile__head"><span class="label"><span class="label__idx">01</span>index.html</span><svg class="tile__arrow" style="transform:rotate(-45deg)" aria-hidden="true"><use href="partials/sprite.svg#i-arrow"/></svg></div>
+          <div class="tile__foot"><div class="stack" style="--stack-gap:var(--space-2)"><h3>Landing</h3><p class="small">Hero, problem, how it works, features, audience, export, roadmap, trust, FAQ, waitlist.</p></div></div>
+        </a>
+        <a class="tile tile--link " href="#sitemap" style="--w:3;--h:1">
+          <div class="tile__head"><span class="label"><span class="label__idx">02</span>how-it-works.html</span><svg class="tile__arrow" style="transform:rotate(-45deg)" aria-hidden="true"><use href="partials/sprite.svg#i-arrow"/></svg></div>
+          <div class="tile__foot"><div class="stack" style="--stack-gap:var(--space-2)"><h3>How it works</h3><p class="small">4 steps in detail. Free and premium.</p></div></div>
+        </a>
+        <a class="tile tile--link " href="#sitemap" style="--w:3;--h:1">
+          <div class="tile__head"><span class="label"><span class="label__idx">03</span>features.html</span><svg class="tile__arrow" style="transform:rotate(-45deg)" aria-hidden="true"><use href="partials/sprite.svg#i-arrow"/></svg></div>
+          <div class="tile__foot"><div class="stack" style="--stack-gap:var(--space-2)"><h3>Features</h3><p class="small">All features, grouped. Roadmap group.</p></div></div>
+        </a>
+        <a class="tile tile--link " href="#sitemap" style="--w:3;--h:1">
+          <div class="tile__head"><span class="label"><span class="label__idx">04</span>roadmap.html</span><svg class="tile__arrow" style="transform:rotate(-45deg)" aria-hidden="true"><use href="partials/sprite.svg#i-arrow"/></svg></div>
+          <div class="tile__foot"><div class="stack" style="--stack-gap:var(--space-2)"><h3>Roadmap</h3><p class="small">v1 scope. Next previews, with a vote.</p></div></div>
+        </a>
+        <a class="tile tile--link " href="#sitemap" style="--w:3;--h:1">
+          <div class="tile__head"><span class="label"><span class="label__idx">05</span>faq.html</span><svg class="tile__arrow" style="transform:rotate(-45deg)" aria-hidden="true"><use href="partials/sprite.svg#i-arrow"/></svg></div>
+          <div class="tile__foot"><div class="stack" style="--stack-gap:var(--space-2)"><h3>FAQ</h3><p class="small">All answers, with a filter.</p></div></div>
+        </a>
+        <a class="tile tile--link " href="#sitemap" style="--w:4;--h:1">
+          <div class="tile__head"><span class="label"><span class="label__idx">06</span>about.html</span><svg class="tile__arrow" style="transform:rotate(-45deg)" aria-hidden="true"><use href="partials/sprite.svg#i-arrow"/></svg></div>
+          <div class="tile__foot"><div class="stack" style="--stack-gap:var(--space-2)"><h3>About</h3><p class="small">Mission, beliefs, founders.</p></div></div>
+        </a>
+        <a class="tile tile--link " href="#sitemap" style="--w:4;--h:1">
+          <div class="tile__head"><span class="label"><span class="label__idx">07</span>contact.html</span><svg class="tile__arrow" style="transform:rotate(-45deg)" aria-hidden="true"><use href="partials/sprite.svg#i-arrow"/></svg></div>
+          <div class="tile__foot"><div class="stack" style="--stack-gap:var(--space-2)"><h3>Contact</h3><p class="small">Front-end form.</p></div></div>
+        </a>
+        <a class="tile tile--link " href="#sitemap" style="--w:2;--h:1">
+          <div class="tile__head"><span class="label"><span class="label__idx">08</span>privacy.html</span><svg class="tile__arrow" style="transform:rotate(-45deg)" aria-hidden="true"><use href="partials/sprite.svg#i-arrow"/></svg></div>
+          <div class="tile__foot"><div class="stack" style="--stack-gap:var(--space-2)"><h3>Privacy</h3><p class="small">Plain-language draft.</p></div></div>
+        </a>
+        <a class="tile tile--link " href="#sitemap" style="--w:2;--h:1">
+          <div class="tile__head"><span class="label"><span class="label__idx">09</span>404.html</span><svg class="tile__arrow" style="transform:rotate(-45deg)" aria-hidden="true"><use href="partials/sprite.svg#i-arrow"/></svg></div>
+          <div class="tile__foot"><div class="stack" style="--stack-gap:var(--space-2)"><h3>404</h3><p class="small">Not found.</p></div></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band" id="color" aria-labelledby="color-title">
+    <div class="container">
+      <header class="shead">
+        <span class="label"><span class="label__idx">[01]</span>Color</span>
+        <h2 id="color-title">Color</h2>
+        <p class="lead">Near-black base with Outer Space tiles. Four new galactic accents. Each accent passes WCAG AA on the ground and on a tile.</p>
+      </header>
+      <div class="bento">
+        <div class="tile" style="--w:7;--w-md:12">
+          <span class="label">Base</span>
+          <div class="sw-grid">
+          <div class="sw"><span class="sw__chip" style="background:#0B1012"></span><span class="sw__name">Void</span><code>#0B1012</code><span class="sw__use">Page ground</span></div>
+          <div class="sw"><span class="sw__chip" style="background:#111819"></span><span class="sw__name">Raised</span><code>#111819</code><span class="sw__use">Bands</span></div>
+          <div class="sw"><span class="sw__chip" style="background:#1D282B"></span><span class="sw__name">Outer Space</span><code>#1D282B</code><span class="sw__use">Bento tiles</span></div>
+          <div class="sw"><span class="sw__chip" style="background:#26353A"></span><span class="sw__name">Surface 2</span><code>#26353A</code><span class="sw__use">Hover, inputs</span></div>
+          <div class="sw"><span class="sw__chip" style="background:#4A6066"></span><span class="sw__name">Line</span><code>#4A6066</code><span class="sw__use">Tile borders</span></div>
+          <div class="sw"><span class="sw__chip" style="background:#8FA3A6"></span><span class="sw__name">Outline</span><code>#8FA3A6</code><span class="sw__use">Control borders</span></div>
+          </div>
+        </div>
+        <div class="tile tile--grid" style="--w:5;--w-md:12">
+          <span class="label">Text on void</span>
+          <div class="stack"><div class="txt"><span style="color:#F4F0E8">Aa</span><span><b>Paper</b><code>#F4F0E8 · 16.8:1</code></span></div>
+<div class="txt"><span style="color:#A3B2B4">Aa</span><span><b>Fog</b><code>#A3B2B4 · 8.7:1</code></span></div>
+<div class="txt"><span style="color:#748689">Aa</span><span><b>Dust</b><code>#748689 · 5.0:1</code></span></div></div>
+          <p class="small">Dust is for large or secondary text on the ground only. Do not use it on Surface 2.</p>
+        </div>
+        <div class="tile acc" style="--w:3;--w-md:6;--acc:#7B93FF">
+          <div class="acc__fill grain"></div>
+          <div class="tile__head"><span class="label" style="color:var(--color-on-accent)">Brand · primary action</span></div>
+          <div class="tile__foot" style="color:var(--color-on-accent)"><div><h3>Pulsar</h3><code>#7B93FF</code></div><span class="acc__ratio">6.8:1<small>on void</small>5.4:1<small>on tile</small></span></div>
+        </div>
+        <div class="tile acc" style="--w:3;--w-md:6;--acc:#E07BFF">
+          <div class="acc__fill grain"></div>
+          <div class="tile__head"><span class="label" style="color:var(--color-on-accent)">Secondary · highlight</span></div>
+          <div class="tile__foot" style="color:var(--color-on-accent)"><div><h3>Plasma</h3><code>#E07BFF</code></div><span class="acc__ratio">7.7:1<small>on void</small>6.1:1<small>on tile</small></span></div>
+        </div>
+        <div class="tile acc" style="--w:3;--w-md:6;--acc:#3FEFC4">
+          <div class="acc__fill grain"></div>
+          <div class="tile__head"><span class="label" style="color:var(--color-on-accent)">Success · v1 · live · focus</span></div>
+          <div class="tile__foot" style="color:var(--color-on-accent)"><div><h3>Ion</h3><code>#3FEFC4</code></div><span class="acc__ratio">13.1:1<small>on void</small>10.3:1<small>on tile</small></span></div>
+        </div>
+        <div class="tile acc" style="--w:3;--w-md:6;--acc:#FF9E64">
+          <div class="acc__fill grain"></div>
+          <div class="tile__head"><span class="label" style="color:var(--color-on-accent)">Attention · roadmap</span></div>
+          <div class="tile__foot" style="color:var(--color-on-accent)"><div><h3>Flare</h3><code>#FF9E64</code></div><span class="acc__ratio">9.4:1<small>on void</small>7.4:1<small>on tile</small></span></div>
+        </div>
+        <div class="tile tile--grad" style="--w:4;--grad:var(--grad-horizon);min-height:12rem">
+          <div class="tile__head"><span class="label">Gradient + grain</span></div>
+          <div class="tile__foot"><div><h3>Horizon</h3><p class="small">Pulsar to Plasma. Hero, CTA.</p></div><code style="color:var(--color-on-accent)">--grad-horizon</code></div>
+        </div>
+        <div class="tile tile--grad" style="--w:4;--grad:var(--grad-drift);min-height:12rem">
+          <div class="tile__head"><span class="label">Gradient + grain</span></div>
+          <div class="tile__foot"><div><h3>Drift</h3><p class="small">Ion to Pulsar. Success, "v1".</p></div><code style="color:var(--color-on-accent)">--grad-drift</code></div>
+        </div>
+        <div class="tile tile--grad" style="--w:4;--grad:var(--grad-corona);min-height:12rem">
+          <div class="tile__head"><span class="label">Gradient + grain</span></div>
+          <div class="tile__foot"><div><h3>Corona</h3><p class="small">Flare to Plasma. Roadmap.</p></div><code style="color:var(--color-on-accent)">--grad-corona</code></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="type" aria-labelledby="type-title">
+    <div class="container">
+      <header class="shead">
+        <span class="label"><span class="label__idx">[02]</span>Typography</span>
+        <h2 id="type-title">Typography</h2>
+        <p class="lead">Funnel Display for headings, at medium weight with tight tracking. Atkinson Hyperlegible Next for text. Atkinson Hyperlegible Mono only for labels, data and code.</p>
+      </header>
+      <div class="bento">
+        <div class="tile tile--void specimen" style="--w:8;--h:2;--w-md:12">
+          <span class="label">Funnel Display · 500</span>
+          <p class="specimen__aa">Aa</p>
+          <p class="specimen__line">Your taste, made exact.</p>
+        </div>
+        <div class="tile" style="--w:4;--w-md:6">
+          <span class="label">Atkinson Hyperlegible Next</span>
+          <p style="color:var(--color-text)">Drop your concept and ideas on one moodboard. The text face is made for legibility, so long copy stays easy to read.</p>
+        </div>
+        <div class="tile" style="--w:4;--w-md:6">
+          <span class="label">Atkinson Hyperlegible Mono</span>
+          <p class="mono-demo"><span>[01] COLLECT</span><span>primary.500 = #7B93FF</span><span>STATUS: COMING SOON</span></p>
+        </div>
+        <div class="tile" style="--w:12">
+          <span class="label">Scale · fluid</span>
+          <ul class="scale">
+<li><code>5xl</code><span style="font-size:min(var(--text-5xl), 3rem);font-family:var(--font-display)">Display</span></li>
+<li><code>4xl</code><span style="font-size:min(var(--text-4xl), 3rem);font-family:var(--font-display)">H1</span></li>
+<li><code>3xl</code><span style="font-size:min(var(--text-3xl), 3rem);font-family:var(--font-display)">H2</span></li>
+<li><code>2xl</code><span style="font-size:min(var(--text-2xl), 3rem);font-family:var(--font-display)">H3 large</span></li>
+<li><code>xl</code><span style="font-size:min(var(--text-xl), 3rem);font-family:var(--font-display)">H3</span></li>
+<li><code>lg</code><span style="font-size:min(var(--text-lg), 3rem);font-family:var(--font-body)">Lead</span></li>
+<li><code>base</code><span style="font-size:min(var(--text-base), 3rem);font-family:var(--font-body)">Body</span></li>
+<li><code>sm</code><span style="font-size:min(var(--text-sm), 3rem);font-family:var(--font-body)">Small</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band" id="grid" aria-labelledby="grid-title">
+    <div class="container">
+      <header class="shead">
+        <span class="label"><span class="label__idx">[03]</span>Grid and space</span>
+        <h2 id="grid-title">Grid and space</h2>
+        <p class="lead">A 12-column Swiss grid. Bento tiles span 2, 3, 4, 6, 8 or 12 columns. On tablet, tiles take 6 columns. On phone, all tiles take the full width.</p>
+      </header>
+      <div class="cols-demo" aria-hidden="true"><i><span>01</span></i><i><span>02</span></i><i><span>03</span></i><i><span>04</span></i><i><span>05</span></i><i><span>06</span></i><i><span>07</span></i><i><span>08</span></i><i><span>09</span></i><i><span>10</span></i><i><span>11</span></i><i><span>12</span></i></div>
+      <div class="bento" style="margin-top:var(--bento-gap)">
+        <div class="tile tile--grid span-demo" style="--w:8"><code>--w: 8</code></div>
+        <div class="tile tile--grid span-demo" style="--w:4"><code>--w: 4</code></div>
+        <div class="tile tile--grid span-demo" style="--w:3;--w-md:6"><code>--w: 3</code></div>
+        <div class="tile tile--grid span-demo" style="--w:3;--w-md:6"><code>--w: 3</code></div>
+        <div class="tile tile--grid span-demo" style="--w:6"><code>--w: 6</code></div>
+        <div class="tile" style="--w:12">
+          <span class="label">Space · 4 px base</span>
+          <ul class="spaces">
+<li><code>space-1</code><i style="width:var(--space-1)"></i><span>4</span></li>
+<li><code>space-2</code><i style="width:var(--space-2)"></i><span>8</span></li>
+<li><code>space-3</code><i style="width:var(--space-3)"></i><span>12</span></li>
+<li><code>space-4</code><i style="width:var(--space-4)"></i><span>16</span></li>
+<li><code>space-5</code><i style="width:var(--space-5)"></i><span>24</span></li>
+<li><code>space-6</code><i style="width:var(--space-6)"></i><span>32</span></li>
+<li><code>space-7</code><i style="width:var(--space-7)"></i><span>48</span></li>
+<li><code>space-8</code><i style="width:var(--space-8)"></i><span>64</span></li>
+<li><code>space-9</code><i style="width:var(--space-9)"></i><span>96</span></li>
+<li><code>space-10</code><i style="width:var(--space-10)"></i><span>128</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="shapes" aria-labelledby="shapes-title">
+    <div class="container">
+      <header class="shead">
+        <span class="label"><span class="label__idx">[04]</span>Shapes and texture</span>
+        <h2 id="shapes-title">Shapes and texture</h2>
+        <p class="lead">Memphis shapes, now sleek and 3D: spheres, a torus, prisms, cylinders and gems, plus flat shapes and wireframes. Each solid shape has shading and built-in grain. No faces.</p>
+      </header>
+      <div class="bento">
+        <div class="tile" style="--w:12">
+          <div class="shp-grid">
+<figure class="shp"><div class="shp__box"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#b-sphere"/></svg></div><figcaption><code>#b-sphere</code>Sphere</figcaption></figure>
+<figure class="shp"><div class="shp__box"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#b-torus"/></svg></div><figcaption><code>#b-torus</code>Torus</figcaption></figure>
+<figure class="shp"><div class="shp__box"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#b-prism"/></svg></div><figcaption><code>#b-prism</code>Prism</figcaption></figure>
+<figure class="shp"><div class="shp__box"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#b-cube"/></svg></div><figcaption><code>#b-cube</code>Cube</figcaption></figure>
+<figure class="shp"><div class="shp__box"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#b-pyramid"/></svg></div><figcaption><code>#b-pyramid</code>Pyramid</figcaption></figure>
+<figure class="shp"><div class="shp__box"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#b-cylinder"/></svg></div><figcaption><code>#b-cylinder</code>Cylinder</figcaption></figure>
+<figure class="shp"><div class="shp__box"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#b-cone"/></svg></div><figcaption><code>#b-cone</code>Cone</figcaption></figure>
+<figure class="shp"><div class="shp__box"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#b-dome"/></svg></div><figcaption><code>#b-dome</code>Dome</figcaption></figure>
+<figure class="shp"><div class="shp__box"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#b-gem"/></svg></div><figcaption><code>#b-gem</code>Gem</figcaption></figure>
+<figure class="shp"><div class="shp__box"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#b-slab"/></svg></div><figcaption><code>#b-slab</code>Slab</figcaption></figure>
+<figure class="shp"><div class="shp__box"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#b-capsule"/></svg></div><figcaption><code>#b-capsule</code>Capsule</figcaption></figure>
+<figure class="shp"><div class="shp__box"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#b-arc"/></svg></div><figcaption><code>#b-arc</code>Arc</figcaption></figure>
+<figure class="shp"><div class="shp__box"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#b-quarter"/></svg></div><figcaption><code>#b-quarter</code>Quarter</figcaption></figure>
+<figure class="shp"><div class="shp__box"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#b-bars"/></svg></div><figcaption><code>#b-bars</code>Bars</figcaption></figure>
+<figure class="shp"><div class="shp__box"><svg class="" style="color:var(--color-pulsar)" aria-hidden="true"><use href="partials/sprite.svg#b-orbit"/></svg></div><figcaption><code>#b-orbit</code>Orbit</figcaption></figure>
+<figure class="shp"><div class="shp__box"><svg class="" style="color:var(--color-pulsar)" aria-hidden="true"><use href="partials/sprite.svg#b-grid"/></svg></div><figcaption><code>#b-grid</code>Grid plane</figcaption></figure>
+<figure class="shp"><div class="shp__box"><svg class="" style="color:var(--color-ion)" aria-hidden="true"><use href="partials/sprite.svg#b-star"/></svg></div><figcaption><code>#b-star</code>Star</figcaption></figure>
+<figure class="shp"><div class="shp__box"><svg class="" style="color:var(--color-plasma)" aria-hidden="true"><use href="partials/sprite.svg#b-wave"/></svg></div><figcaption><code>#b-wave</code>Wave</figcaption></figure>
+          </div>
+        </div>
+        <div class="tile tile--grid tex" style="--w:3;--w-md:6"><span class="label">Grid</span><code>.tile--grid</code></div>
+        <div class="tile tile--dots tex" style="--w:3;--w-md:6"><span class="label">Dots</span><code>.tile--dots</code></div>
+        <div class="tile tile--deep tex" style="--w:3;--w-md:6"><span class="label">Deep + grain</span><code>.tile--deep</code></div>
+        <div class="tile tile--grad tex" style="--w:3;--w-md:6;--grad:var(--grad-drift)"><span class="label">Gradient + grain</span><code style="color:var(--color-on-accent)">.tile--grad</code></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band" id="components" aria-labelledby="components-title">
+    <div class="container">
+      <header class="shead">
+        <span class="label"><span class="label__idx">[05]</span>Components</span>
+        <h2 id="components-title">Components</h2>
+        <p class="lead">Square, flat and sharp. No drop shadows. Hover adds a thin glow. Focus is a 2 px Ion ring.</p>
+      </header>
+      <div class="bento">
+        <div class="tile" style="--w:6;--w-md:12">
+          <span class="label">Buttons</span>
+          <div class="cluster">
+            <a class="btn" href="#components">Join the waitlist <svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-arrow"/></svg></a>
+            <a class="btn btn--grad" href="#components">See how it works</a>
+          </div>
+          <div class="cluster">
+            <a class="btn btn--outline" href="#components">Outline</a>
+            <a class="btn btn--ghost" href="#components">Ghost</a>
+            <a class="btn btn--sm" href="#components">Small</a>
+            <button class="btn btn--outline btn--icon" type="button"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-replay"/></svg><span class="visually-hidden">Replay</span></button>
+          </div>
+          <a class="link-arrow" href="#components">Text link</a>
+        </div>
+        <div class="tile tile--deep" style="--w:6;--w-md:12" id="waitlist">
+          <span class="label label--dot">Waitlist · coming soon</span>
+          <h3>The waitlist opens soon.</h3>
+          <div>
+            <form class="waitlist is-soon">
+              <label class="visually-hidden" for="wl-sg">Email address</label>
+              <div class="waitlist__row">
+                <input class="input" id="wl-sg" type="email" name="email" placeholder="you@company.com" autocomplete="email" disabled aria-describedby="wl-sg-soon">
+                <button class="btn" type="button" disabled>Join the waitlist</button>
+              </div>
+              <p class="waitlist__micro" id="wl-sg-soon"><strong>Waitlist opens soon.</strong></p>
+            </form>
+          </div>
+        </div>
+        <div class="tile" style="--w:4;--w-md:6">
+          <span class="label">Fields</span>
+          <div class="field"><label class="field__label" for="f-name">Name</label><input class="input" id="f-name" placeholder="Your name"></div>
+          <div class="field"><label class="field__label" for="f-msg">Message</label><textarea class="textarea" id="f-msg" placeholder="How can we help?" style="min-height:5rem"></textarea></div>
+        </div>
+        <div class="tile" style="--w:4;--w-md:6">
+          <span class="label">Tags</span>
+          <div class="cluster">
+            <span class="tag tag--v1">v1</span>
+            <span class="tag tag--roadmap">On our roadmap</span>
+            <span class="tag tag--brand">Premium</span>
+            <span class="tag tag--open">Open</span>
+            <span class="tag tag--solid">Free</span>
+            <span class="tag tag--live" style="--tag:var(--color-ion)">Coming soon</span>
+          </div>
+          <span class="label" style="margin-top:var(--space-3)">Segmented</span>
+          <div class="segmented" role="group" aria-label="Mode"><button type="button" aria-pressed="false">Normal</button><button type="button" aria-pressed="true">Expressive</button></div>
+        </div>
+        <a class="tile tile--link tile--grid" href="#components" style="--w:4;--w-md:12">
+          <div class="tile__head"><span class="icon-chip"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-why"/></svg></span><svg class="tile__arrow" style="transform:rotate(-45deg)" aria-hidden="true"><use href="partials/sprite.svg#i-arrow"/></svg></div>
+          <div class="tile__foot"><div class="stack" style="--stack-gap:var(--space-2)"><h3>Know why</h3><p class="small">Feature tile. Each value shows its source: your image, your words, your options or your edit.</p></div></div>
+        </a>
+        <div class="tile tile--grad" style="--w:4;--w-md:6">
+          <span class="label">Stat tile</span>
+          <p class="tile__num" style="color:var(--color-on-accent)">8</p>
+          <p>Token categories, from color to copy voice.</p>
+        </div>
+        <div class="tile" style="--w:8;--w-md:12">
+          <span class="label">Accordion · FAQ</span>
+          <div class="accordion">
+            <details open><summary data-n="Q1"><span>Do I need a design background?</span></summary><div class="accordion__body">No. Start from images, words or a few guided options.</div></details>
+            <details><summary data-n="Q2"><span>Do I need an account?</span></summary><div class="accordion__body">No account is needed to start. Generation from your board needs sign-in.</div></details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="icons" aria-labelledby="icons-title">
+    <div class="container">
+      <header class="shead">
+        <span class="label"><span class="label__idx">[06]</span>Icons</span>
+        <h2 id="icons-title">Icons</h2>
+        <p class="lead">The stroke icon set from Version A: 24 px, 2 px lines. Use it in an icon chip or inline with text.</p>
+      </header>
+      <div class="tile" style="padding:0">
+        <ul class="icon-grid">
+<li title="i-board"><svg aria-hidden="true"><use href="partials/sprite.svg#i-board"/></svg><code>board</code></li>
+<li title="i-image"><svg aria-hidden="true"><use href="partials/sprite.svg#i-image"/></svg><code>image</code></li>
+<li title="i-note"><svg aria-hidden="true"><use href="partials/sprite.svg#i-note"/></svg><code>note</code></li>
+<li title="i-chips"><svg aria-hidden="true"><use href="partials/sprite.svg#i-chips"/></svg><code>chips</code></li>
+<li title="i-heart"><svg aria-hidden="true"><use href="partials/sprite.svg#i-heart"/></svg><code>heart</code></li>
+<li title="i-pin"><svg aria-hidden="true"><use href="partials/sprite.svg#i-pin"/></svg><code>pin</code></li>
+<li title="i-import"><svg aria-hidden="true"><use href="partials/sprite.svg#i-import"/></svg><code>import</code></li>
+<li title="i-dropper"><svg aria-hidden="true"><use href="partials/sprite.svg#i-dropper"/></svg><code>dropper</code></li>
+<li title="i-spark"><svg aria-hidden="true"><use href="partials/sprite.svg#i-spark"/></svg><code>spark</code></li>
+<li title="i-color"><svg aria-hidden="true"><use href="partials/sprite.svg#i-color"/></svg><code>color</code></li>
+<li title="i-type"><svg aria-hidden="true"><use href="partials/sprite.svg#i-type"/></svg><code>type</code></li>
+<li title="i-spacing"><svg aria-hidden="true"><use href="partials/sprite.svg#i-spacing"/></svg><code>spacing</code></li>
+<li title="i-shape"><svg aria-hidden="true"><use href="partials/sprite.svg#i-shape"/></svg><code>shape</code></li>
+<li title="i-motion"><svg aria-hidden="true"><use href="partials/sprite.svg#i-motion"/></svg><code>motion</code></li>
+<li title="i-layers"><svg aria-hidden="true"><use href="partials/sprite.svg#i-layers"/></svg><code>layers</code></li>
+<li title="i-voice"><svg aria-hidden="true"><use href="partials/sprite.svg#i-voice"/></svg><code>voice</code></li>
+<li title="i-sliders"><svg aria-hidden="true"><use href="partials/sprite.svg#i-sliders"/></svg><code>sliders</code></li>
+<li title="i-lock"><svg aria-hidden="true"><use href="partials/sprite.svg#i-lock"/></svg><code>lock</code></li>
+<li title="i-why"><svg aria-hidden="true"><use href="partials/sprite.svg#i-why"/></svg><code>why</code></li>
+<li title="i-toggle"><svg aria-hidden="true"><use href="partials/sprite.svg#i-toggle"/></svg><code>toggle</code></li>
+<li title="i-eye"><svg aria-hidden="true"><use href="partials/sprite.svg#i-eye"/></svg><code>eye</code></li>
+<li title="i-gallery"><svg aria-hidden="true"><use href="partials/sprite.svg#i-gallery"/></svg><code>gallery</code></li>
+<li title="i-page"><svg aria-hidden="true"><use href="partials/sprite.svg#i-page"/></svg><code>page</code></li>
+<li title="i-devices"><svg aria-hidden="true"><use href="partials/sprite.svg#i-devices"/></svg><code>devices</code></li>
+<li title="i-a11y"><svg aria-hidden="true"><use href="partials/sprite.svg#i-a11y"/></svg><code>a11y</code></li>
+<li title="i-contrast"><svg aria-hidden="true"><use href="partials/sprite.svg#i-contrast"/></svg><code>contrast</code></li>
+<li title="i-tokens"><svg aria-hidden="true"><use href="partials/sprite.svg#i-tokens"/></svg><code>tokens</code></li>
+<li title="i-code"><svg aria-hidden="true"><use href="partials/sprite.svg#i-code"/></svg><code>code</code></li>
+<li title="i-book"><svg aria-hidden="true"><use href="partials/sprite.svg#i-book"/></svg><code>book</code></li>
+<li title="i-file"><svg aria-hidden="true"><use href="partials/sprite.svg#i-file"/></svg><code>file</code></li>
+<li title="i-download"><svg aria-hidden="true"><use href="partials/sprite.svg#i-download"/></svg><code>download</code></li>
+<li title="i-shield"><svg aria-hidden="true"><use href="partials/sprite.svg#i-shield"/></svg><code>shield</code></li>
+<li title="i-cpu"><svg aria-hidden="true"><use href="partials/sprite.svg#i-cpu"/></svg><code>cpu</code></li>
+<li title="i-user"><svg aria-hidden="true"><use href="partials/sprite.svg#i-user"/></svg><code>user</code></li>
+<li title="i-share"><svg aria-hidden="true"><use href="partials/sprite.svg#i-share"/></svg><code>share</code></li>
+<li title="i-cloud"><svg aria-hidden="true"><use href="partials/sprite.svg#i-cloud"/></svg><code>cloud</code></li>
+<li title="i-store"><svg aria-hidden="true"><use href="partials/sprite.svg#i-store"/></svg><code>store</code></li>
+<li title="i-deck"><svg aria-hidden="true"><use href="partials/sprite.svg#i-deck"/></svg><code>deck</code></li>
+<li title="i-social"><svg aria-hidden="true"><use href="partials/sprite.svg#i-social"/></svg><code>social</code></li>
+<li title="i-mockup"><svg aria-hidden="true"><use href="partials/sprite.svg#i-mockup"/></svg><code>mockup</code></li>
+<li title="i-video"><svg aria-hidden="true"><use href="partials/sprite.svg#i-video"/></svg><code>video</code></li>
+<li title="i-globe"><svg aria-hidden="true"><use href="partials/sprite.svg#i-globe"/></svg><code>globe</code></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band" id="motion" aria-labelledby="motion-title">
+    <div class="container">
+      <header class="shead">
+        <span class="label"><span class="label__idx">[07]</span>Motion</span>
+        <h2 id="motion-title">Motion</h2>
+        <p class="lead">Short and sleek. Tiles rise 16 px and fade in on scroll. Hover moves an arrow or adds a glow. When reduced motion is on, all of this stops.</p>
+      </header>
+      <div class="bento">
+        <div class="tile tile--void" style="--w:4;--w-md:12"><span class="label">Fast · 140 ms</span><p>Hover color, press.</p></div>
+        <div class="tile tile--void" style="--w:4;--w-md:6"><span class="label">Base · 240 ms</span><p>Glow, arrow move, accordion.</p></div>
+        <div class="tile tile--void" style="--w:4;--w-md:6"><span class="label">Slow · 520 ms</span><p>Tile reveal, hero sequence (GSAP).</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div class="stack" style="--span:6;--stack-gap:var(--space-3)">
+        <a class="logo" href="index.html"><svg class="logo__mark" aria-hidden="true"><use href="partials/sprite.svg#logo-mark"/></svg><span data-brand>RONA</span></a>
+        <p class="small muted" style="max-width:30ch">From moodboard to design system.</p>
+      </div>
+      <div style="--span:2"><h4>Product</h4><ul><li><a href="how-it-works.html">How it works</a></li><li><a href="features.html">Features</a></li><li><a href="roadmap.html">Roadmap</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+      <div style="--span:2"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div style="--span:2"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy policy</a></li></ul></div>
+    </div>
+    <div class="cluster small" style="justify-content:space-between;margin-top:var(--space-8);padding-top:var(--space-4);border-top:1px solid var(--color-line);color:var(--color-text-faint);font-family:var(--font-mono);font-size:var(--text-xs);letter-spacing:.04em">
+      <span>© <span data-year>2026</span></span>
+      <span>Made for founders with taste.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/js/site.config.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
