@@ -1,1 +1,1 @@
-# design-system-generator
+# Design System Generator
