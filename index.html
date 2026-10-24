@@ -33,7 +33,6 @@
     <link rel="stylesheet" href="assets/css/sections-v2.css" />
   </head>
   <body data-problem-layout="collage" class="rhythm-2">
-    <a class="btn btn--sm skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="container site-header__inner">
         <a class="logo" href="index.html" aria-label="Home"
@@ -83,7 +82,7 @@
               guideline you can adjust, preview and export.
             </p>
             <div id="waitlist" data-waitlist-wrap>
-              <form class="waitlist is-soon">
+              <form class="waitlist is-soon" data-form-type="waitlist" novalidate>
                 <label class="visually-hidden" for="wl-hero">Email address</label>
                 <div class="waitlist__row">
                   <input
@@ -96,8 +95,13 @@
                     disabled
                     aria-describedby="wl-hero-soon"
                   />
-                  <button class="btn" type="button" disabled>Join the waitlist</button>
+                  <button class="btn" type="submit" disabled>Join the waitlist</button>
                 </div>
+                <div class="visually-hidden" aria-hidden="true">
+                  <input name="website" type="text" tabindex="-1" autocomplete="off" />
+                </div>
+                <div data-turnstile></div>
+                <p class="field__hint" data-form-status role="status" hidden></p>
                 <p class="waitlist__micro" id="wl-hero-soon">
                   <strong>Waitlist opens soon.</strong>
                 </p>
@@ -1287,7 +1291,7 @@
             </h2>
             <p>The waitlist for <span data-brand>RONA</span> opens soon.</p>
             <div>
-              <form class="waitlist is-soon">
+              <form class="waitlist is-soon" data-form-type="waitlist" novalidate>
                 <label class="visually-hidden" for="wl-final">Email address</label>
                 <div class="waitlist__row">
                   <input
@@ -1300,8 +1304,13 @@
                     disabled
                     aria-describedby="wl-final-soon"
                   />
-                  <button class="btn" type="button" disabled>Join the waitlist</button>
+                  <button class="btn" type="submit" disabled>Join the waitlist</button>
                 </div>
+                <div class="visually-hidden" aria-hidden="true">
+                  <input name="website" type="text" tabindex="-1" autocomplete="off" />
+                </div>
+                <div data-turnstile></div>
+                <p class="field__hint" data-form-status role="status" hidden></p>
                 <p class="waitlist__micro" id="wl-final-soon">
                   <strong>Waitlist opens soon.</strong>
                 </p>
@@ -1371,5 +1380,11 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/hero.js"></script>
     <script src="assets/js/sections.js"></script>
+    <script
+      src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
+      async
+      defer
+    ></script>
+    <script src="assets/js/forms.js"></script>
   </body>
 </html>

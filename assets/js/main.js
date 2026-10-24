@@ -27,7 +27,7 @@
     });
   }
 
-  /* Waitlist: no form provider yet. The forms are disabled in the HTML ("Waitlist opens soon"). */
+  /* Waitlist: see forms.js. The forms stay disabled in the HTML ("Waitlist opens soon") until enabled. */
 
   /* Motion: GSAP when present, and only when the user allows motion.
      The [data-reveal] animation is in sections.js (IntersectionObserver + CSS). */

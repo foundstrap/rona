@@ -55,5 +55,5 @@
     });
   }
 
-  /* Contact form: no provider yet. contact.html shows "Contact opens soon." */
+  /* Contact form: see forms.js. */
 })();

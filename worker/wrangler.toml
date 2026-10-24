@@ -1,0 +1,18 @@
+name = "foundstrap-forms"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+# Dedicated API hostname. Cloudflare manages DNS and TLS.
+routes = [
+  { pattern = "api.foundstrap.com", custom_domain = true }
+]
+
+[vars]
+SENDER_EMAIL = "noreply@foundstrap.com"
+SENDER_NAME = "RONA forms"
+RECIPIENT_EMAIL = "foundstrap@gmail.com"
+ALLOWED_ORIGINS = "https://rona.foundstrap.com"
+
+# Secrets: configure using Wrangler, never commit them.
+# BREVO_API_KEY
+# TURNSTILE_SECRET_KEY

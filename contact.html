@@ -27,7 +27,6 @@
     <link rel="stylesheet" href="assets/css/pages.css" />
   </head>
   <body class="rhythm-2">
-    <a class="btn btn--sm skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="container site-header__inner">
         <a class="logo" href="index.html" aria-label="Home"
@@ -91,7 +90,9 @@
         <div class="container">
           <span class="label label--dot">Contact</span>
           <h1 id="page-title">Say <span class="grad-text">hello.</span></h1>
-          <p class="lead">Questions, partnership ideas or feedback. Our contact form opens soon.</p>
+          <p class="lead">
+            Questions, partnership ideas or feedback. Write to us with the form below.
+          </p>
         </div>
       </section>
 
@@ -99,13 +100,58 @@
         <div class="container">
           <div class="contact">
             <div class="tile" data-reveal>
-              <div class="contact-soon" role="note">
-                <h2>Contact opens soon.</h2>
-                <p class="muted">
-                  We are setting up our contact channel. Until then, many answers are on the
-                  <a href="faq.html">FAQ page</a>.
-                </p>
-              </div>
+              <form class="contact-form" data-form-type="contact" novalidate>
+                <div class="row">
+                  <div class="field">
+                    <label class="field__label" for="cf-name">Name</label>
+                    <input
+                      class="input"
+                      id="cf-name"
+                      name="name"
+                      type="text"
+                      maxlength="100"
+                      autocomplete="name"
+                      required
+                    />
+                  </div>
+                  <div class="field">
+                    <label class="field__label" for="cf-email">Email</label>
+                    <input
+                      class="input"
+                      id="cf-email"
+                      name="email"
+                      type="email"
+                      maxlength="254"
+                      autocomplete="email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="cf-message">Message</label>
+                  <textarea
+                    class="textarea"
+                    id="cf-message"
+                    name="message"
+                    minlength="10"
+                    maxlength="5000"
+                    required
+                  ></textarea>
+                </div>
+                <div class="visually-hidden" aria-hidden="true">
+                  <label for="cf-website">Leave this field empty</label>
+                  <input
+                    id="cf-website"
+                    name="website"
+                    type="text"
+                    tabindex="-1"
+                    autocomplete="off"
+                  />
+                </div>
+                <div data-turnstile></div>
+                <p class="field__hint" data-form-status role="status" hidden></p>
+                <button class="btn" type="submit">Send message</button>
+              </form>
             </div>
             <aside class="contact-side">
               <div class="tile side-card side-card--accent" data-reveal>
@@ -184,5 +230,11 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/sections.js"></script>
     <script src="assets/js/pages.js"></script>
+    <script src="assets/js/forms.js"></script>
+    <script
+      src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
+      async
+      defer
+    ></script>
   </body>
 </html>
