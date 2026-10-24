@@ -1,5 +1,8 @@
-/* Receives the contact form and the waitlist form. Verifies Turnstile, then sends
-   one email through the Brevo transactional API. Nothing is stored. */
+/* Receives the contact form and the waitlist form. Verifies Turnstile, then sends the owner
+   notification and a confirmation to the submitter through the Brevo transactional API.
+   Nothing is stored. */
+
+import { adminContact, adminWaitlist, confirmContact, confirmWaitlist } from "./email.js";
 
 const BREVO_URL = "https://api.brevo.com/v3/smtp/email";
 const TURNSTILE_URL = "https://challenges.cloudflare.com/turnstile/v0/siteverify";
@@ -19,14 +22,6 @@ function json(status, body, origin) {
 
 function clean(value, max) {
   return typeof value === "string" ? value.replace(/\s+/g, " ").trim().slice(0, max) : "";
-}
-
-function escapeHtml(s) {
-  return s
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
 }
 
 /* Returns { error } or { data }. */
@@ -71,14 +66,13 @@ async function verifyTurnstile(token, secret, ip) {
 
 export function buildEmail(data, env) {
   const isContact = data.type === "contact";
+  const brand = env.BRAND_NAME || "RONA";
   const subject = isContact
     ? `${SUBJECT_PREFIX.contact} ${data.name}`
     : `${SUBJECT_PREFIX.waitlist} ${data.email}`;
-  const lines = isContact
-    ? [`Form: contact`, `Name: ${data.name}`, `Email: ${data.email}`, ``, data.message]
-    : [`Form: waitlist`, `Email: ${data.email}`];
-  const text = lines.join("\n");
-  const html = `<p>${escapeHtml(text).replace(/\n/g, "<br>")}</p>`;
+  const { html, text } = isContact
+    ? adminContact({ brand, name: data.name, email: data.email, message: data.message })
+    : adminWaitlist({ brand, email: data.email });
   return {
     sender: { email: env.SENDER_EMAIL, name: env.SENDER_NAME || "Forms" },
     to: [{ email: env.RECIPIENT_EMAIL }],
@@ -92,18 +86,19 @@ export function buildEmail(data, env) {
 /* Feedback email to the submitter. It never repeats the submitted message. */
 export function buildConfirmation(data, env) {
   const brand = env.BRAND_NAME || "RONA";
+  const siteUrl = (env.SITE_URL || "https://rona.foundstrap.com").replace(/\/+$/, "");
   const isContact = data.type === "contact";
   const subject = isContact ? `We got your message` : `You are on the ${brand} waitlist`;
-  const text = isContact
-    ? `Hi ${data.name},\n\nThanks for writing to ${brand}. We got your message and will reply by email.\n\n${brand}`
-    : `Thanks for joining the ${brand} waitlist.\n\nWe will email you when access opens.\n\n${brand}`;
+  const { html, text } = isContact
+    ? confirmContact({ brand, name: data.name, siteUrl })
+    : confirmWaitlist({ brand, siteUrl });
   return {
     sender: { email: env.SENDER_EMAIL, name: brand },
     to: [{ email: data.email }],
     replyTo: { email: env.RECIPIENT_EMAIL },
     subject,
     textContent: text,
-    htmlContent: `<p>${escapeHtml(text).replace(/\n/g, "<br>")}</p>`,
+    htmlContent: html,
   };
 }
 

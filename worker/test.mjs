@@ -48,9 +48,18 @@ assert.equal(sent[0].headers["api-key"], "k");
 assert.equal(sent[0].body.replyTo.email, "a@b.co");
 assert.equal(sent[0].body.subject, "[Contact form] Ann Bob");
 assert.ok(sent[0].body.htmlContent.includes("&lt;b&gt;"));
+assert.ok(!sent[0].body.htmlContent.includes("<b>there"));
+assert.ok(sent[0].body.htmlContent.includes("New contact message"));
+assert.ok(sent[0].body.textContent.includes("Hello <b>there</b>!"));
+assert.ok(sent[0].body.textContent.includes("a@b.co"));
 
 assert.deepEqual(sent[1].body.to, [{ email: "a@b.co" }]);
 assert.ok(!sent[1].body.textContent.includes("Hello"));
+assert.ok(!sent[1].body.htmlContent.includes("Hello"));
+assert.ok(sent[1].body.htmlContent.includes("We got your message."));
+assert.ok(!sent[1].body.htmlContent.includes("A person reads"));
+assert.ok(!sent[1].body.textContent.includes("A person reads"));
+assert.ok(sent[1].body.htmlContent.includes("Hi Ann Bob"));
 
 sent = [];
 secrets = [];
@@ -58,6 +67,12 @@ r = await call({ type: "waitlist", email: "w@x.io", turnstileToken: "t" });
 assert.deepEqual(secrets, ["w"]);
 assert.equal(r.status, 200);
 assert.equal(sent[0].body.subject, "[Waitlist] w@x.io");
+assert.ok(sent[0].body.htmlContent.includes("New waitlist signup"));
+assert.ok(sent[0].body.textContent.includes("w@x.io"));
+assert.ok(sent[1].body.htmlContent.includes("You are on the list."));
+assert.ok(
+  sent[1].body.textContent.includes("We have your email and will write to you when there is news."),
+);
 assert.equal(sent.length, 2);
 assert.deepEqual(sent[1].body.to, [{ email: "w@x.io" }]);
 
@@ -98,4 +113,18 @@ assert.equal(
   500,
 );
 assert.equal(sent.length, 0);
+// Hostile input stays inert in every template.
+{
+  const { buildEmail, buildConfirmation } = await import("./src/index.js");
+  const evil = {
+    type: "contact",
+    name: '"><img src=x onerror=1>',
+    email: "a@b.co",
+    message: "<script>alert(1)</script>",
+  };
+  for (const m of [buildEmail(evil, env), buildConfirmation(evil, env)]) {
+    assert.ok(!m.htmlContent.includes("<script>"));
+    assert.ok(!m.htmlContent.includes("<img src=x"));
+  }
+}
 console.log("all ok");

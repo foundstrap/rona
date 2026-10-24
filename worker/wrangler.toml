@@ -11,6 +11,8 @@ routes = [
 SENDER_EMAIL = "noreply@foundstrap.com"
 SENDER_NAME = "RONA forms"
 RECIPIENT_EMAIL = "foundstrap@gmail.com"
+BRAND_NAME = "RONA"
+SITE_URL = "https://rona.foundstrap.com"
 ALLOWED_ORIGINS = "https://rona.foundstrap.com"
 
 # Secrets: configure using Wrangler, never commit them.
