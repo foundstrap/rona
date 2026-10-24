@@ -4,8 +4,12 @@
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* Brand name: one source of truth */
-  document.querySelectorAll("[data-brand]").forEach(function (el) { el.textContent = SITE.name; });
-  document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = SITE.year; });
+  document.querySelectorAll("[data-brand]").forEach(function (el) {
+    el.textContent = SITE.name;
+  });
+  document.querySelectorAll("[data-year]").forEach(function (el) {
+    el.textContent = SITE.year;
+  });
 
   /* Mobile nav */
   var toggle = document.querySelector(".nav-toggle");
@@ -16,7 +20,10 @@
       toggle.setAttribute("aria-expanded", String(open));
     });
     nav.addEventListener("click", function (e) {
-      if (e.target.closest("a")) { nav.classList.remove("is-open"); toggle.setAttribute("aria-expanded", "false"); }
+      if (e.target.closest("a")) {
+        nav.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+      }
     });
   }
 
@@ -29,9 +36,11 @@
     gsap.utils.toArray("[data-float]").forEach(function (el, i) {
       gsap.to(el, {
         y: (i % 2 ? -1 : 1) * (8 + (i % 3) * 4),
-        rotation: (i % 2 ? 6 : -6),
+        rotation: i % 2 ? 6 : -6,
         duration: 3 + (i % 4),
-        ease: "sine.inOut", yoyo: true, repeat: -1
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: -1,
       });
     });
   }

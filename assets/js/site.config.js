@@ -2,5 +2,5 @@
    Every element with [data-brand] shows SITE.name. */
 window.SITE = {
   name: "RONA",
-  year: new Date().getFullYear()
+  year: new Date().getFullYear(),
 };

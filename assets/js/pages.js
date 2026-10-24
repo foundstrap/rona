@@ -15,14 +15,21 @@
     }
     voteForm.addEventListener("change", function (e) {
       if (e.target.name !== "preview") return;
-      try { localStorage.setItem(KEY, e.target.value); } catch (err) {}
+      try {
+        localStorage.setItem(KEY, e.target.value);
+      } catch (err) {}
       render(e.target.value);
     });
     var saved = null;
-    try { saved = localStorage.getItem(KEY); } catch (err) {}
+    try {
+      saved = localStorage.getItem(KEY);
+    } catch (err) {}
     if (saved) {
       var el = voteForm.querySelector('input[value="' + saved + '"]');
-      if (el) { el.checked = true; render(saved); }
+      if (el) {
+        el.checked = true;
+        render(saved);
+      }
     }
   }
 
@@ -41,7 +48,9 @@
         if (hit) shown++;
         if (q && hit) d.open = true;
       });
-      groups.forEach(function (g) { g.hidden = !g.querySelector("details:not([hidden])"); });
+      groups.forEach(function (g) {
+        g.hidden = !g.querySelector("details:not([hidden])");
+      });
       if (empty) empty.hidden = shown > 0;
     });
   }

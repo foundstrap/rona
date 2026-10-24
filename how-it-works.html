@@ -1,273 +1,834 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>How it works · RONA</title>
-  <meta name="description" content="How RONA will turn your moodboard into a design system: collect, generate, adjust, preview and export.">
-  <meta property="og:title" content="How it works · RONA">
-  <meta property="og:description" content="How RONA will turn your moodboard into a design system: collect, generate, adjust, preview and export.">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <script>document.documentElement.classList.add("js");</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Atkinson+Hyperlegible+Mono:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="assets/css/tokens.css">
-  <link rel="stylesheet" href="assets/css/base.css">
-  <link rel="stylesheet" href="assets/css/components.css">
-  <link rel="stylesheet" href="assets/css/sections.css">
-  <link rel="stylesheet" href="assets/css/sections-v2.css">
-  <link rel="stylesheet" href="assets/css/pages.css">
-</head>
-<body class="rhythm-2">
-<a class="btn btn--sm skip-link" href="#main">Skip to content</a>
-<header class="site-header">
-  <div class="container site-header__inner">
-    <a class="logo" href="index.html" aria-label="Home"><svg class="logo__mark" aria-hidden="true"><use href="partials/sprite.svg#logo-mark"/></svg><span data-brand>RONA</span></a>
-    <nav class="nav" id="site-nav" aria-label="Main">
-      <a href="how-it-works.html" aria-current="page">How it works</a>
-      <a href="features.html">Features</a>
-      <a href="roadmap.html">Roadmap</a>
-      <a href="faq.html">FAQ</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="cluster">
-      <a class="btn btn--sm header-cta" href="index.html#waitlist">Join the waitlist</a>
-      <button class="btn btn--outline btn--sm btn--icon nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><svg aria-hidden="true"><use href="partials/sprite.svg#i-menu"/></svg><span class="visually-hidden">Menu</span></button>
-    </div>
-  </div>
-</header>
-
-<main id="main">
-  <section class="phead" aria-labelledby="page-title">
-    <div class="phead__art" aria-hidden="true">
-      <svg class="phead__floor" style="" aria-hidden="true"><use href="partials/sprite.svg#b-grid"/></svg>
-      <svg class="phead__shape" style="width:clamp(5rem,9vw,8.5rem);height:clamp(5rem,9vw,8.5rem);right:8%;top:18%" aria-hidden="true"><use href="partials/sprite.svg#b-prism"/></svg><svg class="phead__shape phead__shape--b" style="width:clamp(3rem,5vw,4.5rem);height:clamp(3rem,5vw,4.5rem);right:24%;bottom:16%" aria-hidden="true"><use href="partials/sprite.svg#b-sphere-plasma"/></svg>
-    </div>
-    <div class="container">
-      <span class="label label--dot">How it works</span>
-      <h1 id="page-title">One board in. <span class="grad-text">One system out.</span></h1>
-      <p class="lead">Collect your ideas, let <span data-brand>RONA</span> build the system, adjust it, then export it. This is the plan for the first release.</p>
-    </div>
-  </section>
-
-  <section class="section how" id="how" aria-labelledby="how-title" data-how>
-    <div class="container">
-      <header class="shead" data-reveal>
-        <span class="label"><span class="label__idx">[01]</span>The flow</span>
-        <h2 id="how-title">Four steps, <span class="grad-text">one flow.</span></h2>
-        <p class="lead">Four steps, from your ideas to a design system you can use.</p>
-      </header>
-      <div class="how__grid">
-        <div>
-          <div class="how__steps" role="tablist" aria-label="Steps">
-          <button class="how__step" role="tab" id="how-tab-1" aria-controls="how-v-1" aria-selected="true" data-step="0" style="--step:var(--color-ion)">
-            <span class="how__num">01</span>
-            <span><strong class="how__title">Collect</strong><span class="how__desc">Add images, color swatches, fonts, notes or a Figma file to one board. No moodboard? Pick a style, a vibe and an emotion.</span></span>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>How it works · RONA</title>
+    <meta
+      name="description"
+      content="How RONA will turn your moodboard into a design system: collect, generate, adjust, preview and export."
+    />
+    <meta property="og:title" content="How it works · RONA" />
+    <meta
+      property="og:description"
+      content="How RONA will turn your moodboard into a design system: collect, generate, adjust, preview and export."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Atkinson+Hyperlegible+Mono:wght@400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/sections.css" />
+    <link rel="stylesheet" href="assets/css/sections-v2.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+  </head>
+  <body class="rhythm-2">
+    <a class="btn btn--sm skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="logo" href="index.html" aria-label="Home"
+          ><svg class="logo__mark" aria-hidden="true">
+            <use href="partials/sprite.svg#logo-mark" /></svg
+          ><span data-brand>RONA</span></a
+        >
+        <nav class="nav" id="site-nav" aria-label="Main">
+          <a href="how-it-works.html" aria-current="page">How it works</a>
+          <a href="features.html">Features</a>
+          <a href="roadmap.html">Roadmap</a>
+          <a href="faq.html">FAQ</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="cluster">
+          <a class="btn btn--sm header-cta" href="index.html#waitlist">Join the waitlist</a>
+          <button
+            class="btn btn--outline btn--sm btn--icon nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+          >
+            <svg aria-hidden="true"><use href="partials/sprite.svg#i-menu" /></svg
+            ><span class="visually-hidden">Menu</span>
           </button>
-          <button class="how__step" role="tab" id="how-tab-2" aria-controls="how-v-2" aria-selected="false" tabindex="-1" data-step="1" style="--step:var(--color-pulsar)">
-            <span class="how__num">02</span>
-            <span><strong class="how__title">Generate</strong><span class="how__desc"><span data-brand>RONA</span> reads your board and builds your full system: color, type, spacing, shape, motion, surfaces, shadows and copy voice.</span></span>
-          </button>
-          <button class="how__step" role="tab" id="how-tab-3" aria-controls="how-v-3" aria-selected="false" tabindex="-1" data-step="2" style="--step:var(--color-plasma)">
-            <span class="how__num">03</span>
-            <span><strong class="how__title">Adjust</strong><span class="how__desc">Try other color schemes and font pairs. Move a slider. Lock what you like.</span></span>
-          </button>
-          <button class="how__step" role="tab" id="how-tab-4" aria-controls="how-v-4" aria-selected="false" tabindex="-1" data-step="3" style="--step:var(--color-flare)">
-            <span class="how__num">04</span>
-            <span><strong class="how__title">Preview and export</strong><span class="how__desc">See it on real layouts, in light and dark. Download your tokens, code and brand guideline.</span></span>
-          </button>
-          </div>
-          <div class="how__progress" aria-hidden="true"><i data-how-progress></i></div>
-        </div>
-        <div class="how__stage">
-          <div class="tile tile--deep" aria-hidden="false">
-            <svg class="how__floor" style="" aria-hidden="true"><use href="partials/sprite.svg#b-grid"/></svg>
-            <div class="hv is-active" id="how-v-1" role="tabpanel" aria-labelledby="how-tab-1">
-              <div class="hv__head"><span class="label"><span class="label__idx">1</span>Board</span><span class="tag">6 items</span></div>
-              <div class="hv__body hv1">
-                <div class="mx mx__tilt c1 mx-photo" aria-hidden="true"><svg viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="#2A2F6B"/><circle cx="40" cy="20" r="10" fill="#E07BFF"/><path d="M0 60V40l18-12 16 10 26-14v36z" fill="#111819"/></svg></div>
-                <div class="mx mx__tilt c2 mx-photo" aria-hidden="true"><svg viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="#FF9E64"/><path d="M0 60A30 30 0 0 1 60 60z" fill="#7B93FF"/><path d="M14 60A16 16 0 0 1 46 60z" fill="#0B1012"/></svg></div>
-                <div class="mx mx__tilt c3" aria-hidden="true"><i style="background:#7B93FF"></i><i style="background:#E07BFF"></i><i style="background:#3FEFC4"></i><i style="background:#F4F0E8"></i></div>
-                <div class="mx mx__tilt c4" aria-hidden="true"><b>Aa</b><div class="flabel">Geometric sans</div></div>
-                <div class="mx mx__tilt c5" aria-hidden="true">Calm, curious and a little cosmic.</div>
-                <div class="mx mx__tilt c6" aria-hidden="true">✕ Avoid: neon</div>
-              </div>
-              <div class="hv__drop">Drop images, or import a Figma file</div>
-            </div>
-            <div class="hv" id="how-v-2" role="tabpanel" aria-labelledby="how-tab-2">
-              <div class="hv__head"><span class="label"><span class="label__idx">2</span>Generate</span><span class="tag">8 categories</span></div>
-              <div class="hv-ramps">
-                <div class="r"><span>primary</span><i style="background:#EEF1FF"></i><i style="background:#D9E0FF"></i><i style="background:#BCC8FF"></i><i style="background:#9DAFFF"></i><i style="background:#7B93FF"></i><i style="background:#5F78EC"></i><i style="background:#4A5FCC"></i><i style="background:#38479C"></i><i style="background:#232857"></i></div><div class="r"><span>accent</span><i style="background:#FBEEFF"></i><i style="background:#F5D9FF"></i><i style="background:#EDBBFF"></i><i style="background:#E69BFF"></i><i style="background:#E07BFF"></i><i style="background:#C45FE6"></i><i style="background:#9F48BD"></i><i style="background:#753490"></i><i style="background:#3B1E52"></i></div><div class="r"><span>success</span><i style="background:#E6FFF8"></i><i style="background:#C2FFEE"></i><i style="background:#8FFBDD"></i><i style="background:#62F5CF"></i><i style="background:#3FEFC4"></i><i style="background:#2BCBA6"></i><i style="background:#21A386"></i><i style="background:#187864"></i><i style="background:#0E4A46"></i></div>
-              </div>
-              <div class="hv-cats"><span class="on">color</span><span class="on">type</span><span class="on">spacing</span><span class="on">shape</span><span>motion</span><span>surface</span><span>elevation</span><span>voice</span></div>
-            </div>
-            <div class="hv" id="how-v-3" role="tabpanel" aria-labelledby="how-tab-3">
-              <div class="hv__head"><span class="label"><span class="label__idx">3</span>Adjust</span><span class="tag">3 schemes</span></div>
-              <div class="hv3">
-                <div>
-                  <div class="hv-schemes">
-                    <div class="hv-scheme"><i style="background:#2A2F6B"></i><i style="background:#3FEFC4"></i><i style="background:#FF9E64"></i><i style="background:#F4F0E8"></i><em>A</em></div>
-                    <div class="hv-scheme pick"><i style="background:#4A5FCC"></i><i style="background:#E07BFF"></i><i style="background:#7B93FF"></i><i style="background:#EEF1FF"></i><em>B ✓</em></div>
-                    <div class="hv-scheme"><i style="background:#0B1012"></i><i style="background:#9DAFFF"></i><i style="background:#3FEFC4"></i><i style="background:#F4F0E8"></i><em>C</em></div>
-                  </div>
-                  <div class="hv-slider"><span><span>Corners</span><span>0 px</span></span><div class="t"><i style="width:8%"></i><b style="left:8%"></b></div></div>
-                  <div class="hv-slider"><span><span>Density</span><span>airy</span></span><div class="t"><i style="width:72%"></i><b style="left:72%"></b></div></div>
-                </div>
-                <div>
-                  <div class="hv-lock"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-lock"/></svg>primary.500 locked</div>
-                  <div class="hv-lock"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-lock"/></svg>font.display locked</div>
-                  <div class="hv-why"><b>Why this blue?</b>From your image 1 and the note "calm".</div>
-                </div>
-              </div>
-            </div>
-            <div class="hv" id="how-v-4" role="tabpanel" aria-labelledby="how-tab-4">
-              <div class="hv__head"><span class="label"><span class="label__idx">4</span>Preview and export</span><span class="tag">landing.html</span></div>
-              <div class="hv4">
-                <div class="hv-page"><div class="hv-page__nav"><span>Brand</span><i></i></div><div class="hv-page__body"><b>Hello, galaxy</b><i></i><i class="s"></i><span class="hv-page__cta">Get started</span><div class="hv-page__cards"><span></span><span></span><span></span></div></div></div>
-                <div>
-                  <div class="hv-modes"><span class="on">Light</span><span>Dark</span></div>
-                  <div class="hv-modes"><span>Mobile</span><span class="on">Desktop</span></div>
-                  <div class="hv-why" style="border-color:var(--color-ion);background:rgba(63,239,196,.06)"><b style="color:var(--color-ion)">Contrast check</b>All required text pairs pass WCAG AA.</div>
-                  <div class="hv-dl"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-download"/></svg><span>Export zip<small>tokens · code · docs</small></span></div>
-                </div>
-              </div>
-            </div>
-            <div class="how__nav" role="group" aria-label="Move between steps">
-              <button class="how__navbtn how__navbtn--prev" type="button" data-how-prev aria-label="Previous step"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-arrow"/></svg></button>
-              <span class="how__count" aria-live="polite"><b data-how-count>01</b><span> / 04</span></span>
-              <button class="how__navbtn" type="button" data-how-next aria-label="Next step"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-arrow"/></svg></button>
-            </div>
-          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <div class="pbody">
-    <div class="container">
-      <section class="pblock" aria-labelledby="detail-title">
-      <header class="shead" data-reveal>
-        <span class="label"><span class="label__idx">[02]</span>Each step in detail</span>
-        <h2 id="detail-title">What happens <span class="grad-text">in each step.</span></h2>
-      </header>
-      <section class="fgroup" id="collect" aria-labelledby="collect-title" style="--f-accent:var(--color-flare)">
-        <div class="tile tile--deep fgroup__head" data-reveal>
-          <div class="fgroup__art" aria-hidden="true"><svg class="" style="width:6rem;height:6rem;right:1.5rem;top:1rem" aria-hidden="true"><use href="partials/sprite.svg#b-sphere"/></svg><svg class="" style="width:3.25rem;height:3.25rem;right:7.5rem;top:4.5rem" aria-hidden="true"><use href="partials/sprite.svg#b-cube"/></svg></div>
-          <span class="nbox" aria-hidden="true">01</span>
-          <h2 id="collect-title">Collect</h2>
-          <p>Put everything that shows your taste on one board. No moodboard? Pick from guided options.</p>
-          
+    <main id="main">
+      <section class="phead" aria-labelledby="page-title">
+        <div class="phead__art" aria-hidden="true">
+          <svg class="phead__floor" style="" aria-hidden="true">
+            <use href="partials/sprite.svg#b-grid" />
+          </svg>
+          <svg
+            class="phead__shape"
+            style="
+              width: clamp(5rem, 9vw, 8.5rem);
+              height: clamp(5rem, 9vw, 8.5rem);
+              right: 8%;
+              top: 18%;
+            "
+            aria-hidden="true"
+          >
+            <use href="partials/sprite.svg#b-prism" /></svg
+          ><svg
+            class="phead__shape phead__shape--b"
+            style="
+              width: clamp(3rem, 5vw, 4.5rem);
+              height: clamp(3rem, 5vw, 4.5rem);
+              right: 24%;
+              bottom: 16%;
+            "
+            aria-hidden="true"
+          >
+            <use href="partials/sprite.svg#b-sphere-plasma" />
+          </svg>
         </div>
-        <ul class="flist" role="list">
-          <li class="fitem" data-reveal><span class="icon-chip"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-image"/></svg></span><h3>Images</h3><p>Add images with the file picker, paste, drag and drop, or your phone camera.</p></li>
-          <li class="fitem" data-reveal><span class="icon-chip"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-note"/></svg></span><h3>Your own words</h3><p>Write notes such as "warm, calm, like a notebook". <span data-brand>RONA</span> will read vibe words, color names and comparisons.</p></li>
-          <li class="fitem" data-reveal><span class="icon-chip"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-chips"/></svg></span><h3>Guided options</h3><p>Pick a style, vibe, theme, emotion, density, corner shape, mode and brand color.</p></li>
-          <li class="fitem" data-reveal><span class="icon-chip"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-heart"/></svg></span><h3>Emotions</h3><p>Pick up to 3 emotions. They will change the style and the copy tone.</p></li>
-          <li class="fitem" data-reveal><span class="icon-chip"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-pin"/></svg></span><h3>Weight, pin and avoid</h3><p>Make an item larger to give it more weight. Pin a must-have. Mark an item "avoid".</p></li>
-          <li class="fitem" data-reveal><span class="icon-chip"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-import"/></svg></span><h3>Figma import</h3><p>Paste a Figma link to add its colors, text styles, radius and spacing to the board.</p></li>
-        </ul>
-      </section>
-      <section class="fgroup" id="generate" aria-labelledby="generate-title" style="--f-accent:var(--color-pulsar)">
-        <div class="tile tile--deep fgroup__head" data-reveal>
-          <div class="fgroup__art" aria-hidden="true"><svg class="" style="width:4.5rem;height:5rem;right:1.75rem;top:1rem" aria-hidden="true"><use href="partials/sprite.svg#b-gem"/></svg><svg class="" style="width:5rem;height:3rem;right:6.75rem;top:4.5rem" aria-hidden="true"><use href="partials/sprite.svg#b-torus"/></svg></div>
-          <span class="nbox" aria-hidden="true">02</span>
-          <h2 id="generate-title">Generate</h2>
-          <p><span data-brand>RONA</span> will merge your board into one style profile, then build every value from it.</p>
-          <span class="tag tag--brand">Premium, with sign-in</span>
+        <div class="container">
+          <span class="label label--dot">How it works</span>
+          <h1 id="page-title">One board in. <span class="grad-text">One system out.</span></h1>
+          <p class="lead">
+            Collect your ideas, let <span data-brand>RONA</span> build the system, adjust it, then
+            export it. This is the plan for the first release.
+          </p>
         </div>
-        <ul class="flist" role="list">
-          <li class="fitem" data-reveal><span class="icon-chip"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-color"/></svg></span><h3>Color</h3><p>11-step scales, color roles, status colors, and light and dark mode.</p></li>
-          <li class="fitem" data-reveal><span class="icon-chip"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-type"/></svg></span><h3>Typography</h3><p>Open-license font pairs and a type scale that fits mobile and desktop.</p></li>
-          <li class="fitem" data-reveal><span class="icon-chip"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-shape"/></svg></span><h3>Spacing and shape</h3><p>Compact, balanced or comfortable spacing. Corner radius, borders and sizes.</p></li>
-          <li class="fitem" data-reveal><span class="icon-chip"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-motion"/></svg></span><h3>Motion, surface, elevation</h3><p>Durations and easing, surface styles, and shadow levels from your palette.</p></li>
-          <li class="fitem" data-reveal><span class="icon-chip"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-voice"/></svg></span><h3>Copy voice</h3><p>Voice rules, tone for each situation, and words to use and avoid.</p></li>
-          <li class="fitem" data-reveal><span class="icon-chip"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-contrast"/></svg></span><h3>Contrast checks</h3><p>Each required text pair will pass WCAG AA. <span data-brand>RONA</span> adjusts the color until it passes.</p></li>
-        </ul>
-      </section>
-      <section class="fgroup" id="adjust" aria-labelledby="adjust-title" style="--f-accent:var(--color-plasma)">
-        <div class="tile tile--deep fgroup__head" data-reveal>
-          <div class="fgroup__art" aria-hidden="true"><svg class="" style="width:6.5rem;height:2.75rem;right:1.25rem;top:1.5rem" aria-hidden="true"><use href="partials/sprite.svg#b-capsule"/></svg><svg class="" style="width:3.25rem;height:3.25rem;right:8.25rem;top:4.25rem" aria-hidden="true"><use href="partials/sprite.svg#b-sphere-plasma"/></svg></div>
-          <span class="nbox" aria-hidden="true">03</span>
-          <h2 id="adjust-title">Adjust</h2>
-          <p>Compare options, move sliders and lock what you like. The preview updates at once.</p>
-          
-        </div>
-        <ul class="flist" role="list">
-          <li class="fitem" data-reveal><span class="icon-chip"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-color"/></svg></span><h3>Color schemes</h3><p>Compare 3 to 5 palettes. Filter by harmony, for example analogous or complementary.</p></li>
-          <li class="fitem" data-reveal><span class="icon-chip"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-type"/></svg></span><h3>Fonts and spacing</h3><p>Compare the top 3 font pairs and the top 3 spacing options.</p></li>
-          <li class="fitem" data-reveal><span class="icon-chip"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-sliders"/></svg></span><h3>Sliders</h3><p>Move 8 style sliders, for example calm to energetic, and 4 voice sliders.</p></li>
-          <li class="fitem" data-reveal><span class="icon-chip"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-lock"/></svg></span><h3>Locks</h3><p>A value that you change is locked. A new result will not overwrite it.</p></li>
-          <li class="fitem" data-reveal><span class="icon-chip"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-why"/></svg></span><h3>Know why</h3><p>Each value shows its source: your image, your words, your options or your edit.</p></li>
-          <li class="fitem" data-reveal><span class="icon-chip"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-toggle"/></svg></span><h3>Simple or Advanced</h3><p>Use sliders and swatches, or edit token names and raw values.</p></li>
-        </ul>
-      </section>
-      <section class="fgroup" id="export" aria-labelledby="export-title" style="--f-accent:var(--color-ion)">
-        <div class="tile tile--deep fgroup__head" data-reveal>
-          <div class="fgroup__art" aria-hidden="true"><svg class="" style="width:5rem;height:5rem;right:1.5rem;top:1rem" aria-hidden="true"><use href="partials/sprite.svg#b-cube"/></svg><svg class="" style="width:4rem;height:2.7rem;right:7rem;top:4.75rem" aria-hidden="true"><use href="partials/sprite.svg#b-slab"/></svg></div>
-          <span class="nbox" aria-hidden="true">04</span>
-          <h2 id="export-title">Preview and export</h2>
-          <p>See your system on real layouts. Then download one zip.</p>
-          
-        </div>
-        <ul class="flist flist--2" role="list">
-          <li class="fitem" data-reveal><span class="icon-chip"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-eye"/></svg></span><h3>Live preview</h3><p>A component gallery, a landing page, a dashboard and an article.</p></li>
-          <li class="fitem" data-reveal><span class="icon-chip"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-devices"/></svg></span><h3>Modes and widths</h3><p>Light, dark and side by side. Mobile, tablet and desktop widths.</p></li>
-          <li class="fitem" data-reveal><span class="icon-chip"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-download"/></svg></span><h3>Select the parts</h3><p>Select the parts you want with check boxes. The zip is made in your browser.</p></li>
-          <li class="fitem" data-reveal><span class="icon-chip"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-shield"/></svg></span><h3>Checks before export</h3><p>Broken references and failed contrast pairs will stop the download until you fix them.</p></li>
-        </ul>
-      </section>
       </section>
 
-      <section class="pblock" aria-labelledby="plans-title">
-      <header class="shead" data-reveal>
-        <span class="label"><span class="label__idx">[03]</span>Plans</span>
-        <h2 id="plans-title">What needs <span class="grad-text">an account.</span></h2>
-      </header>
-        <div class="plans">
-          <div class="tile plan" style="--f-accent:var(--color-ion)" data-reveal>
-            <span class="tag tag--v1" style="align-self:flex-start">Free · No account</span>
-            <h3>Edit and export</h3>
-            <ul class="checks"><li>Use the board</li><li>Edit each value and token by hand</li><li>Live preview</li><li>One draft in your browser</li><li>Export</li></ul>
-          </div>
-          <div class="tile plan" style="--f-accent:var(--color-flare)" data-reveal>
-            <span class="tag tag--open" style="align-self:flex-start">Free account · Sign-in</span>
-            <h3>Save your projects</h3>
-            <ul class="checks"><li>All the free tools</li><li>Save your projects on our server</li><li>Open them on any device</li></ul>
-          </div>
-          <div class="tile plan" style="--f-accent:var(--color-pulsar)" data-reveal>
-            <span class="tag tag--brand" style="align-self:flex-start">Premium · Sign-in</span>
-            <h3>Generate from your board</h3>
-            <ul class="checks"><li>Generate the full system from your board</li><li>Edit the style profile</li><li>AI features, with a usage limit</li></ul>
+      <section class="section how" id="how" aria-labelledby="how-title" data-how>
+        <div class="container">
+          <header class="shead" data-reveal>
+            <span class="label"><span class="label__idx">[01]</span>The flow</span>
+            <h2 id="how-title">Four steps, <span class="grad-text">one flow.</span></h2>
+            <p class="lead">Four steps, from your ideas to a design system you can use.</p>
+          </header>
+          <div class="how__grid">
+            <div>
+              <div class="how__steps" role="tablist" aria-label="Steps">
+                <button
+                  type="button"
+                  class="how__step"
+                  role="tab"
+                  id="how-tab-1"
+                  aria-controls="how-v-1"
+                  aria-selected="true"
+                  data-step="0"
+                  style="--step: var(--color-ion)"
+                >
+                  <span class="how__num">01</span>
+                  <span
+                    ><strong class="how__title">Collect</strong
+                    ><span class="how__desc"
+                      >Add images, color swatches, fonts, notes or a Figma file to one board. No
+                      moodboard? Pick a style, a vibe and an emotion.</span
+                    ></span
+                  >
+                </button>
+                <button
+                  type="button"
+                  class="how__step"
+                  role="tab"
+                  id="how-tab-2"
+                  aria-controls="how-v-2"
+                  aria-selected="false"
+                  tabindex="-1"
+                  data-step="1"
+                  style="--step: var(--color-pulsar)"
+                >
+                  <span class="how__num">02</span>
+                  <span
+                    ><strong class="how__title">Generate</strong
+                    ><span class="how__desc"
+                      ><span data-brand>RONA</span> reads your board and builds your full system:
+                      color, type, spacing, shape, motion, surfaces, shadows and copy voice.</span
+                    ></span
+                  >
+                </button>
+                <button
+                  type="button"
+                  class="how__step"
+                  role="tab"
+                  id="how-tab-3"
+                  aria-controls="how-v-3"
+                  aria-selected="false"
+                  tabindex="-1"
+                  data-step="2"
+                  style="--step: var(--color-plasma)"
+                >
+                  <span class="how__num">03</span>
+                  <span
+                    ><strong class="how__title">Adjust</strong
+                    ><span class="how__desc"
+                      >Try other color schemes and font pairs. Move a slider. Lock what you
+                      like.</span
+                    ></span
+                  >
+                </button>
+                <button
+                  type="button"
+                  class="how__step"
+                  role="tab"
+                  id="how-tab-4"
+                  aria-controls="how-v-4"
+                  aria-selected="false"
+                  tabindex="-1"
+                  data-step="3"
+                  style="--step: var(--color-flare)"
+                >
+                  <span class="how__num">04</span>
+                  <span
+                    ><strong class="how__title">Preview and export</strong
+                    ><span class="how__desc"
+                      >See it on real layouts, in light and dark. Download your tokens, code and
+                      brand guideline.</span
+                    ></span
+                  >
+                </button>
+              </div>
+              <div class="how__progress" aria-hidden="true"><i data-how-progress></i></div>
+            </div>
+            <div class="how__stage">
+              <div class="tile tile--deep" aria-hidden="false">
+                <svg class="how__floor" style="" aria-hidden="true">
+                  <use href="partials/sprite.svg#b-grid" />
+                </svg>
+                <div class="hv is-active" id="how-v-1" role="tabpanel" aria-labelledby="how-tab-1">
+                  <div class="hv__head">
+                    <span class="label"><span class="label__idx">1</span>Board</span
+                    ><span class="tag">6 items</span>
+                  </div>
+                  <div class="hv__body hv1">
+                    <div class="mx mx__tilt c1 mx-photo" aria-hidden="true">
+                      <svg viewBox="0 0 60 60" aria-hidden="true">
+                        <rect width="60" height="60" fill="#2A2F6B" />
+                        <circle cx="40" cy="20" r="10" fill="#E07BFF" />
+                        <path d="M0 60V40l18-12 16 10 26-14v36z" fill="#111819" />
+                      </svg>
+                    </div>
+                    <div class="mx mx__tilt c2 mx-photo" aria-hidden="true">
+                      <svg viewBox="0 0 60 60" aria-hidden="true">
+                        <rect width="60" height="60" fill="#FF9E64" />
+                        <path d="M0 60A30 30 0 0 1 60 60z" fill="#7B93FF" />
+                        <path d="M14 60A16 16 0 0 1 46 60z" fill="#0B1012" />
+                      </svg>
+                    </div>
+                    <div class="mx mx__tilt c3" aria-hidden="true">
+                      <i style="background: #7b93ff"></i><i style="background: #e07bff"></i
+                      ><i style="background: #3fefc4"></i><i style="background: #f4f0e8"></i>
+                    </div>
+                    <div class="mx mx__tilt c4" aria-hidden="true">
+                      <b>Aa</b>
+                      <div class="flabel">Geometric sans</div>
+                    </div>
+                    <div class="mx mx__tilt c5" aria-hidden="true">
+                      Calm, curious and a little cosmic.
+                    </div>
+                    <div class="mx mx__tilt c6" aria-hidden="true">✕ Avoid: neon</div>
+                  </div>
+                  <div class="hv__drop">Drop images, or import a Figma file</div>
+                </div>
+                <div class="hv" id="how-v-2" role="tabpanel" aria-labelledby="how-tab-2">
+                  <div class="hv__head">
+                    <span class="label"><span class="label__idx">2</span>Generate</span
+                    ><span class="tag">8 categories</span>
+                  </div>
+                  <div class="hv-ramps">
+                    <div class="r">
+                      <span>primary</span><i style="background: #eef1ff"></i
+                      ><i style="background: #d9e0ff"></i><i style="background: #bcc8ff"></i
+                      ><i style="background: #9dafff"></i><i style="background: #7b93ff"></i
+                      ><i style="background: #5f78ec"></i><i style="background: #4a5fcc"></i
+                      ><i style="background: #38479c"></i><i style="background: #232857"></i>
+                    </div>
+                    <div class="r">
+                      <span>accent</span><i style="background: #fbeeff"></i
+                      ><i style="background: #f5d9ff"></i><i style="background: #edbbff"></i
+                      ><i style="background: #e69bff"></i><i style="background: #e07bff"></i
+                      ><i style="background: #c45fe6"></i><i style="background: #9f48bd"></i
+                      ><i style="background: #753490"></i><i style="background: #3b1e52"></i>
+                    </div>
+                    <div class="r">
+                      <span>success</span><i style="background: #e6fff8"></i
+                      ><i style="background: #c2ffee"></i><i style="background: #8ffbdd"></i
+                      ><i style="background: #62f5cf"></i><i style="background: #3fefc4"></i
+                      ><i style="background: #2bcba6"></i><i style="background: #21a386"></i
+                      ><i style="background: #187864"></i><i style="background: #0e4a46"></i>
+                    </div>
+                  </div>
+                  <div class="hv-cats">
+                    <span class="on">color</span><span class="on">type</span
+                    ><span class="on">spacing</span><span class="on">shape</span><span>motion</span
+                    ><span>surface</span><span>elevation</span><span>voice</span>
+                  </div>
+                </div>
+                <div class="hv" id="how-v-3" role="tabpanel" aria-labelledby="how-tab-3">
+                  <div class="hv__head">
+                    <span class="label"><span class="label__idx">3</span>Adjust</span
+                    ><span class="tag">3 schemes</span>
+                  </div>
+                  <div class="hv3">
+                    <div>
+                      <div class="hv-schemes">
+                        <div class="hv-scheme">
+                          <i style="background: #2a2f6b"></i><i style="background: #3fefc4"></i
+                          ><i style="background: #ff9e64"></i><i style="background: #f4f0e8"></i
+                          ><em>A</em>
+                        </div>
+                        <div class="hv-scheme pick">
+                          <i style="background: #4a5fcc"></i><i style="background: #e07bff"></i
+                          ><i style="background: #7b93ff"></i><i style="background: #eef1ff"></i
+                          ><em>B ✓</em>
+                        </div>
+                        <div class="hv-scheme">
+                          <i style="background: #0b1012"></i><i style="background: #9dafff"></i
+                          ><i style="background: #3fefc4"></i><i style="background: #f4f0e8"></i
+                          ><em>C</em>
+                        </div>
+                      </div>
+                      <div class="hv-slider">
+                        <span><span>Corners</span><span>0 px</span></span>
+                        <div class="t"><i style="width: 8%"></i><b style="left: 8%"></b></div>
+                      </div>
+                      <div class="hv-slider">
+                        <span><span>Density</span><span>airy</span></span>
+                        <div class="t"><i style="width: 72%"></i><b style="left: 72%"></b></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="hv-lock">
+                        <svg class="" style="" aria-hidden="true">
+                          <use href="partials/sprite.svg#i-lock" /></svg
+                        >primary.500 locked
+                      </div>
+                      <div class="hv-lock">
+                        <svg class="" style="" aria-hidden="true">
+                          <use href="partials/sprite.svg#i-lock" /></svg
+                        >font.display locked
+                      </div>
+                      <div class="hv-why">
+                        <b>Why this blue?</b>From your image 1 and the note "calm".
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hv" id="how-v-4" role="tabpanel" aria-labelledby="how-tab-4">
+                  <div class="hv__head">
+                    <span class="label"><span class="label__idx">4</span>Preview and export</span
+                    ><span class="tag">landing.html</span>
+                  </div>
+                  <div class="hv4">
+                    <div class="hv-page">
+                      <div class="hv-page__nav"><span>Brand</span><i></i></div>
+                      <div class="hv-page__body">
+                        <b>Hello, galaxy</b><i></i><i class="s"></i
+                        ><span class="hv-page__cta">Get started</span>
+                        <div class="hv-page__cards"><span></span><span></span><span></span></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="hv-modes"><span class="on">Light</span><span>Dark</span></div>
+                      <div class="hv-modes"><span>Mobile</span><span class="on">Desktop</span></div>
+                      <div
+                        class="hv-why"
+                        style="border-color: var(--color-ion); background: rgba(63, 239, 196, 0.06)"
+                      >
+                        <b style="color: var(--color-ion)">Contrast check</b>All required text pairs
+                        pass WCAG AA.
+                      </div>
+                      <div class="hv-dl">
+                        <svg class="" style="" aria-hidden="true">
+                          <use href="partials/sprite.svg#i-download" /></svg
+                        ><span>Export zip<small>tokens · code · docs</small></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="how__nav" role="group" aria-label="Move between steps">
+                  <button
+                    class="how__navbtn how__navbtn--prev"
+                    type="button"
+                    data-how-prev
+                    aria-label="Previous step"
+                  >
+                    <svg class="" style="" aria-hidden="true">
+                      <use href="partials/sprite.svg#i-arrow" />
+                    </svg>
+                  </button>
+                  <span class="how__count" aria-live="polite"
+                    ><b data-how-count>01</b><span> / 04</span></span
+                  >
+                  <button class="how__navbtn" type="button" data-how-next aria-label="Next step">
+                    <svg class="" style="" aria-hidden="true">
+                      <use href="partials/sprite.svg#i-arrow" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <p class="pnote">Prices and limits are not final. With a free account, you can save your projects and open them on any device.</p>
       </section>
-    </div>
-  </div>
 
-  <section class="section band" id="export-files" aria-labelledby="export-files-title">
-    <div class="container">
-      <header class="shead" data-reveal>
-        <span class="label"><span class="label__idx">[04]</span>What you get</span>
-        <h2 id="export-files-title">One export. <span class="grad-text">Ready to use.</span></h2>
-        <p class="lead">One zip, made in your browser. Select the parts you want.</p>
-      </header>
-      <div class="ex">
-        <ul class="ex__list">
-          <li data-reveal><span class="icon-chip" style="--chip:var(--color-pulsar)"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-tokens"/></svg></span><div><strong>Design tokens</strong><p>In the DTCG standard, for light, dark and 3 density modes.</p></div></li>
-          <li data-reveal><span class="icon-chip" style="--chip:var(--color-plasma)"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-code"/></svg></span><div><strong>Ready code</strong><p>HTML, CSS and JS that opens in any browser. No build step.</p></div></li>
-          <li data-reveal><span class="icon-chip" style="--chip:var(--color-flare)"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-book"/></svg></span><div><strong>Brand guideline</strong><p>A guide for your team, and a part written for AI coding tools. It follows the open DESIGN.md format.</p></div></li>
-          <li data-reveal><span class="icon-chip" style="--chip:var(--color-ion)"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-eye"/></svg></span><div><strong>Docs page</strong><p>One HTML page with live samples of your system.</p></div></li>
-          <li data-reveal><span class="icon-chip" style="--chip:var(--color-pulsar)"><svg class="" style="" aria-hidden="true"><use href="partials/sprite.svg#i-type"/></svg></span><div><strong>Font guide</strong><p>Each font, its license and how to add it.</p></div></li>
-        </ul>
-        <div class="tile tree" data-reveal>
-          <div class="tree__bar"><span>your-brand-2026-10-10.zip</span><span>sample</span></div>
-          <div class="tree__body">
-<pre aria-label="Files in the export zip"><b>your-brand.zip</b>
+      <div class="pbody">
+        <div class="container">
+          <section class="pblock" aria-labelledby="detail-title">
+            <header class="shead" data-reveal>
+              <span class="label"><span class="label__idx">[02]</span>Each step in detail</span>
+              <h2 id="detail-title">What happens <span class="grad-text">in each step.</span></h2>
+            </header>
+            <section
+              class="fgroup"
+              id="collect"
+              aria-labelledby="collect-title"
+              style="--f-accent: var(--color-flare)"
+            >
+              <div class="tile tile--deep fgroup__head" data-reveal>
+                <div class="fgroup__art" aria-hidden="true">
+                  <svg
+                    class=""
+                    style="width: 6rem; height: 6rem; right: 1.5rem; top: 1rem"
+                    aria-hidden="true"
+                  >
+                    <use href="partials/sprite.svg#b-sphere" /></svg
+                  ><svg
+                    class=""
+                    style="width: 3.25rem; height: 3.25rem; right: 7.5rem; top: 4.5rem"
+                    aria-hidden="true"
+                  >
+                    <use href="partials/sprite.svg#b-cube" />
+                  </svg>
+                </div>
+                <span class="nbox" aria-hidden="true">01</span>
+                <h2 id="collect-title">Collect</h2>
+                <p>
+                  Put everything that shows your taste on one board. No moodboard? Pick from guided
+                  options.
+                </p>
+              </div>
+              <ul class="flist" role="list">
+                <li class="fitem" data-reveal>
+                  <span class="icon-chip"
+                    ><svg class="" style="" aria-hidden="true">
+                      <use href="partials/sprite.svg#i-image" /></svg
+                  ></span>
+                  <h3>Images</h3>
+                  <p>
+                    Add images with the file picker, paste, drag and drop, or your phone camera.
+                  </p>
+                </li>
+                <li class="fitem" data-reveal>
+                  <span class="icon-chip"
+                    ><svg class="" style="" aria-hidden="true">
+                      <use href="partials/sprite.svg#i-note" /></svg
+                  ></span>
+                  <h3>Your own words</h3>
+                  <p>
+                    Write notes such as "warm, calm, like a notebook".
+                    <span data-brand>RONA</span> will read vibe words, color names and comparisons.
+                  </p>
+                </li>
+                <li class="fitem" data-reveal>
+                  <span class="icon-chip"
+                    ><svg class="" style="" aria-hidden="true">
+                      <use href="partials/sprite.svg#i-chips" /></svg
+                  ></span>
+                  <h3>Guided options</h3>
+                  <p>
+                    Pick a style, vibe, theme, emotion, density, corner shape, mode and brand color.
+                  </p>
+                </li>
+                <li class="fitem" data-reveal>
+                  <span class="icon-chip"
+                    ><svg class="" style="" aria-hidden="true">
+                      <use href="partials/sprite.svg#i-heart" /></svg
+                  ></span>
+                  <h3>Emotions</h3>
+                  <p>Pick up to 3 emotions. They will change the style and the copy tone.</p>
+                </li>
+                <li class="fitem" data-reveal>
+                  <span class="icon-chip"
+                    ><svg class="" style="" aria-hidden="true">
+                      <use href="partials/sprite.svg#i-pin" /></svg
+                  ></span>
+                  <h3>Weight, pin and avoid</h3>
+                  <p>
+                    Make an item larger to give it more weight. Pin a must-have. Mark an item
+                    "avoid".
+                  </p>
+                </li>
+                <li class="fitem" data-reveal>
+                  <span class="icon-chip"
+                    ><svg class="" style="" aria-hidden="true">
+                      <use href="partials/sprite.svg#i-import" /></svg
+                  ></span>
+                  <h3>Figma import</h3>
+                  <p>
+                    Paste a Figma link to add its colors, text styles, radius and spacing to the
+                    board.
+                  </p>
+                </li>
+              </ul>
+            </section>
+            <section
+              class="fgroup"
+              id="generate"
+              aria-labelledby="generate-title"
+              style="--f-accent: var(--color-pulsar)"
+            >
+              <div class="tile tile--deep fgroup__head" data-reveal>
+                <div class="fgroup__art" aria-hidden="true">
+                  <svg
+                    class=""
+                    style="width: 4.5rem; height: 5rem; right: 1.75rem; top: 1rem"
+                    aria-hidden="true"
+                  >
+                    <use href="partials/sprite.svg#b-gem" /></svg
+                  ><svg
+                    class=""
+                    style="width: 5rem; height: 3rem; right: 6.75rem; top: 4.5rem"
+                    aria-hidden="true"
+                  >
+                    <use href="partials/sprite.svg#b-torus" />
+                  </svg>
+                </div>
+                <span class="nbox" aria-hidden="true">02</span>
+                <h2 id="generate-title">Generate</h2>
+                <p>
+                  <span data-brand>RONA</span> will merge your board into one style profile, then
+                  build every value from it.
+                </p>
+                <span class="tag tag--brand">Premium, with sign-in</span>
+              </div>
+              <ul class="flist" role="list">
+                <li class="fitem" data-reveal>
+                  <span class="icon-chip"
+                    ><svg class="" style="" aria-hidden="true">
+                      <use href="partials/sprite.svg#i-color" /></svg
+                  ></span>
+                  <h3>Color</h3>
+                  <p>11-step scales, color roles, status colors, and light and dark mode.</p>
+                </li>
+                <li class="fitem" data-reveal>
+                  <span class="icon-chip"
+                    ><svg class="" style="" aria-hidden="true">
+                      <use href="partials/sprite.svg#i-type" /></svg
+                  ></span>
+                  <h3>Typography</h3>
+                  <p>Open-license font pairs and a type scale that fits mobile and desktop.</p>
+                </li>
+                <li class="fitem" data-reveal>
+                  <span class="icon-chip"
+                    ><svg class="" style="" aria-hidden="true">
+                      <use href="partials/sprite.svg#i-shape" /></svg
+                  ></span>
+                  <h3>Spacing and shape</h3>
+                  <p>Compact, balanced or comfortable spacing. Corner radius, borders and sizes.</p>
+                </li>
+                <li class="fitem" data-reveal>
+                  <span class="icon-chip"
+                    ><svg class="" style="" aria-hidden="true">
+                      <use href="partials/sprite.svg#i-motion" /></svg
+                  ></span>
+                  <h3>Motion, surface, elevation</h3>
+                  <p>Durations and easing, surface styles, and shadow levels from your palette.</p>
+                </li>
+                <li class="fitem" data-reveal>
+                  <span class="icon-chip"
+                    ><svg class="" style="" aria-hidden="true">
+                      <use href="partials/sprite.svg#i-voice" /></svg
+                  ></span>
+                  <h3>Copy voice</h3>
+                  <p>Voice rules, tone for each situation, and words to use and avoid.</p>
+                </li>
+                <li class="fitem" data-reveal>
+                  <span class="icon-chip"
+                    ><svg class="" style="" aria-hidden="true">
+                      <use href="partials/sprite.svg#i-contrast" /></svg
+                  ></span>
+                  <h3>Contrast checks</h3>
+                  <p>
+                    Each required text pair will pass WCAG AA. <span data-brand>RONA</span> adjusts
+                    the color until it passes.
+                  </p>
+                </li>
+              </ul>
+            </section>
+            <section
+              class="fgroup"
+              id="adjust"
+              aria-labelledby="adjust-title"
+              style="--f-accent: var(--color-plasma)"
+            >
+              <div class="tile tile--deep fgroup__head" data-reveal>
+                <div class="fgroup__art" aria-hidden="true">
+                  <svg
+                    class=""
+                    style="width: 6.5rem; height: 2.75rem; right: 1.25rem; top: 1.5rem"
+                    aria-hidden="true"
+                  >
+                    <use href="partials/sprite.svg#b-capsule" /></svg
+                  ><svg
+                    class=""
+                    style="width: 3.25rem; height: 3.25rem; right: 8.25rem; top: 4.25rem"
+                    aria-hidden="true"
+                  >
+                    <use href="partials/sprite.svg#b-sphere-plasma" />
+                  </svg>
+                </div>
+                <span class="nbox" aria-hidden="true">03</span>
+                <h2 id="adjust-title">Adjust</h2>
+                <p>
+                  Compare options, move sliders and lock what you like. The preview updates at once.
+                </p>
+              </div>
+              <ul class="flist" role="list">
+                <li class="fitem" data-reveal>
+                  <span class="icon-chip"
+                    ><svg class="" style="" aria-hidden="true">
+                      <use href="partials/sprite.svg#i-color" /></svg
+                  ></span>
+                  <h3>Color schemes</h3>
+                  <p>
+                    Compare 3 to 5 palettes. Filter by harmony, for example analogous or
+                    complementary.
+                  </p>
+                </li>
+                <li class="fitem" data-reveal>
+                  <span class="icon-chip"
+                    ><svg class="" style="" aria-hidden="true">
+                      <use href="partials/sprite.svg#i-type" /></svg
+                  ></span>
+                  <h3>Fonts and spacing</h3>
+                  <p>Compare the top 3 font pairs and the top 3 spacing options.</p>
+                </li>
+                <li class="fitem" data-reveal>
+                  <span class="icon-chip"
+                    ><svg class="" style="" aria-hidden="true">
+                      <use href="partials/sprite.svg#i-sliders" /></svg
+                  ></span>
+                  <h3>Sliders</h3>
+                  <p>Move 8 style sliders, for example calm to energetic, and 4 voice sliders.</p>
+                </li>
+                <li class="fitem" data-reveal>
+                  <span class="icon-chip"
+                    ><svg class="" style="" aria-hidden="true">
+                      <use href="partials/sprite.svg#i-lock" /></svg
+                  ></span>
+                  <h3>Locks</h3>
+                  <p>A value that you change is locked. A new result will not overwrite it.</p>
+                </li>
+                <li class="fitem" data-reveal>
+                  <span class="icon-chip"
+                    ><svg class="" style="" aria-hidden="true">
+                      <use href="partials/sprite.svg#i-why" /></svg
+                  ></span>
+                  <h3>Know why</h3>
+                  <p>
+                    Each value shows its source: your image, your words, your options or your edit.
+                  </p>
+                </li>
+                <li class="fitem" data-reveal>
+                  <span class="icon-chip"
+                    ><svg class="" style="" aria-hidden="true">
+                      <use href="partials/sprite.svg#i-toggle" /></svg
+                  ></span>
+                  <h3>Simple or Advanced</h3>
+                  <p>Use sliders and swatches, or edit token names and raw values.</p>
+                </li>
+              </ul>
+            </section>
+            <section
+              class="fgroup"
+              id="export"
+              aria-labelledby="export-title"
+              style="--f-accent: var(--color-ion)"
+            >
+              <div class="tile tile--deep fgroup__head" data-reveal>
+                <div class="fgroup__art" aria-hidden="true">
+                  <svg
+                    class=""
+                    style="width: 5rem; height: 5rem; right: 1.5rem; top: 1rem"
+                    aria-hidden="true"
+                  >
+                    <use href="partials/sprite.svg#b-cube" /></svg
+                  ><svg
+                    class=""
+                    style="width: 4rem; height: 2.7rem; right: 7rem; top: 4.75rem"
+                    aria-hidden="true"
+                  >
+                    <use href="partials/sprite.svg#b-slab" />
+                  </svg>
+                </div>
+                <span class="nbox" aria-hidden="true">04</span>
+                <h2 id="export-title">Preview and export</h2>
+                <p>See your system on real layouts. Then download one zip.</p>
+              </div>
+              <ul class="flist flist--2" role="list">
+                <li class="fitem" data-reveal>
+                  <span class="icon-chip"
+                    ><svg class="" style="" aria-hidden="true">
+                      <use href="partials/sprite.svg#i-eye" /></svg
+                  ></span>
+                  <h3>Live preview</h3>
+                  <p>A component gallery, a landing page, a dashboard and an article.</p>
+                </li>
+                <li class="fitem" data-reveal>
+                  <span class="icon-chip"
+                    ><svg class="" style="" aria-hidden="true">
+                      <use href="partials/sprite.svg#i-devices" /></svg
+                  ></span>
+                  <h3>Modes and widths</h3>
+                  <p>Light, dark and side by side. Mobile, tablet and desktop widths.</p>
+                </li>
+                <li class="fitem" data-reveal>
+                  <span class="icon-chip"
+                    ><svg class="" style="" aria-hidden="true">
+                      <use href="partials/sprite.svg#i-download" /></svg
+                  ></span>
+                  <h3>Select the parts</h3>
+                  <p>
+                    Select the parts you want with check boxes. The zip is made in your browser.
+                  </p>
+                </li>
+                <li class="fitem" data-reveal>
+                  <span class="icon-chip"
+                    ><svg class="" style="" aria-hidden="true">
+                      <use href="partials/sprite.svg#i-shield" /></svg
+                  ></span>
+                  <h3>Checks before export</h3>
+                  <p>
+                    Broken references and failed contrast pairs will stop the download until you fix
+                    them.
+                  </p>
+                </li>
+              </ul>
+            </section>
+          </section>
+
+          <section class="pblock" aria-labelledby="plans-title">
+            <header class="shead" data-reveal>
+              <span class="label"><span class="label__idx">[03]</span>Plans</span>
+              <h2 id="plans-title">What needs <span class="grad-text">an account.</span></h2>
+            </header>
+            <div class="plans">
+              <div class="tile plan" style="--f-accent: var(--color-ion)" data-reveal>
+                <span class="tag tag--v1" style="align-self: flex-start">Free · No account</span>
+                <h3>Edit and export</h3>
+                <ul class="checks">
+                  <li>Use the board</li>
+                  <li>Edit each value and token by hand</li>
+                  <li>Live preview</li>
+                  <li>One draft in your browser</li>
+                  <li>Export</li>
+                </ul>
+              </div>
+              <div class="tile plan" style="--f-accent: var(--color-flare)" data-reveal>
+                <span class="tag tag--open" style="align-self: flex-start"
+                  >Free account · Sign-in</span
+                >
+                <h3>Save your projects</h3>
+                <ul class="checks">
+                  <li>All the free tools</li>
+                  <li>Save your projects on our server</li>
+                  <li>Open them on any device</li>
+                </ul>
+              </div>
+              <div class="tile plan" style="--f-accent: var(--color-pulsar)" data-reveal>
+                <span class="tag tag--brand" style="align-self: flex-start">Premium · Sign-in</span>
+                <h3>Generate from your board</h3>
+                <ul class="checks">
+                  <li>Generate the full system from your board</li>
+                  <li>Edit the style profile</li>
+                  <li>AI features, with a usage limit</li>
+                </ul>
+              </div>
+            </div>
+            <p class="pnote">
+              Prices and limits are not final. With a free account, you can save your projects and
+              open them on any device.
+            </p>
+          </section>
+        </div>
+      </div>
+
+      <section class="section band" id="export-files" aria-labelledby="export-files-title">
+        <div class="container">
+          <header class="shead" data-reveal>
+            <span class="label"><span class="label__idx">[04]</span>What you get</span>
+            <h2 id="export-files-title">
+              One export. <span class="grad-text">Ready to use.</span>
+            </h2>
+            <p class="lead">One zip, made in your browser. Select the parts you want.</p>
+          </header>
+          <div class="ex">
+            <ul class="ex__list">
+              <li data-reveal>
+                <span class="icon-chip" style="--chip: var(--color-pulsar)"
+                  ><svg class="" style="" aria-hidden="true">
+                    <use href="partials/sprite.svg#i-tokens" /></svg
+                ></span>
+                <div>
+                  <strong>Design tokens</strong>
+                  <p>In the DTCG standard, for light, dark and 3 density modes.</p>
+                </div>
+              </li>
+              <li data-reveal>
+                <span class="icon-chip" style="--chip: var(--color-plasma)"
+                  ><svg class="" style="" aria-hidden="true">
+                    <use href="partials/sprite.svg#i-code" /></svg
+                ></span>
+                <div>
+                  <strong>Ready code</strong>
+                  <p>HTML, CSS and JS that opens in any browser. No build step.</p>
+                </div>
+              </li>
+              <li data-reveal>
+                <span class="icon-chip" style="--chip: var(--color-flare)"
+                  ><svg class="" style="" aria-hidden="true">
+                    <use href="partials/sprite.svg#i-book" /></svg
+                ></span>
+                <div>
+                  <strong>Brand guideline</strong>
+                  <p>
+                    A guide for your team, and a part written for AI coding tools. It follows the
+                    open DESIGN.md format.
+                  </p>
+                </div>
+              </li>
+              <li data-reveal>
+                <span class="icon-chip" style="--chip: var(--color-ion)"
+                  ><svg class="" style="" aria-hidden="true">
+                    <use href="partials/sprite.svg#i-eye" /></svg
+                ></span>
+                <div>
+                  <strong>Docs page</strong>
+                  <p>One HTML page with live samples of your system.</p>
+                </div>
+              </li>
+              <li data-reveal>
+                <span class="icon-chip" style="--chip: var(--color-pulsar)"
+                  ><svg class="" style="" aria-hidden="true">
+                    <use href="partials/sprite.svg#i-type" /></svg
+                ></span>
+                <div>
+                  <strong>Font guide</strong>
+                  <p>Each font, its license and how to add it.</p>
+                </div>
+              </li>
+            </ul>
+            <div class="tile tree" data-reveal>
+              <div class="tree__bar"><span>your-brand-2026-10-10.zip</span><span>sample</span></div>
+              <div class="tree__body">
+                <pre role="group" aria-label="Files in the export zip"><b>your-brand.zip</b>
 ├─ <b>README.md</b>
 ├─ <b>FONTS.md</b>
 ├─ <span class="d">tokens/</span>
@@ -288,7 +849,10 @@
 └─ <span class="d">docs/</span>
    ├─ <span class="m">DESIGN.md</span>
    └─ docs.html</pre>
-<pre aria-label="Sample from tokens.base.json"><span class="c">// tokens/tokens.base.json</span>
+                <pre
+                  role="group"
+                  aria-label="Sample from tokens.base.json"
+                ><span class="c">// tokens/tokens.base.json</span>
 {
   <span class="p">"color"</span>: {
     <span class="p">"primary"</span>: {
@@ -305,61 +869,120 @@
     }
   }
 }</pre>
-          </div>
-          <div class="tree__note"><span>Made in your browser</span><span>Contrast checked before export</span><span>No font files included</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="join" aria-labelledby="join-title" style="padding-top:0">
-    <div class="container">
-      <div class="cta-b" data-reveal>
-        <svg class="floor" style="" aria-hidden="true"><use href="partials/sprite.svg#b-grid"/></svg>
-        <svg class="s1" style="" aria-hidden="true"><use href="partials/sprite.svg#b-sphere"/></svg>
-        <svg class="s2" style="" aria-hidden="true"><use href="partials/sprite.svg#b-torus"/></svg>
-        <svg class="s3" style="" aria-hidden="true"><use href="partials/sprite.svg#b-gem"/></svg>
-        <span class="label label--dot">Coming soon</span>
-        <h2 id="join-title">Your brand system starts with <span class="grad-text">one board.</span></h2>
-        <p>The waitlist for <span data-brand>RONA</span> opens soon.</p>
-        <div>
-          <form class="waitlist is-soon">
-            <label class="visually-hidden" for="wl-page">Email address</label>
-            <div class="waitlist__row">
-              <input class="input" id="wl-page" type="email" name="email" placeholder="you@company.com" autocomplete="email" disabled aria-describedby="wl-page-soon">
-              <button class="btn" type="button" disabled>Join the waitlist</button>
+              </div>
+              <div class="tree__note">
+                <span>Made in your browser</span><span>Contrast checked before export</span
+                ><span>No font files included</span>
+              </div>
             </div>
-            <p class="waitlist__micro" id="wl-page-soon"><strong>Waitlist opens soon.</strong></p>
-          </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="join" aria-labelledby="join-title" style="padding-top: 0">
+        <div class="container">
+          <div class="cta-b" data-reveal>
+            <svg class="floor" style="" aria-hidden="true">
+              <use href="partials/sprite.svg#b-grid" />
+            </svg>
+            <svg class="s1" style="" aria-hidden="true">
+              <use href="partials/sprite.svg#b-sphere" />
+            </svg>
+            <svg class="s2" style="" aria-hidden="true">
+              <use href="partials/sprite.svg#b-torus" />
+            </svg>
+            <svg class="s3" style="" aria-hidden="true">
+              <use href="partials/sprite.svg#b-gem" />
+            </svg>
+            <span class="label label--dot">Coming soon</span>
+            <h2 id="join-title">
+              Your brand system starts with <span class="grad-text">one board.</span>
+            </h2>
+            <p>The waitlist for <span data-brand>RONA</span> opens soon.</p>
+            <div>
+              <form class="waitlist is-soon">
+                <label class="visually-hidden" for="wl-page">Email address</label>
+                <div class="waitlist__row">
+                  <input
+                    class="input"
+                    id="wl-page"
+                    type="email"
+                    name="email"
+                    placeholder="you@company.com"
+                    autocomplete="email"
+                    disabled
+                    aria-describedby="wl-page-soon"
+                  />
+                  <button class="btn" type="button" disabled>Join the waitlist</button>
+                </div>
+                <p class="waitlist__micro" id="wl-page-soon">
+                  <strong>Waitlist opens soon.</strong>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="cols">
+          <div class="stack" style="--span: 6; --stack-gap: var(--space-3)">
+            <a class="logo" href="index.html"
+              ><svg class="logo__mark" aria-hidden="true">
+                <use href="partials/sprite.svg#logo-mark" /></svg
+              ><span data-brand>RONA</span></a
+            >
+            <p class="small muted" style="max-width: 30ch">From moodboard to design system.</p>
+          </div>
+          <div style="--span: 2">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="how-it-works.html">How it works</a></li>
+              <li><a href="features.html">Features</a></li>
+              <li><a href="roadmap.html">Roadmap</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </div>
+          <div style="--span: 2">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div style="--span: 2">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="privacy.html">Privacy policy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="cluster small"
+          style="
+            justify-content: space-between;
+            margin-top: var(--space-8);
+            padding-top: var(--space-4);
+            border-top: 1px solid var(--color-line);
+            color: var(--color-text-faint);
+            font-family: var(--font-mono);
+            font-size: var(--text-xs);
+            letter-spacing: 0.04em;
+          "
+        >
+          <span>© <span data-year>2026</span></span>
+          <span>Made for founders with taste.</span>
         </div>
       </div>
-    </div>
-  </section>
-</main>
+    </footer>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="cols">
-      <div class="stack" style="--span:6;--stack-gap:var(--space-3)">
-        <a class="logo" href="index.html"><svg class="logo__mark" aria-hidden="true"><use href="partials/sprite.svg#logo-mark"/></svg><span data-brand>RONA</span></a>
-        <p class="small muted" style="max-width:30ch">From moodboard to design system.</p>
-      </div>
-      <div style="--span:2"><h4>Product</h4><ul><li><a href="how-it-works.html">How it works</a></li><li><a href="features.html">Features</a></li><li><a href="roadmap.html">Roadmap</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
-      <div style="--span:2"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div style="--span:2"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy policy</a></li></ul></div>
-    </div>
-    <div class="cluster small" style="justify-content:space-between;margin-top:var(--space-8);padding-top:var(--space-4);border-top:1px solid var(--color-line);color:var(--color-text-faint);font-family:var(--font-mono);font-size:var(--text-xs);letter-spacing:.04em">
-      <span>© <span data-year>2026</span></span>
-      <span>Made for founders with taste.</span>
-    </div>
-  </div>
-</footer>
-
-<script src="assets/vendor/gsap.min.js"></script>
-<script src="assets/vendor/ScrollTrigger.min.js"></script>
-<script src="assets/js/site.config.js"></script>
-<script src="assets/js/main.js"></script>
-<script src="assets/js/sections.js"></script>
-<script src="assets/js/pages.js"></script>
-</body>
+    <script src="assets/vendor/gsap.min.js"></script>
+    <script src="assets/vendor/ScrollTrigger.min.js"></script>
+    <script src="assets/js/site.config.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/sections.js"></script>
+    <script src="assets/js/pages.js"></script>
+  </body>
 </html>

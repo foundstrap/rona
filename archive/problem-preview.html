@@ -1,288 +1,1356 @@
 <!doctype html>
+<!-- [html-validate-disable unique-landmark -- the two Problem variants repeat one heading on purpose] -->
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="robots" content="noindex">
-  <script>document.documentElement.classList.add("js");</script>
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>RONA · Problem section options</title>
-  <meta name="description" content="RONA turns your moodboard into a complete design system and brand guideline.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Atkinson+Hyperlegible+Mono:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="../assets/css/tokens.css">
-  <link rel="stylesheet" href="../assets/css/base.css">
-  <link rel="stylesheet" href="../assets/css/components.css">
-  <link rel="stylesheet" href="../assets/css/hero.css">
-  <link rel="stylesheet" href="../assets/css/sections.css">
-</head>
-<body>
-<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYToyMzQ0ZDJkZi1jYzAwLTRiNzYtYWIxNy00NjQ5NGMzNzY2MTEAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaLMqIpskte7TYq6DFdFzBiAAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDplYzU0MzRmMS0yZTM3LTRhNzktODUxZC0xZmU2OGRkMjMxOWNscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoizCkBPhyImoxO1xZV92KKgAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggD+a7mTkTlQJ8VdSiw689URjcCAMsX0npwVsVSPu7mDKkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaMbiJad76aO38gK45nBq3RUAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCDhSzgSarJMAphQG8zaUN/a1ZwdqVhZaU765iV16pnW2WRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBjcZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjIzNDRkMmRmLWNjMDAtNGI3Ni1hYjE3LTQ2NDk0YzM3NjYxMS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmRhOWZiMDRhLWY5OTAtNDk3MC1hZmM5LTE4NDYxOTRiZWRhMHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCAP5ruZOROVAnxV1KLDrz1RGNwIAyxfSenBWxVI+7uYMqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggUz8naw0t6rm5RXDopdk5Pz8nSl0lrWOlBI8upyDKf2iiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg7FlRwWxt7tAzaeRM8JbMpxH/sqx2FTPhjejwqFkM5hB0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQD7hLfv2fhLS7cFX9JwDHyUGWY4doo5Deu+r4tmUOrCeQ8QSLKj+yz0aKJuRtVSqiuWZP/jaMkuQcXQ8awPOQeE=</c2pa:manifest></metadata>
-  <defs>
-    <linearGradient id="bg-horizon" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7B93FF"/><stop offset="1" stop-color="#E07BFF"/></linearGradient>
-    <linearGradient id="bg-drift" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#3FEFC4"/><stop offset="1" stop-color="#7B93FF"/></linearGradient>
-    <linearGradient id="bg-corona" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF9E64"/><stop offset="1" stop-color="#E07BFF"/></linearGradient>
-    <radialGradient id="bg-sphere" cx="0.34" cy="0.3" r="0.8"><stop offset="0" stop-color="#F4F0E8"/><stop offset="0.18" stop-color="#C3CDFF"/><stop offset="0.55" stop-color="#7B93FF"/><stop offset="1" stop-color="#2A2F6B"/></radialGradient>
-    <radialGradient id="bg-sphere-plasma" cx="0.34" cy="0.3" r="0.8"><stop offset="0" stop-color="#F4F0E8"/><stop offset="0.2" stop-color="#F1C2FF"/><stop offset="0.6" stop-color="#E07BFF"/><stop offset="1" stop-color="#3B1E52"/></radialGradient>
-    <radialGradient id="bg-sphere-ion" cx="0.34" cy="0.3" r="0.8"><stop offset="0" stop-color="#F4F0E8"/><stop offset="0.2" stop-color="#B5FFEB"/><stop offset="0.6" stop-color="#3FEFC4"/><stop offset="1" stop-color="#0E4A46"/></radialGradient>
-    <linearGradient id="bg-cyl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2A2F6B"/><stop offset="0.35" stop-color="#9DAFFF"/><stop offset="0.55" stop-color="#7B93FF"/><stop offset="1" stop-color="#232857"/></linearGradient>
-    <linearGradient id="bg-cyl-plasma" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3B1E52"/><stop offset="0.35" stop-color="#F1C2FF"/><stop offset="0.6" stop-color="#E07BFF"/><stop offset="1" stop-color="#3B1E52"/></linearGradient>
-    <linearGradient id="bg-cyl-ion" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0E4A46"/><stop offset="0.35" stop-color="#B5FFEB"/><stop offset="0.6" stop-color="#3FEFC4"/><stop offset="1" stop-color="#0E4A46"/></linearGradient>
-    <linearGradient id="bg-cyl-flare" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5A2A17"/><stop offset="0.35" stop-color="#FFD2B5"/><stop offset="0.6" stop-color="#FF9E64"/><stop offset="1" stop-color="#5A2A17"/></linearGradient>
-    <linearGradient id="bg-torus" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F1C2FF"/><stop offset="0.35" stop-color="#E07BFF"/><stop offset="0.75" stop-color="#7B93FF"/><stop offset="1" stop-color="#232857"/></linearGradient>
-    <linearGradient id="bg-hole" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#232857"/><stop offset="1" stop-color="#9DAFFF"/></linearGradient>
-    <radialGradient id="bg-shine" cx="0.3" cy="0.25" r="0.5"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0.75"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></radialGradient>
-    <linearGradient id="bg-top" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4F0E8"/><stop offset="1" stop-color="#C3CDFF"/></linearGradient>
-    <!-- Grain inside a shape: noise blended over the fill, clipped to the shape -->
-    <filter id="b-grain" x="-15%" y="-15%" width="130%" height="130%" color-interpolation-filters="sRGB">
-      <feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="2" stitchTiles="stitch" result="t"/>
-      <feColorMatrix in="t" type="saturate" values="0" result="g"/>
-      <feBlend in="SourceGraphic" in2="g" mode="overlay" result="b"/>
-      <feComposite in="b" in2="SourceGraphic" operator="in"/>
-    </filter>
-  </defs>
-  <!-- B shapes: gradients and grain are built in -->
-  <symbol id="b-sphere" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="url(#bg-sphere)" filter="url(#b-grain)"/></symbol>
-  <symbol id="b-sphere-plasma" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="url(#bg-sphere-plasma)" filter="url(#b-grain)"/></symbol>
-  <symbol id="b-sphere-ion" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="url(#bg-sphere-ion)" filter="url(#b-grain)"/></symbol>
-  <symbol id="b-torus" viewBox="0 0 120 70"><g filter="url(#b-grain)"><path fill-rule="evenodd" fill="url(#bg-torus)" d="M60 4C30 4 4 17 4 34s26 32 56 32 56-15 56-32S90 4 60 4zM60 24c-15 0-26 4-26 9s11 8 26 8 26-3 26-8-11-9-26-9z"/><path d="M34 33c0-5 11-9 26-9s26 4 26 9c-4-3-14-5-26-5s-22 2-26 5z" fill="url(#bg-hole)"/><ellipse cx="40" cy="15" rx="18" ry="6" fill="url(#bg-shine)"/></g></symbol>
-  <symbol id="b-capsule" viewBox="0 0 120 50"><g filter="url(#b-grain)"><rect x="4" y="4" width="112" height="42" rx="21" fill="url(#bg-cyl)" transform="rotate(0)"/><rect x="4" y="4" width="112" height="42" rx="21" fill="url(#bg-drift)" opacity="0.55"/><rect x="18" y="9" width="60" height="9" rx="4.5" fill="#FFFFFF" opacity="0.35"/><rect x="4" y="30" width="112" height="16" rx="8" fill="#0B1012" opacity="0.25"/></g></symbol>
-  <symbol id="b-prism" viewBox="0 0 116 100"><g filter="url(#b-grain)"><path d="M8 92L36 22l44-14L52 78z" fill="#9DAFFF"/><path d="M36 22l44-14 28 70-44 14z" fill="#4E5FC4"/><path d="M8 92l28-70 28 70z" fill="#E07BFF"/><path d="M36 22l-28 70h9z" fill="#F4F0E8" opacity="0.3"/></g></symbol>
-  <symbol id="b-cube" viewBox="0 0 100 100"><g filter="url(#b-grain)"><path d="M50 6l42 22-42 22L8 28z" fill="#9DAFFF"/><path d="M8 28l42 22v46L8 72z" fill="#5C6FD6"/><path d="M92 28L50 50v46l42-24z" fill="#E07BFF"/></g></symbol>
-  <symbol id="b-arc" viewBox="0 0 100 50"><path d="M2 50a48 48 0 0 1 96 0z" fill="url(#bg-corona)" filter="url(#b-grain)"/></symbol>
-  <symbol id="b-quarter" viewBox="0 0 100 100"><path d="M0 0h100v100A100 100 0 0 1 0 0z" fill="url(#bg-horizon)" filter="url(#b-grain)"/></symbol>
-  <symbol id="b-grid" viewBox="0 0 1200 200" preserveAspectRatio="xMidYMax slice"><defs><linearGradient id="bg-gridfade" x1="0" y1="0" x2="0" y2="200" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="currentColor" stop-opacity="0"/><stop offset="0.22" stop-color="currentColor" stop-opacity="0"/><stop offset="0.5" stop-color="currentColor" stop-opacity="0.35"/><stop offset="1" stop-color="currentColor" stop-opacity="1"/></linearGradient><clipPath id="bg-gridclip"><rect width="1200" height="200"/></clipPath></defs><path d="M-1800.0 200L600.0 0 M-1740.0 200L600.0 0 M-1680.0 200L600.0 0 M-1620.0 200L600.0 0 M-1560.0 200L600.0 0 M-1500.0 200L600.0 0 M-1440.0 200L600.0 0 M-1380.0 200L600.0 0 M-1320.0 200L600.0 0 M-1260.0 200L600.0 0 M-1200.0 200L600.0 0 M-1140.0 200L600.0 0 M-1080.0 200L600.0 0 M-1020.0 200L600.0 0 M-960.0 200L600.0 0 M-900.0 200L600.0 0 M-840.0 200L600.0 0 M-780.0 200L600.0 0 M-720.0 200L600.0 0 M-660.0 200L600.0 0 M-600.0 200L600.0 0 M-540.0 200L600.0 0 M-480.0 200L600.0 0 M-420.0 200L600.0 0 M-360.0 200L600.0 0 M-300.0 200L600.0 0 M-240.0 200L600.0 0 M-180.0 200L600.0 0 M-120.0 200L600.0 0 M-60.0 200L600.0 0 M0.0 200L600.0 0 M60.0 200L600.0 0 M120.0 200L600.0 0 M180.0 200L600.0 0 M240.0 200L600.0 0 M300.0 200L600.0 0 M360.0 200L600.0 0 M420.0 200L600.0 0 M480.0 200L600.0 0 M540.0 200L600.0 0 M600.0 200L600.0 0 M660.0 200L600.0 0 M720.0 200L600.0 0 M780.0 200L600.0 0 M840.0 200L600.0 0 M900.0 200L600.0 0 M960.0 200L600.0 0 M1020.0 200L600.0 0 M1080.0 200L600.0 0 M1140.0 200L600.0 0 M1200.0 200L600.0 0 M1260.0 200L600.0 0 M1320.0 200L600.0 0 M1380.0 200L600.0 0 M1440.0 200L600.0 0 M1500.0 200L600.0 0 M1560.0 200L600.0 0 M1620.0 200L600.0 0 M1680.0 200L600.0 0 M1740.0 200L600.0 0 M1800.0 200L600.0 0 M1860.0 200L600.0 0 M1920.0 200L600.0 0 M1980.0 200L600.0 0 M2040.0 200L600.0 0 M2100.0 200L600.0 0 M2160.0 200L600.0 0 M2220.0 200L600.0 0 M2280.0 200L600.0 0 M2340.0 200L600.0 0 M2400.0 200L600.0 0 M2460.0 200L600.0 0 M2520.0 200L600.0 0 M2580.0 200L600.0 0 M2640.0 200L600.0 0 M2700.0 200L600.0 0 M2760.0 200L600.0 0 M2820.0 200L600.0 0 M2880.0 200L600.0 0 M2940.0 200L600.0 0 M3000.0 200L600.0 0 M0 200.00H1200 M0 153.85H1200 M0 125.00H1200 M0 105.26H1200 M0 90.91H1200 M0 80.00H1200 M0 71.43H1200 M0 64.52H1200 M0 58.82H1200 M0 54.05H1200 M0 50.00H1200 M0 46.51H1200 M0 43.48H1200 M0 40.82H1200 M0 38.46H1200 M0 36.36H1200 M0 34.48H1200 M0 32.79H1200 M0 31.25H1200 M0 29.85H1200 M0 28.57H1200 M0 27.40H1200 M0 26.32H1200 M0 25.32H1200 M0 24.39H1200 M0 23.53H1200 M0 22.73H1200 M0 21.98H1200 M0 21.28H1200 M0 20.62H1200 M0 20.00H1200 M0 19.42H1200 M0 18.87H1200 M0 18.35H1200 M0 17.86H1200 M0 17.39H1200 M0 16.95H1200 M0 16.53H1200 M0 16.13H1200 M0 15.75H1200 M0 15.38H1200 M0 15.04H1200 M0 14.71H1200 M0 14.39H1200 M0 14.08H1200 M0 13.79H1200 M0 13.51H1200 M0 13.25H1200 M0 12.99H1200 M0 12.74H1200 M0 12.50H1200 M0 12.27H1200 M0 12.05H1200 M0 11.83H1200 M0 11.63H1200 M0 11.43H1200 M0 11.24H1200 M0 11.05H1200 M0 10.87H1200 M0 10.70H1200" fill="none" stroke="url(#bg-gridfade)" stroke-width="1" vector-effect="non-scaling-stroke" clip-path="url(#bg-gridclip)"/></symbol>
-  <symbol id="b-orbit" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="60" cy="60" rx="56" ry="20" transform="rotate(-24 60 60)"/><ellipse cx="60" cy="60" rx="56" ry="20" transform="rotate(36 60 60)" stroke-dasharray="3 5"/></g><circle cx="60" cy="60" r="12" fill="url(#bg-sphere)"/><circle cx="104" cy="38" r="4" fill="#3FEFC4"/></symbol>
-  <symbol id="b-star" viewBox="0 0 100 100"><path d="M50 0C53 36 64 47 100 50 64 53 53 64 50 100 47 64 36 53 0 50 36 47 47 36 50 0z" fill="currentColor"/></symbol>
-  <symbol id="b-wave" viewBox="0 0 160 30"><path d="M2 15c13-16 26-16 39 0s26 16 39 0 26-16 39 0 26 16 39 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square"/></symbol>
-  <symbol id="b-bars" viewBox="0 0 100 100"><g filter="url(#b-grain)"><rect x="0" y="0" width="100" height="18" fill="#7B93FF"/><rect x="0" y="27" width="76" height="18" fill="#A889FF"/><rect x="0" y="54" width="52" height="18" fill="#C784FF"/><rect x="0" y="81" width="28" height="18" fill="#E07BFF"/></g></symbol>
-  <symbol id="b-cross" viewBox="0 0 40 40"><path d="M20 0v40M0 20h40" stroke="currentColor" stroke-width="1.5"/></symbol>
-  <symbol id="b-pyramid" viewBox="0 0 100 100"><g filter="url(#b-grain)"><path d="M50 6L8 74l42 20z" fill="#9DAFFF"/><path d="M50 6l42 68-42 20z" fill="#4E5FC4"/><path d="M50 6L8 74l10 4z" fill="#F4F0E8" opacity="0.35"/></g></symbol>
-  <symbol id="b-cylinder" viewBox="0 0 80 110"><g filter="url(#b-grain)"><path d="M6 18v74c0 9 15 16 34 16s34-7 34-16V18z" fill="url(#bg-cyl-ion)"/><ellipse cx="40" cy="18" rx="34" ry="14" fill="#B5FFEB"/><ellipse cx="32" cy="15" rx="16" ry="5" fill="url(#bg-shine)"/></g></symbol>
-  <symbol id="b-cone" viewBox="0 0 90 110"><g filter="url(#b-grain)"><path d="M45 4L4 92c0 8 18 14 41 14s41-6 41-14z" fill="url(#bg-cyl-flare)"/><path d="M4 92c0 8 18 14 41 14s41-6 41-14c-8 5-24 8-41 8S12 97 4 92z" fill="#5A2A17" opacity="0.6"/></g></symbol>
-  <symbol id="b-dome" viewBox="0 0 110 70"><g filter="url(#b-grain)"><path d="M4 56a51 51 0 0 1 102 0z" fill="url(#bg-sphere-plasma)"/><ellipse cx="55" cy="56" rx="51" ry="10" fill="#3B1E52"/><ellipse cx="55" cy="56" rx="51" ry="10" fill="none" stroke="#F1C2FF" stroke-opacity="0.5"/></g></symbol>
-  <symbol id="b-slab" viewBox="0 0 120 80"><g filter="url(#b-grain)"><path d="M60 6l54 24-54 24L6 30z" fill="url(#bg-top)"/><path d="M6 30l54 24v20L6 50z" fill="#7B93FF"/><path d="M114 30L60 54v20l54-24z" fill="#3FEFC4"/></g></symbol>
-  <symbol id="b-gem" viewBox="0 0 100 110"><g filter="url(#b-grain)"><path d="M50 4L8 52h42z" fill="#C3CDFF"/><path d="M50 4l42 48H50z" fill="#7B93FF"/><path d="M8 52l42 54V52z" fill="#E07BFF"/><path d="M92 52l-42 54V52z" fill="#8A4FB0"/></g></symbol>
-  <symbol id="logo-mark" viewBox="0 0 32 32"><rect x="1" y="1" width="18" height="18" fill="#7B93FF"/><circle cx="21" cy="21" r="10" fill="url(#bg-horizon)"/><rect x="1" y="1" width="18" height="18" fill="none" stroke="#0B1012" stroke-width="0"/></symbol>
-  <!-- Icons: same set as Version A. Stroke = currentColor -->
-  <symbol id="i-board" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><rect x="6.5" y="6.5" width="5" height="6" rx="1"/><circle cx="16" cy="9" r="2"/><path d="M6.5 16.5h11"/></g></symbol>
-  <symbol id="i-spark" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3c.6 4.6 2.4 6.4 7 7-4.6.6-6.4 2.4-7 7-.6-4.6-2.4-6.4-7-7 4.6-.6 6.4-2.4 7-7z"/><path d="M19 16v4M17 18h4"/></g></symbol>
-  <symbol id="i-sliders" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></g></symbol>
-  <symbol id="i-eye" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></g></symbol>
-  <symbol id="i-why" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="12" r="2.5"/><path d="M8.5 6.5c4 0 4.5 5.5 7 5.5M8.5 17.5c4 0 4.5-5.5 7-5.5"/></g></symbol>
-  <symbol id="i-toggle" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="7" width="19" height="10" rx="5"/><circle cx="16.5" cy="12" r="2.5" fill="currentColor"/></g></symbol>
-  <symbol id="i-download" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10.5l5 5 5-5M4 19.5h16"/></g></symbol>
-  <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></g></symbol>
-  <symbol id="i-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="M7.5 12.3l3 3 6-6.3"/></g></symbol>
-  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-replay" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M4 4v4.5h4.5"/></g></symbol>
-  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
-  <symbol id="i-founder" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></g></symbol>
-  <symbol id="i-pen" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 20l1-4.5L15.5 5a2.1 2.1 0 0 1 3 0l.5.5a2.1 2.1 0 0 1 0 3L8.5 19z"/><path d="M13.5 7l3.5 3.5"/></g></symbol>
-  <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6z"/><path d="M9 12l2 2 4-4" stroke-linecap="round"/></g></symbol>
-  <symbol id="i-contrast" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></g></symbol>
-  <symbol id="i-image" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16"/><circle cx="9" cy="9.5" r="1.8"/><path d="M3 17l5-5 4 4 3-3 6 6"/></g></symbol>
-  <symbol id="i-note" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h10l4 4v14H5z"/><path d="M15 3v4h4M8 12h8M8 16h5"/></g></symbol>
-  <symbol id="i-chips" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="9" height="5"/><rect x="13.5" y="5" width="8" height="5"/><rect x="2.5" y="14" width="12" height="5"/></g></symbol>
-  <symbol id="i-heart" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.3 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/></g></symbol>
-  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6l-1 6 3 3H7l3-3z"/><path d="M12 12v9"/></g></symbol>
-  <symbol id="i-import" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="13" width="8" height="8"/><path d="M15 3h6v6M21 3l-7 7"/></g></symbol>
-  <symbol id="i-dropper" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 5.5l4 4M17 3.5a2.1 2.1 0 0 1 3 3l-2 2-3-3z"/><path d="M15 8.5L6 17.5 4 20l2.5-2 9-9"/></g></symbol>
-  <symbol id="i-summary" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 10h16M4 14h10M4 18h7"/></g></symbol>
-  <symbol id="i-color" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/><circle cx="17" cy="17" r="4"/></g></symbol>
-  <symbol id="i-type" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19l5-14 5 14M5 14h6M15 11.5a3 3 0 0 1 6 0V19M21 15h-3.5a2.2 2.2 0 0 0 0 4H21"/></g></symbol>
-  <symbol id="i-spacing" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v16M20 4v16M8 12h8M8 12l2.5-2.5M8 12l2.5 2.5M16 12l-2.5-2.5M16 12l-2.5 2.5"/></g></symbol>
-  <symbol id="i-shape" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="10" height="10"/><circle cx="16" cy="8" r="5"/></g></symbol>
-  <symbol id="i-motion" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18c6 0 5-12 11-12h7"/><circle cx="18" cy="6" r="0.5"/><path d="M3 10h3M3 14h5"/></g></symbol>
-  <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></g></symbol>
-  <symbol id="i-voice" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H10l-5 4v-4H4z"/><path d="M8 9h8M8 12h5"/></g></symbol>
-  <symbol id="i-library" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="5" height="18"/><rect x="10" y="3" width="5" height="18"/><path d="M17 4l4 1-3.5 16-4-1"/></g></symbol>
-  <symbol id="i-undo" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14L4 9l5-5"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/></g></symbol>
-  <symbol id="i-gallery" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="5"/><rect x="13" y="3" width="8" height="9"/><rect x="3" y="10" width="8" height="11"/><rect x="13" y="14" width="8" height="7"/></g></symbol>
-  <symbol id="i-page" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18"/><path d="M3 8h18M7 12h10M7 16h6"/></g></symbol>
-  <symbol id="i-devices" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="14" height="11"/><path d="M5 19h8"/><rect x="17" y="8" width="5" height="11"/></g></symbol>
-  <symbol id="i-a11y" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.5" r="1.5"/><path d="M5 8l7 1.5L19 8M12 9.5V14l-3 6M12 14l3 6"/></g></symbol>
-  <symbol id="i-tokens" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4c-2 0-2 1.5-2 3s0 3-2 5c2 2 2 3.5 2 5s0 3 2 3M16 4c2 0 2 1.5 2 3s0 3 2 5c-2 2-2 3.5-2 5s0 3-2 3"/></g></symbol>
-  <symbol id="i-book" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h6a2 2 0 0 1 2 2v14a2 2 0 0 0-2-2H4zM20 4h-6a2 2 0 0 0-2 2v14a2 2 0 0 1 2-2h6z"/></g></symbol>
-  <symbol id="i-file" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h9l5 5v13H5z"/><path d="M14 3v5h5"/></g></symbol>
-  <symbol id="i-cpu" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12"/><rect x="9.5" y="9.5" width="5" height="5"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/></g></symbol>
-  <symbol id="i-user" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></g></symbol>
-  <symbol id="i-share" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.3 10.8l7.4-3.6M8.3 13.2l7.4 3.6"/></g></symbol>
-  <symbol id="i-store" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l2-5h14l2 5M3 9h18v3a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0zM5 14v6h14v-6"/></g></symbol>
-  <symbol id="i-deck" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12"/><path d="M12 16v4M8 20h8M7 12l3-3 2 2 4-4"/></g></symbol>
-  <symbol id="i-social" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2.5" width="14" height="19"/><rect x="8" y="6" width="8" height="8"/><path d="M8 17.5h5"/></g></symbol>
-  <symbol id="i-mockup" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7h11v9a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4z"/><path d="M16 9h2a2.5 2.5 0 0 1 0 5h-2M8 3v2M12 3v2"/></g></symbol>
-  <symbol id="i-video" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14"/><path d="M10 9l5 3-5 3z"/></g></symbol>
-  <symbol id="i-cloud" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4.5 4.5 0 1 1 .8-8.9A6 6 0 0 1 19 11a3.5 3.5 0 0 1-.5 7z"/></g></symbol>
-  <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></g></symbol>
-</svg>
-<style>
-.pp-intro{padding-block:var(--space-8) var(--space-4)}
-.pp-intro h1{font:600 clamp(2rem,4vw,3rem)/1.05 var(--font-display);margin:0 0 var(--space-3)}
-.pp-intro p,.pp-head p{color:var(--color-text-muted);margin:0;max-width:44rem}
-.pp-opt{border-top:2px solid var(--color-pulsar)}
-.pp-opt + .pp-opt{margin-top:var(--space-8)}
-.pp-head{padding-top:var(--space-6);display:grid;gap:var(--space-2)}
-.pp-opt .section{padding-top:var(--space-5)}
-</style>
-<main>
-  <div class="container pp-intro">
-    <h1>Problem section: 2 options</h1>
-    <p>Preview for approval. Both options use the same heading and text. Only the visual changes. Tell me which option to keep on the landing page.</p>
-  </div>
-  <div data-problem-layout="collage" class="pp-opt">
-    <div class="container pp-head"><span class="label"><span class="label__idx">[Option 1]</span> Collage</span><p>A messy board: sheets, hex codes, photos, notes and fonts, all at different angles.</p></div>
-<section class="section" id="problem" aria-labelledby="problem-title">
-    <div class="container">
-      <header class="shead" data-reveal>
-        <span class="label"><span class="label__idx">[01]</span>The problem</span>
-        <h2 id="problem-title">A moodboard shows a feeling. Your product needs <span class="grad-text">exact values.</span></h2>
-        <p class="lead">Hex codes, color scales, font pairs, type sizes, spacing, contrast checks, tokens, docs. It is slow, repetitive work, and most founders do not have a designer to do it.</p>
-      </header>
-      <div class="pr-collage" data-reveal role="img" aria-label="A messy pile of manual work: saved reference pictures and a website screenshot, a spreadsheet of almost equal hex codes, a failed contrast check, crossed-out font names, uneven spacing values and a sticky note that says dark mode is still to do.">
-        <div class="pr-collage__in">
-          <div class="mx mx__tilt mx-sheet p-sheet" aria-hidden="true"><span class="flabel">colors_final_v7.xlsx</span>
-          <table>
-            <tr><td><span class="sw" style="background:#7B93FF"></span>primary</td><td>#7B93FF</td></tr>
-            <tr><td><span class="sw" style="background:#7A92FE"></span>primary?</td><td class="q">#7A92FE ??</td></tr>
-            <tr><td><span class="sw" style="background:#738AF5"></span>primary-2</td><td>#738AF5</td></tr>
-            <tr><td><span class="sw" style="background:#9DAFFF"></span>light-ish</td><td class="q">#9DAFFF ?</td></tr>
-            <tr><td><span class="sw" style="background:#4A5FCC"></span>dark (old)</td><td>#4A5FCC</td></tr>
-          </table></div>
-          <div class="mx mx__tilt mx-contrast p-contrast" aria-hidden="true"><span class="flabel">Contrast</span><b>Aa</b><small>2.1 : 1</small><span class="fail">Fails AA</span></div>
-          <figure class="mx mx__tilt mx-photo p-photoA" aria-hidden="true"><svg viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="#2A2F6B"/><circle cx="40" cy="20" r="10" fill="#E07BFF"/><path d="M0 60V40l18-12 16 10 26-14v36z" fill="#111819"/></svg><figcaption>mood_01.jpg</figcaption></figure>
-          <figure class="mx mx__tilt mx-photo p-photoB" aria-hidden="true"><svg viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="#3FEFC4"/><rect x="10" y="10" width="26" height="26" fill="#0B1012"/><circle cx="40" cy="40" r="14" fill="#F4F0E8"/></svg><figcaption>IMG_2041 (copy).png</figcaption></figure>
-          <figure class="mx mx__tilt mx-photo p-photoC" aria-hidden="true"><svg viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="#FF9E64"/><path d="M0 60A30 30 0 0 1 60 60z" fill="#7B93FF"/><path d="M14 60A16 16 0 0 1 46 60z" fill="#0B1012"/></svg><figcaption>pinterest-save.webp</figcaption></figure>
-          <div class="mx mx__tilt mx-shot p-shot" aria-hidden="true"><div class="mx-shot__bar"><i></i><i></i><i></i><span class="flabel">ref_site_screenshot.png</span></div><div class="mx-shot__body"><b></b><i></i><i class="s"></i><span>Sign up</span></div></div>
-          <div class="mx mx__tilt mx-fonts p-fonts" aria-hidden="true"><span class="flabel">Font pair?</span><span><s>Sans A + Serif B</s></span><span><s>Sans C + Sans D</s></span><span>Sans A + ???</span></div>
-          <div class="mx mx__tilt mx-ruler p-ruler" aria-hidden="true">spacing: 13 · 15 · 18 · 21 ?</div>
-          <div class="mx mx__tilt mx-sticky p-sticky" aria-hidden="true">TODO: dark mode. Docs. Tokens for dev.</div>
-          <span class="mx-hex mx__tilt p-hex1" style="position:absolute" aria-hidden="true">#E07BFF</span>
-          <span class="mx-hex mx__tilt p-hex2" style="position:absolute" aria-hidden="true">#DF7CFE?</span>
-          <span class="mx-hex mx__tilt p-hex3" style="position:absolute" aria-hidden="true">line-height 1.4? 1.5?</span>
-          <svg class="p-deco" style="" aria-hidden="true"><use href="#b-torus"/></svg>
-        </div>
-      </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>RONA · Problem section options</title>
+    <meta
+      name="description"
+      content="RONA turns your moodboard into a complete design system and brand guideline."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Atkinson+Hyperlegible+Mono:wght@400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="../assets/css/tokens.css" />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/components.css" />
+    <link rel="stylesheet" href="../assets/css/hero.css" />
+    <link rel="stylesheet" href="../assets/css/sections.css" />
 
-      <div class="pr-split">
-        <div class="tile pr-before" data-reveal>
-          <div class="tile__head"><span class="label"><span class="label__idx" style="color:var(--color-danger)">Before</span>By hand</span></div>
-          <div class="pr-before__mess" role="img" aria-label="A spreadsheet of almost equal hex codes, a failed contrast check, crossed-out font names and a sticky note that says dark mode is still to do.">
-            <div class="mx mx__tilt mx-sheet b-sheet" aria-hidden="true"><span class="flabel">colors_final_v7.xlsx</span>
-          <table>
-            <tr><td><span class="sw" style="background:#7B93FF"></span>primary</td><td>#7B93FF</td></tr>
-            <tr><td><span class="sw" style="background:#7A92FE"></span>primary?</td><td class="q">#7A92FE ??</td></tr>
-            <tr><td><span class="sw" style="background:#738AF5"></span>primary-2</td><td>#738AF5</td></tr>
-            <tr><td><span class="sw" style="background:#9DAFFF"></span>light-ish</td><td class="q">#9DAFFF ?</td></tr>
-            <tr><td><span class="sw" style="background:#4A5FCC"></span>dark (old)</td><td>#4A5FCC</td></tr>
-          </table></div>
-            <div class="mx mx__tilt mx-contrast b-contrast" aria-hidden="true"><span class="flabel">Contrast</span><b>Aa</b><small>2.1 : 1</small><span class="fail">Fails AA</span></div>
-            <div class="mx mx__tilt mx-fonts b-fonts" aria-hidden="true"><span class="flabel">Font pair?</span><span><s>Sans A + Serif B</s></span><span><s>Sans C + Sans D</s></span><span>Sans A + ???</span></div>
-            <div class="mx mx__tilt mx-sticky b-sticky" aria-hidden="true">TODO: dark mode. Docs. Tokens for dev.</div>
-          </div>
-          <ul class="pr-pains">
-            <li>Almost equal hex codes</li>
-            <li>Text that fails contrast</li>
-            <li>No dark mode, no tokens, no docs</li>
-          </ul>
-        </div>
-        <div class="tile tile--deep pr-after" data-reveal>
-          <div class="tile__head"><span class="label"><span class="label__idx">After</span>With <span data-brand>RONA</span></span></div>
-          <div class="pr-after__sys" role="img" aria-label="An ordered design system: one primary color scale, a passed contrast check, one font pair, a spacing scale and token files.">
-            <div class="pr-row"><span>color.primary</span><div class="ramp"><i style="background:#EEF1FF"></i><i style="background:#D9E0FF"></i><i style="background:#BCC8FF"></i><i style="background:#9DAFFF"></i><i style="background:#7B93FF"></i><i style="background:#5F78EC"></i><i style="background:#4A5FCC"></i><i style="background:#38479C"></i><i style="background:#232857"></i></div></div>
-            <div class="pr-row"><span>contrast</span><b class="ok">AA ✓ all required pairs</b></div>
-            <div class="pr-row"><span>font pair</span><b>Display + Text</b></div>
-            <div class="pr-row"><span>spacing</span><b>4 · 8 · 12 · 16 · 24 · 32</b></div>
-            <div class="pr-row"><span>modes</span><b>light · dark</b></div>
-            <div class="pr-row"><span>export</span><b>tokens · code · DESIGN.md</b></div>
-          </div>
-          <ul class="pr-gains">
-            <li>One scale for each color</li>
-            <li>Contrast checked before export</li>
-            <li>Tokens, code and docs in one zip</li>
-          </ul>
-        </div>
+    <style>
+      .pp-intro {
+        padding-block: var(--space-8) var(--space-4);
+      }
+      .pp-intro h1 {
+        font: 600 clamp(2rem, 4vw, 3rem)/1.05 var(--font-display);
+        margin: 0 0 var(--space-3);
+      }
+      .pp-intro p,
+      .pp-head p {
+        color: var(--color-text-muted);
+        margin: 0;
+        max-width: 44rem;
+      }
+      .pp-opt {
+        border-top: 2px solid var(--color-pulsar);
+      }
+      .pp-opt + .pp-opt {
+        margin-top: var(--space-8);
+      }
+      .pp-head {
+        padding-top: var(--space-6);
+        display: grid;
+        gap: var(--space-2);
+      }
+      .pp-opt .section {
+        padding-top: var(--space-5);
+      }
+    </style>
+  </head>
+  <body>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="0"
+      height="0"
+      style="position: absolute; width: 0; height: 0; overflow: hidden"
+      aria-hidden="true"
+      focusable="false"
+      xmlns:c2pa="http://c2pa.org/manifest"
+    >
+      <metadata>
+        <c2pa:manifest
+          >AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYToyMzQ0ZDJkZi1jYzAwLTRiNzYtYWIxNy00NjQ5NGMzNzY2MTEAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaLMqIpskte7TYq6DFdFzBiAAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDplYzU0MzRmMS0yZTM3LTRhNzktODUxZC0xZmU2OGRkMjMxOWNscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoizCkBPhyImoxO1xZV92KKgAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggD+a7mTkTlQJ8VdSiw689URjcCAMsX0npwVsVSPu7mDKkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaMbiJad76aO38gK45nBq3RUAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCDhSzgSarJMAphQG8zaUN/a1ZwdqVhZaU765iV16pnW2WRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBjcZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjIzNDRkMmRmLWNjMDAtNGI3Ni1hYjE3LTQ2NDk0YzM3NjYxMS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmRhOWZiMDRhLWY5OTAtNDk3MC1hZmM5LTE4NDYxOTRiZWRhMHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCAP5ruZOROVAnxV1KLDrz1RGNwIAyxfSenBWxVI+7uYMqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggUz8naw0t6rm5RXDopdk5Pz8nSl0lrWOlBI8upyDKf2iiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg7FlRwWxt7tAzaeRM8JbMpxH/sqx2FTPhjejwqFkM5hB0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQD7hLfv2fhLS7cFX9JwDHyUGWY4doo5Deu+r4tmUOrCeQ8QSLKj+yz0aKJuRtVSqiuWZP/jaMkuQcXQ8awPOQeE=</c2pa:manifest
+        >
+      </metadata>
+      <defs>
+        <linearGradient id="bg-horizon" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#7B93FF" />
+          <stop offset="1" stop-color="#E07BFF" />
+        </linearGradient>
+        <linearGradient id="bg-drift" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0" stop-color="#3FEFC4" />
+          <stop offset="1" stop-color="#7B93FF" />
+        </linearGradient>
+        <linearGradient id="bg-corona" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#FF9E64" />
+          <stop offset="1" stop-color="#E07BFF" />
+        </linearGradient>
+        <radialGradient id="bg-sphere" cx="0.34" cy="0.3" r="0.8">
+          <stop offset="0" stop-color="#F4F0E8" />
+          <stop offset="0.18" stop-color="#C3CDFF" />
+          <stop offset="0.55" stop-color="#7B93FF" />
+          <stop offset="1" stop-color="#2A2F6B" />
+        </radialGradient>
+        <radialGradient id="bg-sphere-plasma" cx="0.34" cy="0.3" r="0.8">
+          <stop offset="0" stop-color="#F4F0E8" />
+          <stop offset="0.2" stop-color="#F1C2FF" />
+          <stop offset="0.6" stop-color="#E07BFF" />
+          <stop offset="1" stop-color="#3B1E52" />
+        </radialGradient>
+        <radialGradient id="bg-sphere-ion" cx="0.34" cy="0.3" r="0.8">
+          <stop offset="0" stop-color="#F4F0E8" />
+          <stop offset="0.2" stop-color="#B5FFEB" />
+          <stop offset="0.6" stop-color="#3FEFC4" />
+          <stop offset="1" stop-color="#0E4A46" />
+        </radialGradient>
+        <linearGradient id="bg-cyl" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#2A2F6B" />
+          <stop offset="0.35" stop-color="#9DAFFF" />
+          <stop offset="0.55" stop-color="#7B93FF" />
+          <stop offset="1" stop-color="#232857" />
+        </linearGradient>
+        <linearGradient id="bg-cyl-plasma" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#3B1E52" />
+          <stop offset="0.35" stop-color="#F1C2FF" />
+          <stop offset="0.6" stop-color="#E07BFF" />
+          <stop offset="1" stop-color="#3B1E52" />
+        </linearGradient>
+        <linearGradient id="bg-cyl-ion" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#0E4A46" />
+          <stop offset="0.35" stop-color="#B5FFEB" />
+          <stop offset="0.6" stop-color="#3FEFC4" />
+          <stop offset="1" stop-color="#0E4A46" />
+        </linearGradient>
+        <linearGradient id="bg-cyl-flare" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#5A2A17" />
+          <stop offset="0.35" stop-color="#FFD2B5" />
+          <stop offset="0.6" stop-color="#FF9E64" />
+          <stop offset="1" stop-color="#5A2A17" />
+        </linearGradient>
+        <linearGradient id="bg-torus" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#F1C2FF" />
+          <stop offset="0.35" stop-color="#E07BFF" />
+          <stop offset="0.75" stop-color="#7B93FF" />
+          <stop offset="1" stop-color="#232857" />
+        </linearGradient>
+        <linearGradient id="bg-hole" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#232857" />
+          <stop offset="1" stop-color="#9DAFFF" />
+        </linearGradient>
+        <radialGradient id="bg-shine" cx="0.3" cy="0.25" r="0.5">
+          <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.75" />
+          <stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
+        </radialGradient>
+        <linearGradient id="bg-top" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#F4F0E8" />
+          <stop offset="1" stop-color="#C3CDFF" />
+        </linearGradient>
+        <!-- Grain inside a shape: noise blended over the fill, clipped to the shape -->
+        <filter
+          id="b-grain"
+          x="-15%"
+          y="-15%"
+          width="130%"
+          height="130%"
+          color-interpolation-filters="sRGB"
+        >
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="1.2"
+            numOctaves="2"
+            stitchTiles="stitch"
+            result="t"
+          />
+          <feColorMatrix in="t" type="saturate" values="0" result="g" />
+          <feBlend in="SourceGraphic" in2="g" mode="overlay" result="b" />
+          <feComposite in="b" in2="SourceGraphic" operator="in" />
+        </filter>
+      </defs>
+      <!-- B shapes: gradients and grain are built in -->
+      <symbol id="b-sphere" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="48" fill="url(#bg-sphere)" filter="url(#b-grain)" />
+      </symbol>
+      <symbol id="b-sphere-plasma" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="48" fill="url(#bg-sphere-plasma)" filter="url(#b-grain)" />
+      </symbol>
+      <symbol id="b-sphere-ion" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="48" fill="url(#bg-sphere-ion)" filter="url(#b-grain)" />
+      </symbol>
+      <symbol id="b-torus" viewBox="0 0 120 70">
+        <g filter="url(#b-grain)">
+          <path
+            fill-rule="evenodd"
+            fill="url(#bg-torus)"
+            d="M60 4C30 4 4 17 4 34s26 32 56 32 56-15 56-32S90 4 60 4zM60 24c-15 0-26 4-26 9s11 8 26 8 26-3 26-8-11-9-26-9z"
+          />
+          <path
+            d="M34 33c0-5 11-9 26-9s26 4 26 9c-4-3-14-5-26-5s-22 2-26 5z"
+            fill="url(#bg-hole)"
+          />
+          <ellipse cx="40" cy="15" rx="18" ry="6" fill="url(#bg-shine)" />
+        </g>
+      </symbol>
+      <symbol id="b-capsule" viewBox="0 0 120 50">
+        <g filter="url(#b-grain)">
+          <rect
+            x="4"
+            y="4"
+            width="112"
+            height="42"
+            rx="21"
+            fill="url(#bg-cyl)"
+            transform="rotate(0)"
+          />
+          <rect x="4" y="4" width="112" height="42" rx="21" fill="url(#bg-drift)" opacity="0.55" />
+          <rect x="18" y="9" width="60" height="9" rx="4.5" fill="#FFFFFF" opacity="0.35" />
+          <rect x="4" y="30" width="112" height="16" rx="8" fill="#0B1012" opacity="0.25" />
+        </g>
+      </symbol>
+      <symbol id="b-prism" viewBox="0 0 116 100">
+        <g filter="url(#b-grain)">
+          <path d="M8 92L36 22l44-14L52 78z" fill="#9DAFFF" />
+          <path d="M36 22l44-14 28 70-44 14z" fill="#4E5FC4" />
+          <path d="M8 92l28-70 28 70z" fill="#E07BFF" />
+          <path d="M36 22l-28 70h9z" fill="#F4F0E8" opacity="0.3" />
+        </g>
+      </symbol>
+      <symbol id="b-cube" viewBox="0 0 100 100">
+        <g filter="url(#b-grain)">
+          <path d="M50 6l42 22-42 22L8 28z" fill="#9DAFFF" />
+          <path d="M8 28l42 22v46L8 72z" fill="#5C6FD6" />
+          <path d="M92 28L50 50v46l42-24z" fill="#E07BFF" />
+        </g>
+      </symbol>
+      <symbol id="b-arc" viewBox="0 0 100 50">
+        <path d="M2 50a48 48 0 0 1 96 0z" fill="url(#bg-corona)" filter="url(#b-grain)" />
+      </symbol>
+      <symbol id="b-quarter" viewBox="0 0 100 100">
+        <path d="M0 0h100v100A100 100 0 0 1 0 0z" fill="url(#bg-horizon)" filter="url(#b-grain)" />
+      </symbol>
+      <symbol id="b-grid" viewBox="0 0 1200 200" preserveAspectRatio="xMidYMax slice">
+        <defs>
+          <linearGradient
+            id="bg-gridfade"
+            x1="0"
+            y1="0"
+            x2="0"
+            y2="200"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0" stop-color="currentColor" stop-opacity="0" />
+            <stop offset="0.22" stop-color="currentColor" stop-opacity="0" />
+            <stop offset="0.5" stop-color="currentColor" stop-opacity="0.35" />
+            <stop offset="1" stop-color="currentColor" stop-opacity="1" />
+          </linearGradient>
+          <clipPath id="bg-gridclip"><rect width="1200" height="200" /></clipPath>
+        </defs>
+        <path
+          d="M-1800.0 200L600.0 0 M-1740.0 200L600.0 0 M-1680.0 200L600.0 0 M-1620.0 200L600.0 0 M-1560.0 200L600.0 0 M-1500.0 200L600.0 0 M-1440.0 200L600.0 0 M-1380.0 200L600.0 0 M-1320.0 200L600.0 0 M-1260.0 200L600.0 0 M-1200.0 200L600.0 0 M-1140.0 200L600.0 0 M-1080.0 200L600.0 0 M-1020.0 200L600.0 0 M-960.0 200L600.0 0 M-900.0 200L600.0 0 M-840.0 200L600.0 0 M-780.0 200L600.0 0 M-720.0 200L600.0 0 M-660.0 200L600.0 0 M-600.0 200L600.0 0 M-540.0 200L600.0 0 M-480.0 200L600.0 0 M-420.0 200L600.0 0 M-360.0 200L600.0 0 M-300.0 200L600.0 0 M-240.0 200L600.0 0 M-180.0 200L600.0 0 M-120.0 200L600.0 0 M-60.0 200L600.0 0 M0.0 200L600.0 0 M60.0 200L600.0 0 M120.0 200L600.0 0 M180.0 200L600.0 0 M240.0 200L600.0 0 M300.0 200L600.0 0 M360.0 200L600.0 0 M420.0 200L600.0 0 M480.0 200L600.0 0 M540.0 200L600.0 0 M600.0 200L600.0 0 M660.0 200L600.0 0 M720.0 200L600.0 0 M780.0 200L600.0 0 M840.0 200L600.0 0 M900.0 200L600.0 0 M960.0 200L600.0 0 M1020.0 200L600.0 0 M1080.0 200L600.0 0 M1140.0 200L600.0 0 M1200.0 200L600.0 0 M1260.0 200L600.0 0 M1320.0 200L600.0 0 M1380.0 200L600.0 0 M1440.0 200L600.0 0 M1500.0 200L600.0 0 M1560.0 200L600.0 0 M1620.0 200L600.0 0 M1680.0 200L600.0 0 M1740.0 200L600.0 0 M1800.0 200L600.0 0 M1860.0 200L600.0 0 M1920.0 200L600.0 0 M1980.0 200L600.0 0 M2040.0 200L600.0 0 M2100.0 200L600.0 0 M2160.0 200L600.0 0 M2220.0 200L600.0 0 M2280.0 200L600.0 0 M2340.0 200L600.0 0 M2400.0 200L600.0 0 M2460.0 200L600.0 0 M2520.0 200L600.0 0 M2580.0 200L600.0 0 M2640.0 200L600.0 0 M2700.0 200L600.0 0 M2760.0 200L600.0 0 M2820.0 200L600.0 0 M2880.0 200L600.0 0 M2940.0 200L600.0 0 M3000.0 200L600.0 0 M0 200.00H1200 M0 153.85H1200 M0 125.00H1200 M0 105.26H1200 M0 90.91H1200 M0 80.00H1200 M0 71.43H1200 M0 64.52H1200 M0 58.82H1200 M0 54.05H1200 M0 50.00H1200 M0 46.51H1200 M0 43.48H1200 M0 40.82H1200 M0 38.46H1200 M0 36.36H1200 M0 34.48H1200 M0 32.79H1200 M0 31.25H1200 M0 29.85H1200 M0 28.57H1200 M0 27.40H1200 M0 26.32H1200 M0 25.32H1200 M0 24.39H1200 M0 23.53H1200 M0 22.73H1200 M0 21.98H1200 M0 21.28H1200 M0 20.62H1200 M0 20.00H1200 M0 19.42H1200 M0 18.87H1200 M0 18.35H1200 M0 17.86H1200 M0 17.39H1200 M0 16.95H1200 M0 16.53H1200 M0 16.13H1200 M0 15.75H1200 M0 15.38H1200 M0 15.04H1200 M0 14.71H1200 M0 14.39H1200 M0 14.08H1200 M0 13.79H1200 M0 13.51H1200 M0 13.25H1200 M0 12.99H1200 M0 12.74H1200 M0 12.50H1200 M0 12.27H1200 M0 12.05H1200 M0 11.83H1200 M0 11.63H1200 M0 11.43H1200 M0 11.24H1200 M0 11.05H1200 M0 10.87H1200 M0 10.70H1200"
+          fill="none"
+          stroke="url(#bg-gridfade)"
+          stroke-width="1"
+          vector-effect="non-scaling-stroke"
+          clip-path="url(#bg-gridclip)"
+        />
+      </symbol>
+      <symbol id="b-orbit" viewBox="0 0 120 120">
+        <g fill="none" stroke="currentColor" stroke-width="1.5">
+          <ellipse cx="60" cy="60" rx="56" ry="20" transform="rotate(-24 60 60)" />
+          <ellipse
+            cx="60"
+            cy="60"
+            rx="56"
+            ry="20"
+            transform="rotate(36 60 60)"
+            stroke-dasharray="3 5"
+          />
+        </g>
+        <circle cx="60" cy="60" r="12" fill="url(#bg-sphere)" />
+        <circle cx="104" cy="38" r="4" fill="#3FEFC4" />
+      </symbol>
+      <symbol id="b-star" viewBox="0 0 100 100">
+        <path
+          d="M50 0C53 36 64 47 100 50 64 53 53 64 50 100 47 64 36 53 0 50 36 47 47 36 50 0z"
+          fill="currentColor"
+        />
+      </symbol>
+      <symbol id="b-wave" viewBox="0 0 160 30">
+        <path
+          d="M2 15c13-16 26-16 39 0s26 16 39 0 26-16 39 0 26 16 39 0"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="3"
+          stroke-linecap="square"
+        />
+      </symbol>
+      <symbol id="b-bars" viewBox="0 0 100 100">
+        <g filter="url(#b-grain)">
+          <rect x="0" y="0" width="100" height="18" fill="#7B93FF" />
+          <rect x="0" y="27" width="76" height="18" fill="#A889FF" />
+          <rect x="0" y="54" width="52" height="18" fill="#C784FF" />
+          <rect x="0" y="81" width="28" height="18" fill="#E07BFF" />
+        </g>
+      </symbol>
+      <symbol id="b-cross" viewBox="0 0 40 40">
+        <path d="M20 0v40M0 20h40" stroke="currentColor" stroke-width="1.5" />
+      </symbol>
+      <symbol id="b-pyramid" viewBox="0 0 100 100">
+        <g filter="url(#b-grain)">
+          <path d="M50 6L8 74l42 20z" fill="#9DAFFF" />
+          <path d="M50 6l42 68-42 20z" fill="#4E5FC4" />
+          <path d="M50 6L8 74l10 4z" fill="#F4F0E8" opacity="0.35" />
+        </g>
+      </symbol>
+      <symbol id="b-cylinder" viewBox="0 0 80 110">
+        <g filter="url(#b-grain)">
+          <path d="M6 18v74c0 9 15 16 34 16s34-7 34-16V18z" fill="url(#bg-cyl-ion)" />
+          <ellipse cx="40" cy="18" rx="34" ry="14" fill="#B5FFEB" />
+          <ellipse cx="32" cy="15" rx="16" ry="5" fill="url(#bg-shine)" />
+        </g>
+      </symbol>
+      <symbol id="b-cone" viewBox="0 0 90 110">
+        <g filter="url(#b-grain)">
+          <path d="M45 4L4 92c0 8 18 14 41 14s41-6 41-14z" fill="url(#bg-cyl-flare)" />
+          <path
+            d="M4 92c0 8 18 14 41 14s41-6 41-14c-8 5-24 8-41 8S12 97 4 92z"
+            fill="#5A2A17"
+            opacity="0.6"
+          />
+        </g>
+      </symbol>
+      <symbol id="b-dome" viewBox="0 0 110 70">
+        <g filter="url(#b-grain)">
+          <path d="M4 56a51 51 0 0 1 102 0z" fill="url(#bg-sphere-plasma)" />
+          <ellipse cx="55" cy="56" rx="51" ry="10" fill="#3B1E52" />
+          <ellipse
+            cx="55"
+            cy="56"
+            rx="51"
+            ry="10"
+            fill="none"
+            stroke="#F1C2FF"
+            stroke-opacity="0.5"
+          />
+        </g>
+      </symbol>
+      <symbol id="b-slab" viewBox="0 0 120 80">
+        <g filter="url(#b-grain)">
+          <path d="M60 6l54 24-54 24L6 30z" fill="url(#bg-top)" />
+          <path d="M6 30l54 24v20L6 50z" fill="#7B93FF" />
+          <path d="M114 30L60 54v20l54-24z" fill="#3FEFC4" />
+        </g>
+      </symbol>
+      <symbol id="b-gem" viewBox="0 0 100 110">
+        <g filter="url(#b-grain)">
+          <path d="M50 4L8 52h42z" fill="#C3CDFF" />
+          <path d="M50 4l42 48H50z" fill="#7B93FF" />
+          <path d="M8 52l42 54V52z" fill="#E07BFF" />
+          <path d="M92 52l-42 54V52z" fill="#8A4FB0" />
+        </g>
+      </symbol>
+      <symbol id="logo-mark" viewBox="0 0 32 32">
+        <rect x="1" y="1" width="18" height="18" fill="#7B93FF" />
+        <circle cx="21" cy="21" r="10" fill="url(#bg-horizon)" />
+        <rect x="1" y="1" width="18" height="18" fill="none" stroke="#0B1012" stroke-width="0" />
+      </symbol>
+      <!-- Icons: same set as Version A. Stroke = currentColor -->
+      <symbol id="i-board" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+          <rect x="3" y="3" width="18" height="18" rx="3" />
+          <rect x="6.5" y="6.5" width="5" height="6" rx="1" />
+          <circle cx="16" cy="9" r="2" />
+          <path d="M6.5 16.5h11" />
+        </g>
+      </symbol>
+      <symbol id="i-spark" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+          <path
+            d="M12 3c.6 4.6 2.4 6.4 7 7-4.6.6-6.4 2.4-7 7-.6-4.6-2.4-6.4-7-7 4.6-.6 6.4-2.4 7-7z"
+          />
+          <path d="M19 16v4M17 18h4" />
+        </g>
+      </symbol>
+      <symbol id="i-sliders" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 7h9M17 7h3M4 17h3M11 17h9" />
+          <circle cx="15" cy="7" r="2" />
+          <circle cx="9" cy="17" r="2" />
+        </g>
+      </symbol>
+      <symbol id="i-eye" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+          <path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" />
+          <circle cx="12" cy="12" r="3" />
+        </g>
+      </symbol>
+      <symbol id="i-why" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="6" cy="6" r="2.5" />
+          <circle cx="6" cy="18" r="2.5" />
+          <circle cx="18" cy="12" r="2.5" />
+          <path d="M8.5 6.5c4 0 4.5 5.5 7 5.5M8.5 17.5c4 0 4.5-5.5 7-5.5" />
+        </g>
+      </symbol>
+      <symbol id="i-toggle" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2.5" y="7" width="19" height="10" rx="5" />
+          <circle cx="16.5" cy="12" r="2.5" fill="currentColor" />
+        </g>
+      </symbol>
+      <symbol id="i-download" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M12 4v11M7 10.5l5 5 5-5M4 19.5h16" />
+        </g>
+      </symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+          <rect x="4.5" y="10.5" width="15" height="10" rx="2" />
+          <path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" />
+        </g>
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="12" cy="12" r="9.5" />
+          <path d="M7.5 12.3l3 3 6-6.3" />
+        </g>
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24">
+        <path
+          d="M4 12h15M13 6l6 6-6 6"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-replay" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M4 12a8 8 0 1 0 2.4-5.7" />
+          <path d="M4 4v4.5h4.5" />
+        </g>
+      </symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24">
+        <path
+          d="M4 7h16M4 12h16M4 17h10"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.2"
+          stroke-linecap="round"
+        />
+      </symbol>
+      <symbol id="i-founder" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+          <path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z" />
+        </g>
+      </symbol>
+      <symbol id="i-pen" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+          <path d="M4 20l1-4.5L15.5 5a2.1 2.1 0 0 1 3 0l.5.5a2.1 2.1 0 0 1 0 3L8.5 19z" />
+          <path d="M13.5 7l3.5 3.5" />
+        </g>
+      </symbol>
+      <symbol id="i-code" viewBox="0 0 24 24">
+        <path
+          d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+          <path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6z" />
+          <path d="M9 12l2 2 4-4" stroke-linecap="round" />
+        </g>
+      </symbol>
+      <symbol id="i-contrast" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="9" />
+          <path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" />
+        </g>
+      </symbol>
+      <symbol id="i-image" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect x="3" y="4" width="18" height="16" />
+          <circle cx="9" cy="9.5" r="1.8" />
+          <path d="M3 17l5-5 4 4 3-3 6 6" />
+        </g>
+      </symbol>
+      <symbol id="i-note" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M5 3h10l4 4v14H5z" />
+          <path d="M15 3v4h4M8 12h8M8 16h5" />
+        </g>
+      </symbol>
+      <symbol id="i-chips" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect x="2.5" y="5" width="9" height="5" />
+          <rect x="13.5" y="5" width="8" height="5" />
+          <rect x="2.5" y="14" width="12" height="5" />
+        </g>
+      </symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.3 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"
+          />
+        </g>
+      </symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M9 3h6l-1 6 3 3H7l3-3z" />
+          <path d="M12 12v9" />
+        </g>
+      </symbol>
+      <symbol id="i-import" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect x="3" y="3" width="8" height="8" />
+          <rect x="13" y="13" width="8" height="8" />
+          <path d="M15 3h6v6M21 3l-7 7" />
+        </g>
+      </symbol>
+      <symbol id="i-dropper" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M14.5 5.5l4 4M17 3.5a2.1 2.1 0 0 1 3 3l-2 2-3-3z" />
+          <path d="M15 8.5L6 17.5 4 20l2.5-2 9-9" />
+        </g>
+      </symbol>
+      <symbol id="i-summary" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M4 6h16M4 10h16M4 14h10M4 18h7" />
+        </g>
+      </symbol>
+      <symbol id="i-color" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect x="3" y="3" width="8" height="8" />
+          <rect x="13" y="3" width="8" height="8" />
+          <rect x="3" y="13" width="8" height="8" />
+          <circle cx="17" cy="17" r="4" />
+        </g>
+      </symbol>
+      <symbol id="i-type" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M3 19l5-14 5 14M5 14h6M15 11.5a3 3 0 0 1 6 0V19M21 15h-3.5a2.2 2.2 0 0 0 0 4H21"
+          />
+        </g>
+      </symbol>
+      <symbol id="i-spacing" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M4 4v16M20 4v16M8 12h8M8 12l2.5-2.5M8 12l2.5 2.5M16 12l-2.5-2.5M16 12l-2.5 2.5"
+          />
+        </g>
+      </symbol>
+      <symbol id="i-shape" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect x="3" y="11" width="10" height="10" />
+          <circle cx="16" cy="8" r="5" />
+        </g>
+      </symbol>
+      <symbol id="i-motion" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M3 18c6 0 5-12 11-12h7" />
+          <circle cx="18" cy="6" r="0.5" />
+          <path d="M3 10h3M3 14h5" />
+        </g>
+      </symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M12 3l9 5-9 5-9-5z" />
+          <path d="M3 13l9 5 9-5" />
+        </g>
+      </symbol>
+      <symbol id="i-voice" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M4 4h16v12H10l-5 4v-4H4z" />
+          <path d="M8 9h8M8 12h5" />
+        </g>
+      </symbol>
+      <symbol id="i-library" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect x="3" y="3" width="5" height="18" />
+          <rect x="10" y="3" width="5" height="18" />
+          <path d="M17 4l4 1-3.5 16-4-1" />
+        </g>
+      </symbol>
+      <symbol id="i-undo" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M9 14L4 9l5-5" />
+          <path d="M4 9h10a6 6 0 0 1 0 12h-3" />
+        </g>
+      </symbol>
+      <symbol id="i-gallery" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect x="3" y="3" width="8" height="5" />
+          <rect x="13" y="3" width="8" height="9" />
+          <rect x="3" y="10" width="8" height="11" />
+          <rect x="13" y="14" width="8" height="7" />
+        </g>
+      </symbol>
+      <symbol id="i-page" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect x="3" y="3" width="18" height="18" />
+          <path d="M3 8h18M7 12h10M7 16h6" />
+        </g>
+      </symbol>
+      <symbol id="i-devices" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect x="2" y="4" width="14" height="11" />
+          <path d="M5 19h8" />
+          <rect x="17" y="8" width="5" height="11" />
+        </g>
+      </symbol>
+      <symbol id="i-a11y" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="12" cy="4.5" r="1.5" />
+          <path d="M5 8l7 1.5L19 8M12 9.5V14l-3 6M12 14l3 6" />
+        </g>
+      </symbol>
+      <symbol id="i-tokens" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M8 4c-2 0-2 1.5-2 3s0 3-2 5c2 2 2 3.5 2 5s0 3 2 3M16 4c2 0 2 1.5 2 3s0 3 2 5c-2 2-2 3.5-2 5s0 3-2 3"
+          />
+        </g>
+      </symbol>
+      <symbol id="i-book" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M4 4h6a2 2 0 0 1 2 2v14a2 2 0 0 0-2-2H4zM20 4h-6a2 2 0 0 0-2 2v14a2 2 0 0 1 2-2h6z"
+          />
+        </g>
+      </symbol>
+      <symbol id="i-file" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M5 3h9l5 5v13H5z" />
+          <path d="M14 3v5h5" />
+        </g>
+      </symbol>
+      <symbol id="i-cpu" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect x="6" y="6" width="12" height="12" />
+          <rect x="9.5" y="9.5" width="5" height="5" />
+          <path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3" />
+        </g>
+      </symbol>
+      <symbol id="i-user" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="12" cy="8" r="4" />
+          <path d="M4 21a8 8 0 0 1 16 0" />
+        </g>
+      </symbol>
+      <symbol id="i-share" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="6" cy="12" r="2.5" />
+          <circle cx="18" cy="6" r="2.5" />
+          <circle cx="18" cy="18" r="2.5" />
+          <path d="M8.3 10.8l7.4-3.6M8.3 13.2l7.4 3.6" />
+        </g>
+      </symbol>
+      <symbol id="i-store" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M3 9l2-5h14l2 5M3 9h18v3a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0zM5 14v6h14v-6"
+          />
+        </g>
+      </symbol>
+      <symbol id="i-deck" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect x="3" y="4" width="18" height="12" />
+          <path d="M12 16v4M8 20h8M7 12l3-3 2 2 4-4" />
+        </g>
+      </symbol>
+      <symbol id="i-social" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect x="5" y="2.5" width="14" height="19" />
+          <rect x="8" y="6" width="8" height="8" />
+          <path d="M8 17.5h5" />
+        </g>
+      </symbol>
+      <symbol id="i-mockup" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M5 7h11v9a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4z" />
+          <path d="M16 9h2a2.5 2.5 0 0 1 0 5h-2M8 3v2M12 3v2" />
+        </g>
+      </symbol>
+      <symbol id="i-video" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect x="3" y="5" width="18" height="14" />
+          <path d="M10 9l5 3-5 3z" />
+        </g>
+      </symbol>
+      <symbol id="i-cloud" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M7 18a4.5 4.5 0 1 1 .8-8.9A6 6 0 0 1 19 11a3.5 3.5 0 0 1-.5 7z" />
+        </g>
+      </symbol>
+      <symbol id="i-globe" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="12" cy="12" r="9" />
+          <path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18" />
+        </g>
+      </symbol>
+    </svg>
+    <main>
+      <div class="container pp-intro">
+        <h1>Problem section: 2 options</h1>
+        <p>
+          Preview for approval. Both options use the same heading and text. Only the visual changes.
+          Tell me which option to keep on the landing page.
+        </p>
       </div>
-    </div>
-  </section>
-  </div>
-  <div data-problem-layout="split" class="pp-opt">
-    <div class="container pp-head"><span class="label"><span class="label__idx">[Option 2]</span> Before / after</span><p>Two panels: the messy work by hand, then the clean system that RONA makes.</p></div>
-<section class="section" id="problem-2" aria-labelledby="problem-title-2">
-    <div class="container">
-      <header class="shead" data-reveal>
-        <span class="label"><span class="label__idx">[01]</span>The problem</span>
-        <h2 id="problem-title-2">A moodboard shows a feeling. Your product needs <span class="grad-text">exact values.</span></h2>
-        <p class="lead">Hex codes, color scales, font pairs, type sizes, spacing, contrast checks, tokens, docs. It is slow, repetitive work, and most founders do not have a designer to do it.</p>
-      </header>
-      <div class="pr-collage" data-reveal role="img" aria-label="A messy pile of manual work: saved reference pictures and a website screenshot, a spreadsheet of almost equal hex codes, a failed contrast check, crossed-out font names, uneven spacing values and a sticky note that says dark mode is still to do.">
-        <div class="pr-collage__in">
-          <div class="mx mx__tilt mx-sheet p-sheet" aria-hidden="true"><span class="flabel">colors_final_v7.xlsx</span>
-          <table>
-            <tr><td><span class="sw" style="background:#7B93FF"></span>primary</td><td>#7B93FF</td></tr>
-            <tr><td><span class="sw" style="background:#7A92FE"></span>primary?</td><td class="q">#7A92FE ??</td></tr>
-            <tr><td><span class="sw" style="background:#738AF5"></span>primary-2</td><td>#738AF5</td></tr>
-            <tr><td><span class="sw" style="background:#9DAFFF"></span>light-ish</td><td class="q">#9DAFFF ?</td></tr>
-            <tr><td><span class="sw" style="background:#4A5FCC"></span>dark (old)</td><td>#4A5FCC</td></tr>
-          </table></div>
-          <div class="mx mx__tilt mx-contrast p-contrast" aria-hidden="true"><span class="flabel">Contrast</span><b>Aa</b><small>2.1 : 1</small><span class="fail">Fails AA</span></div>
-          <figure class="mx mx__tilt mx-photo p-photoA" aria-hidden="true"><svg viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="#2A2F6B"/><circle cx="40" cy="20" r="10" fill="#E07BFF"/><path d="M0 60V40l18-12 16 10 26-14v36z" fill="#111819"/></svg><figcaption>mood_01.jpg</figcaption></figure>
-          <figure class="mx mx__tilt mx-photo p-photoB" aria-hidden="true"><svg viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="#3FEFC4"/><rect x="10" y="10" width="26" height="26" fill="#0B1012"/><circle cx="40" cy="40" r="14" fill="#F4F0E8"/></svg><figcaption>IMG_2041 (copy).png</figcaption></figure>
-          <figure class="mx mx__tilt mx-photo p-photoC" aria-hidden="true"><svg viewBox="0 0 60 60" aria-hidden="true"><rect width="60" height="60" fill="#FF9E64"/><path d="M0 60A30 30 0 0 1 60 60z" fill="#7B93FF"/><path d="M14 60A16 16 0 0 1 46 60z" fill="#0B1012"/></svg><figcaption>pinterest-save.webp</figcaption></figure>
-          <div class="mx mx__tilt mx-shot p-shot" aria-hidden="true"><div class="mx-shot__bar"><i></i><i></i><i></i><span class="flabel">ref_site_screenshot.png</span></div><div class="mx-shot__body"><b></b><i></i><i class="s"></i><span>Sign up</span></div></div>
-          <div class="mx mx__tilt mx-fonts p-fonts" aria-hidden="true"><span class="flabel">Font pair?</span><span><s>Sans A + Serif B</s></span><span><s>Sans C + Sans D</s></span><span>Sans A + ???</span></div>
-          <div class="mx mx__tilt mx-ruler p-ruler" aria-hidden="true">spacing: 13 · 15 · 18 · 21 ?</div>
-          <div class="mx mx__tilt mx-sticky p-sticky" aria-hidden="true">TODO: dark mode. Docs. Tokens for dev.</div>
-          <span class="mx-hex mx__tilt p-hex1" style="position:absolute" aria-hidden="true">#E07BFF</span>
-          <span class="mx-hex mx__tilt p-hex2" style="position:absolute" aria-hidden="true">#DF7CFE?</span>
-          <span class="mx-hex mx__tilt p-hex3" style="position:absolute" aria-hidden="true">line-height 1.4? 1.5?</span>
-          <svg class="p-deco" style="" aria-hidden="true"><use href="#b-torus"/></svg>
+      <div data-problem-layout="collage" class="pp-opt">
+        <div class="container pp-head">
+          <span class="label"><span class="label__idx">[Option 1]</span> Collage</span>
+          <p>A messy board: sheets, hex codes, photos, notes and fonts, all at different angles.</p>
         </div>
-      </div>
+        <section class="section" id="problem" aria-labelledby="problem-title">
+          <div class="container">
+            <header class="shead" data-reveal>
+              <span class="label"><span class="label__idx">[01]</span>The problem</span>
+              <h2 id="problem-title">
+                A moodboard shows a feeling. Your product needs
+                <span class="grad-text">exact values.</span>
+              </h2>
+              <p class="lead">
+                Hex codes, color scales, font pairs, type sizes, spacing, contrast checks, tokens,
+                docs. It is slow, repetitive work, and most founders do not have a designer to do
+                it.
+              </p>
+            </header>
+            <div
+              class="pr-collage"
+              data-reveal
+              role="img"
+              aria-label="A messy pile of manual work: saved reference pictures and a website screenshot, a spreadsheet of almost equal hex codes, a failed contrast check, crossed-out font names, uneven spacing values and a sticky note that says dark mode is still to do."
+            >
+              <div class="pr-collage__in">
+                <div class="mx mx__tilt mx-sheet p-sheet" aria-hidden="true">
+                  <span class="flabel">colors_final_v7.xlsx</span>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td><span class="sw" style="background: #7b93ff"></span>primary</td>
+                        <td>#7B93FF</td>
+                      </tr>
+                      <tr>
+                        <td><span class="sw" style="background: #7a92fe"></span>primary?</td>
+                        <td class="q">#7A92FE ??</td>
+                      </tr>
+                      <tr>
+                        <td><span class="sw" style="background: #738af5"></span>primary-2</td>
+                        <td>#738AF5</td>
+                      </tr>
+                      <tr>
+                        <td><span class="sw" style="background: #9dafff"></span>light-ish</td>
+                        <td class="q">#9DAFFF ?</td>
+                      </tr>
+                      <tr>
+                        <td><span class="sw" style="background: #4a5fcc"></span>dark (old)</td>
+                        <td>#4A5FCC</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="mx mx__tilt mx-contrast p-contrast" aria-hidden="true">
+                  <span class="flabel">Contrast</span><b>Aa</b><small>2.1 : 1</small
+                  ><span class="fail">Fails AA</span>
+                </div>
+                <figure class="mx mx__tilt mx-photo p-photoA" aria-hidden="true">
+                  <svg viewBox="0 0 60 60" aria-hidden="true">
+                    <rect width="60" height="60" fill="#2A2F6B" />
+                    <circle cx="40" cy="20" r="10" fill="#E07BFF" />
+                    <path d="M0 60V40l18-12 16 10 26-14v36z" fill="#111819" />
+                  </svg>
+                  <figcaption>mood_01.jpg</figcaption>
+                </figure>
+                <figure class="mx mx__tilt mx-photo p-photoB" aria-hidden="true">
+                  <svg viewBox="0 0 60 60" aria-hidden="true">
+                    <rect width="60" height="60" fill="#3FEFC4" />
+                    <rect x="10" y="10" width="26" height="26" fill="#0B1012" />
+                    <circle cx="40" cy="40" r="14" fill="#F4F0E8" />
+                  </svg>
+                  <figcaption>IMG_2041 (copy).png</figcaption>
+                </figure>
+                <figure class="mx mx__tilt mx-photo p-photoC" aria-hidden="true">
+                  <svg viewBox="0 0 60 60" aria-hidden="true">
+                    <rect width="60" height="60" fill="#FF9E64" />
+                    <path d="M0 60A30 30 0 0 1 60 60z" fill="#7B93FF" />
+                    <path d="M14 60A16 16 0 0 1 46 60z" fill="#0B1012" />
+                  </svg>
+                  <figcaption>pinterest-save.webp</figcaption>
+                </figure>
+                <div class="mx mx__tilt mx-shot p-shot" aria-hidden="true">
+                  <div class="mx-shot__bar">
+                    <i></i><i></i><i></i><span class="flabel">ref_site_screenshot.png</span>
+                  </div>
+                  <div class="mx-shot__body">
+                    <b></b><i></i><i class="s"></i><span>Sign up</span>
+                  </div>
+                </div>
+                <div class="mx mx__tilt mx-fonts p-fonts" aria-hidden="true">
+                  <span class="flabel">Font pair?</span><span><s>Sans A + Serif B</s></span
+                  ><span><s>Sans C + Sans D</s></span
+                  ><span>Sans A + ???</span>
+                </div>
+                <div class="mx mx__tilt mx-ruler p-ruler" aria-hidden="true">
+                  spacing: 13 · 15 · 18 · 21 ?
+                </div>
+                <div class="mx mx__tilt mx-sticky p-sticky" aria-hidden="true">
+                  TODO: dark mode. Docs. Tokens for dev.
+                </div>
+                <span class="mx-hex mx__tilt p-hex1" style="position: absolute" aria-hidden="true"
+                  >#E07BFF</span
+                >
+                <span class="mx-hex mx__tilt p-hex2" style="position: absolute" aria-hidden="true"
+                  >#DF7CFE?</span
+                >
+                <span class="mx-hex mx__tilt p-hex3" style="position: absolute" aria-hidden="true"
+                  >line-height 1.4? 1.5?</span
+                >
+                <svg class="p-deco" style="" aria-hidden="true"><use href="#b-torus" /></svg>
+              </div>
+            </div>
 
-      <div class="pr-split">
-        <div class="tile pr-before" data-reveal>
-          <div class="tile__head"><span class="label"><span class="label__idx" style="color:var(--color-danger)">Before</span>By hand</span></div>
-          <div class="pr-before__mess" role="img" aria-label="A spreadsheet of almost equal hex codes, a failed contrast check, crossed-out font names and a sticky note that says dark mode is still to do.">
-            <div class="mx mx__tilt mx-sheet b-sheet" aria-hidden="true"><span class="flabel">colors_final_v7.xlsx</span>
-          <table>
-            <tr><td><span class="sw" style="background:#7B93FF"></span>primary</td><td>#7B93FF</td></tr>
-            <tr><td><span class="sw" style="background:#7A92FE"></span>primary?</td><td class="q">#7A92FE ??</td></tr>
-            <tr><td><span class="sw" style="background:#738AF5"></span>primary-2</td><td>#738AF5</td></tr>
-            <tr><td><span class="sw" style="background:#9DAFFF"></span>light-ish</td><td class="q">#9DAFFF ?</td></tr>
-            <tr><td><span class="sw" style="background:#4A5FCC"></span>dark (old)</td><td>#4A5FCC</td></tr>
-          </table></div>
-            <div class="mx mx__tilt mx-contrast b-contrast" aria-hidden="true"><span class="flabel">Contrast</span><b>Aa</b><small>2.1 : 1</small><span class="fail">Fails AA</span></div>
-            <div class="mx mx__tilt mx-fonts b-fonts" aria-hidden="true"><span class="flabel">Font pair?</span><span><s>Sans A + Serif B</s></span><span><s>Sans C + Sans D</s></span><span>Sans A + ???</span></div>
-            <div class="mx mx__tilt mx-sticky b-sticky" aria-hidden="true">TODO: dark mode. Docs. Tokens for dev.</div>
+            <div class="pr-split">
+              <div class="tile pr-before" data-reveal>
+                <div class="tile__head">
+                  <span class="label"
+                    ><span class="label__idx" style="color: var(--color-danger)">Before</span>By
+                    hand</span
+                  >
+                </div>
+                <div
+                  class="pr-before__mess"
+                  role="img"
+                  aria-label="A spreadsheet of almost equal hex codes, a failed contrast check, crossed-out font names and a sticky note that says dark mode is still to do."
+                >
+                  <div class="mx mx__tilt mx-sheet b-sheet" aria-hidden="true">
+                    <span class="flabel">colors_final_v7.xlsx</span>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td><span class="sw" style="background: #7b93ff"></span>primary</td>
+                          <td>#7B93FF</td>
+                        </tr>
+                        <tr>
+                          <td><span class="sw" style="background: #7a92fe"></span>primary?</td>
+                          <td class="q">#7A92FE ??</td>
+                        </tr>
+                        <tr>
+                          <td><span class="sw" style="background: #738af5"></span>primary-2</td>
+                          <td>#738AF5</td>
+                        </tr>
+                        <tr>
+                          <td><span class="sw" style="background: #9dafff"></span>light-ish</td>
+                          <td class="q">#9DAFFF ?</td>
+                        </tr>
+                        <tr>
+                          <td><span class="sw" style="background: #4a5fcc"></span>dark (old)</td>
+                          <td>#4A5FCC</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="mx mx__tilt mx-contrast b-contrast" aria-hidden="true">
+                    <span class="flabel">Contrast</span><b>Aa</b><small>2.1 : 1</small
+                    ><span class="fail">Fails AA</span>
+                  </div>
+                  <div class="mx mx__tilt mx-fonts b-fonts" aria-hidden="true">
+                    <span class="flabel">Font pair?</span><span><s>Sans A + Serif B</s></span
+                    ><span><s>Sans C + Sans D</s></span
+                    ><span>Sans A + ???</span>
+                  </div>
+                  <div class="mx mx__tilt mx-sticky b-sticky" aria-hidden="true">
+                    TODO: dark mode. Docs. Tokens for dev.
+                  </div>
+                </div>
+                <ul class="pr-pains">
+                  <li>Almost equal hex codes</li>
+                  <li>Text that fails contrast</li>
+                  <li>No dark mode, no tokens, no docs</li>
+                </ul>
+              </div>
+              <div class="tile tile--deep pr-after" data-reveal>
+                <div class="tile__head">
+                  <span class="label"
+                    ><span class="label__idx">After</span>With <span data-brand>RONA</span></span
+                  >
+                </div>
+                <div
+                  class="pr-after__sys"
+                  role="img"
+                  aria-label="An ordered design system: one primary color scale, a passed contrast check, one font pair, a spacing scale and token files."
+                >
+                  <div class="pr-row">
+                    <span>color.primary</span>
+                    <div class="ramp">
+                      <i style="background: #eef1ff"></i><i style="background: #d9e0ff"></i
+                      ><i style="background: #bcc8ff"></i><i style="background: #9dafff"></i
+                      ><i style="background: #7b93ff"></i><i style="background: #5f78ec"></i
+                      ><i style="background: #4a5fcc"></i><i style="background: #38479c"></i
+                      ><i style="background: #232857"></i>
+                    </div>
+                  </div>
+                  <div class="pr-row">
+                    <span>contrast</span><b class="ok">AA ✓ all required pairs</b>
+                  </div>
+                  <div class="pr-row"><span>font pair</span><b>Display + Text</b></div>
+                  <div class="pr-row"><span>spacing</span><b>4 · 8 · 12 · 16 · 24 · 32</b></div>
+                  <div class="pr-row"><span>modes</span><b>light · dark</b></div>
+                  <div class="pr-row"><span>export</span><b>tokens · code · DESIGN.md</b></div>
+                </div>
+                <ul class="pr-gains">
+                  <li>One scale for each color</li>
+                  <li>Contrast checked before export</li>
+                  <li>Tokens, code and docs in one zip</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <ul class="pr-pains">
-            <li>Almost equal hex codes</li>
-            <li>Text that fails contrast</li>
-            <li>No dark mode, no tokens, no docs</li>
-          </ul>
-        </div>
-        <div class="tile tile--deep pr-after" data-reveal>
-          <div class="tile__head"><span class="label"><span class="label__idx">After</span>With <span data-brand>RONA</span></span></div>
-          <div class="pr-after__sys" role="img" aria-label="An ordered design system: one primary color scale, a passed contrast check, one font pair, a spacing scale and token files.">
-            <div class="pr-row"><span>color.primary</span><div class="ramp"><i style="background:#EEF1FF"></i><i style="background:#D9E0FF"></i><i style="background:#BCC8FF"></i><i style="background:#9DAFFF"></i><i style="background:#7B93FF"></i><i style="background:#5F78EC"></i><i style="background:#4A5FCC"></i><i style="background:#38479C"></i><i style="background:#232857"></i></div></div>
-            <div class="pr-row"><span>contrast</span><b class="ok">AA ✓ all required pairs</b></div>
-            <div class="pr-row"><span>font pair</span><b>Display + Text</b></div>
-            <div class="pr-row"><span>spacing</span><b>4 · 8 · 12 · 16 · 24 · 32</b></div>
-            <div class="pr-row"><span>modes</span><b>light · dark</b></div>
-            <div class="pr-row"><span>export</span><b>tokens · code · DESIGN.md</b></div>
-          </div>
-          <ul class="pr-gains">
-            <li>One scale for each color</li>
-            <li>Contrast checked before export</li>
-            <li>Tokens, code and docs in one zip</li>
-          </ul>
-        </div>
+        </section>
       </div>
-    </div>
-  </section>
-  </div>
-</main>
-</body>
+      <div data-problem-layout="split" class="pp-opt">
+        <div class="container pp-head">
+          <span class="label"><span class="label__idx">[Option 2]</span> Before / after</span>
+          <p>Two panels: the messy work by hand, then the clean system that RONA makes.</p>
+        </div>
+        <section class="section" id="problem-2" aria-labelledby="problem-title-2">
+          <div class="container">
+            <header class="shead" data-reveal>
+              <span class="label"><span class="label__idx">[01]</span>The problem</span>
+              <h2 id="problem-title-2">
+                A moodboard shows a feeling. Your product needs
+                <span class="grad-text">exact values.</span>
+              </h2>
+              <p class="lead">
+                Hex codes, color scales, font pairs, type sizes, spacing, contrast checks, tokens,
+                docs. It is slow, repetitive work, and most founders do not have a designer to do
+                it.
+              </p>
+            </header>
+            <div
+              class="pr-collage"
+              data-reveal
+              role="img"
+              aria-label="A messy pile of manual work: saved reference pictures and a website screenshot, a spreadsheet of almost equal hex codes, a failed contrast check, crossed-out font names, uneven spacing values and a sticky note that says dark mode is still to do."
+            >
+              <div class="pr-collage__in">
+                <div class="mx mx__tilt mx-sheet p-sheet" aria-hidden="true">
+                  <span class="flabel">colors_final_v7.xlsx</span>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td><span class="sw" style="background: #7b93ff"></span>primary</td>
+                        <td>#7B93FF</td>
+                      </tr>
+                      <tr>
+                        <td><span class="sw" style="background: #7a92fe"></span>primary?</td>
+                        <td class="q">#7A92FE ??</td>
+                      </tr>
+                      <tr>
+                        <td><span class="sw" style="background: #738af5"></span>primary-2</td>
+                        <td>#738AF5</td>
+                      </tr>
+                      <tr>
+                        <td><span class="sw" style="background: #9dafff"></span>light-ish</td>
+                        <td class="q">#9DAFFF ?</td>
+                      </tr>
+                      <tr>
+                        <td><span class="sw" style="background: #4a5fcc"></span>dark (old)</td>
+                        <td>#4A5FCC</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="mx mx__tilt mx-contrast p-contrast" aria-hidden="true">
+                  <span class="flabel">Contrast</span><b>Aa</b><small>2.1 : 1</small
+                  ><span class="fail">Fails AA</span>
+                </div>
+                <figure class="mx mx__tilt mx-photo p-photoA" aria-hidden="true">
+                  <svg viewBox="0 0 60 60" aria-hidden="true">
+                    <rect width="60" height="60" fill="#2A2F6B" />
+                    <circle cx="40" cy="20" r="10" fill="#E07BFF" />
+                    <path d="M0 60V40l18-12 16 10 26-14v36z" fill="#111819" />
+                  </svg>
+                  <figcaption>mood_01.jpg</figcaption>
+                </figure>
+                <figure class="mx mx__tilt mx-photo p-photoB" aria-hidden="true">
+                  <svg viewBox="0 0 60 60" aria-hidden="true">
+                    <rect width="60" height="60" fill="#3FEFC4" />
+                    <rect x="10" y="10" width="26" height="26" fill="#0B1012" />
+                    <circle cx="40" cy="40" r="14" fill="#F4F0E8" />
+                  </svg>
+                  <figcaption>IMG_2041 (copy).png</figcaption>
+                </figure>
+                <figure class="mx mx__tilt mx-photo p-photoC" aria-hidden="true">
+                  <svg viewBox="0 0 60 60" aria-hidden="true">
+                    <rect width="60" height="60" fill="#FF9E64" />
+                    <path d="M0 60A30 30 0 0 1 60 60z" fill="#7B93FF" />
+                    <path d="M14 60A16 16 0 0 1 46 60z" fill="#0B1012" />
+                  </svg>
+                  <figcaption>pinterest-save.webp</figcaption>
+                </figure>
+                <div class="mx mx__tilt mx-shot p-shot" aria-hidden="true">
+                  <div class="mx-shot__bar">
+                    <i></i><i></i><i></i><span class="flabel">ref_site_screenshot.png</span>
+                  </div>
+                  <div class="mx-shot__body">
+                    <b></b><i></i><i class="s"></i><span>Sign up</span>
+                  </div>
+                </div>
+                <div class="mx mx__tilt mx-fonts p-fonts" aria-hidden="true">
+                  <span class="flabel">Font pair?</span><span><s>Sans A + Serif B</s></span
+                  ><span><s>Sans C + Sans D</s></span
+                  ><span>Sans A + ???</span>
+                </div>
+                <div class="mx mx__tilt mx-ruler p-ruler" aria-hidden="true">
+                  spacing: 13 · 15 · 18 · 21 ?
+                </div>
+                <div class="mx mx__tilt mx-sticky p-sticky" aria-hidden="true">
+                  TODO: dark mode. Docs. Tokens for dev.
+                </div>
+                <span class="mx-hex mx__tilt p-hex1" style="position: absolute" aria-hidden="true"
+                  >#E07BFF</span
+                >
+                <span class="mx-hex mx__tilt p-hex2" style="position: absolute" aria-hidden="true"
+                  >#DF7CFE?</span
+                >
+                <span class="mx-hex mx__tilt p-hex3" style="position: absolute" aria-hidden="true"
+                  >line-height 1.4? 1.5?</span
+                >
+                <svg class="p-deco" style="" aria-hidden="true"><use href="#b-torus" /></svg>
+              </div>
+            </div>
+
+            <div class="pr-split">
+              <div class="tile pr-before" data-reveal>
+                <div class="tile__head">
+                  <span class="label"
+                    ><span class="label__idx" style="color: var(--color-danger)">Before</span>By
+                    hand</span
+                  >
+                </div>
+                <div
+                  class="pr-before__mess"
+                  role="img"
+                  aria-label="A spreadsheet of almost equal hex codes, a failed contrast check, crossed-out font names and a sticky note that says dark mode is still to do."
+                >
+                  <div class="mx mx__tilt mx-sheet b-sheet" aria-hidden="true">
+                    <span class="flabel">colors_final_v7.xlsx</span>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td><span class="sw" style="background: #7b93ff"></span>primary</td>
+                          <td>#7B93FF</td>
+                        </tr>
+                        <tr>
+                          <td><span class="sw" style="background: #7a92fe"></span>primary?</td>
+                          <td class="q">#7A92FE ??</td>
+                        </tr>
+                        <tr>
+                          <td><span class="sw" style="background: #738af5"></span>primary-2</td>
+                          <td>#738AF5</td>
+                        </tr>
+                        <tr>
+                          <td><span class="sw" style="background: #9dafff"></span>light-ish</td>
+                          <td class="q">#9DAFFF ?</td>
+                        </tr>
+                        <tr>
+                          <td><span class="sw" style="background: #4a5fcc"></span>dark (old)</td>
+                          <td>#4A5FCC</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="mx mx__tilt mx-contrast b-contrast" aria-hidden="true">
+                    <span class="flabel">Contrast</span><b>Aa</b><small>2.1 : 1</small
+                    ><span class="fail">Fails AA</span>
+                  </div>
+                  <div class="mx mx__tilt mx-fonts b-fonts" aria-hidden="true">
+                    <span class="flabel">Font pair?</span><span><s>Sans A + Serif B</s></span
+                    ><span><s>Sans C + Sans D</s></span
+                    ><span>Sans A + ???</span>
+                  </div>
+                  <div class="mx mx__tilt mx-sticky b-sticky" aria-hidden="true">
+                    TODO: dark mode. Docs. Tokens for dev.
+                  </div>
+                </div>
+                <ul class="pr-pains">
+                  <li>Almost equal hex codes</li>
+                  <li>Text that fails contrast</li>
+                  <li>No dark mode, no tokens, no docs</li>
+                </ul>
+              </div>
+              <div class="tile tile--deep pr-after" data-reveal>
+                <div class="tile__head">
+                  <span class="label"
+                    ><span class="label__idx">After</span>With <span data-brand>RONA</span></span
+                  >
+                </div>
+                <div
+                  class="pr-after__sys"
+                  role="img"
+                  aria-label="An ordered design system: one primary color scale, a passed contrast check, one font pair, a spacing scale and token files."
+                >
+                  <div class="pr-row">
+                    <span>color.primary</span>
+                    <div class="ramp">
+                      <i style="background: #eef1ff"></i><i style="background: #d9e0ff"></i
+                      ><i style="background: #bcc8ff"></i><i style="background: #9dafff"></i
+                      ><i style="background: #7b93ff"></i><i style="background: #5f78ec"></i
+                      ><i style="background: #4a5fcc"></i><i style="background: #38479c"></i
+                      ><i style="background: #232857"></i>
+                    </div>
+                  </div>
+                  <div class="pr-row">
+                    <span>contrast</span><b class="ok">AA ✓ all required pairs</b>
+                  </div>
+                  <div class="pr-row"><span>font pair</span><b>Display + Text</b></div>
+                  <div class="pr-row"><span>spacing</span><b>4 · 8 · 12 · 16 · 24 · 32</b></div>
+                  <div class="pr-row"><span>modes</span><b>light · dark</b></div>
+                  <div class="pr-row"><span>export</span><b>tokens · code · DESIGN.md</b></div>
+                </div>
+                <ul class="pr-gains">
+                  <li>One scale for each color</li>
+                  <li>Contrast checked before export</li>
+                  <li>Tokens, code and docs in one zip</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
 </html>

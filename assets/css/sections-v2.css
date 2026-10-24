@@ -4,94 +4,272 @@
    and the head text sits under the title (only where it is needed).
    All section heads of the same level share one size.
    ========================================================= */
-.rhythm-2 { --h2-size: var(--text-3xl); }
+.rhythm-2 {
+  --h2-size: var(--text-3xl);
+}
 
 .rhythm-2 .shead,
 .rhythm-2 .fq__head {
-  display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-3);
-  border-top: 1px solid var(--color-line-strong); padding-top: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+  border-top: 1px solid var(--color-line-strong);
+  padding-top: var(--space-4);
 }
-.rhythm-2 .shead { margin-bottom: var(--space-6); }
+.rhythm-2 .shead {
+  margin-bottom: var(--space-6);
+}
 .rhythm-2 .shead h2,
-.rhythm-2 .fq__head h2 { font-size: var(--h2-size); line-height: 1; letter-spacing: -0.03em; max-width: 20ch; }
+.rhythm-2 .fq__head h2 {
+  font-size: var(--h2-size);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  max-width: 20ch;
+}
 .rhythm-2 .shead .lead,
-.rhythm-2 .fq__head .lead { align-self: flex-start; text-align: left; max-width: 38rem; font-size: var(--text-base); color: var(--color-text-muted); }
-.rhythm-2 .shead .label .label__idx, .rhythm-2 .fq__head .label .label__idx { color: var(--color-text-faint); }
+.rhythm-2 .fq__head .lead {
+  align-self: flex-start;
+  text-align: left;
+  max-width: 38rem;
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+}
+.rhythm-2 .shead .label .label__idx,
+.rhythm-2 .fq__head .label .label__idx {
+  color: var(--color-text-faint);
+}
 
 /* Final call to action: one step above the section heads, not two */
-.rhythm-2 .cta-b h2 { font-size: var(--text-4xl); max-width: 14ch; }
+.rhythm-2 .cta-b h2 {
+  font-size: var(--text-4xl);
+  max-width: 14ch;
+}
 
 /* Quieter spacing between sections */
-.rhythm-2 .section:not(.how) { padding-block: clamp(3.5rem, 2.5rem + 4vw, 6.5rem); }
-@media not ((min-width: 60rem) and (min-height: 40rem)) { .rhythm-2 .how { padding-block: clamp(3.5rem, 2.5rem + 4vw, 6.5rem); } }
+.rhythm-2 .section:not(.how) {
+  padding-block: clamp(3.5rem, 2.5rem + 4vw, 6.5rem);
+}
+@media not ((min-width: 60rem) and (min-height: 40rem)) {
+  .rhythm-2 .how {
+    padding-block: clamp(3.5rem, 2.5rem + 4vw, 6.5rem);
+  }
+}
 
 /* ---------- [01] Problem: head on the left, collage on the right, one screen high ---------- */
 @media (min-width: 60rem) {
-  .rhythm-2 #problem { min-height: 100vh; min-height: 100svh; display: flex; align-items: center; }
-  .rhythm-2 #problem > .container { width: 100%; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); column-gap: clamp(2rem, 4vw, 4rem); align-items: center; }
-  .rhythm-2 #problem .shead { margin-bottom: 0; }
-  .rhythm-2 #problem .shead h2 { max-width: 12ch; }
-  .rhythm-2 #problem .pr-collage__in { height: min(78svh, 44rem); min-height: 34rem; }
+  .rhythm-2 #problem {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+  }
+  .rhythm-2 #problem > .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    column-gap: clamp(2rem, 4vw, 4rem);
+    align-items: center;
+  }
+  .rhythm-2 #problem .shead {
+    margin-bottom: 0;
+  }
+  .rhythm-2 #problem .shead h2 {
+    max-width: 12ch;
+  }
+  .rhythm-2 #problem .pr-collage__in {
+    height: min(78svh, 44rem);
+    min-height: 34rem;
+  }
   /* positions for a near-square board */
-  .rhythm-2 .pr-collage .p-sheet   { left: 4%;  top: 6%;  width: 44%; }
-  .rhythm-2 .pr-collage .p-contrast{ left: 52%; top: 4%;  width: 20%; }
-  .rhythm-2 .pr-collage .p-photoA  { left: 75%; top: 8%;  width: 18%; }
-  .rhythm-2 .pr-collage .p-photoB  { left: 51%; top: 31%; width: 19%; }
-  .rhythm-2 .pr-collage .p-photoC  { left: 74%; top: 37%; width: 19%; }
-  .rhythm-2 .pr-collage .p-shot    { left: 46%; top: 66%; width: 40%; }
-  .rhythm-2 .pr-collage .p-fonts   { left: 5%;  top: 49%; width: 32%; }
-  .rhythm-2 .pr-collage .p-ruler   { left: 7%;  top: 40%; }
-  .rhythm-2 .pr-collage .p-sticky  { left: 12%; top: 74%; width: 32%; }
-  .rhythm-2 .pr-collage .p-hex1    { left: 80%; top: 74%; }
-  .rhythm-2 .pr-collage .p-hex2    { left: 37%; top: 45%; }
-  .rhythm-2 .pr-collage .p-hex3    { left: 50%; top: 89%; }
-  .rhythm-2 .pr-collage .p-deco    { right: 3%; bottom: 3%; width: 11%; }
+  .rhythm-2 .pr-collage .p-sheet {
+    left: 4%;
+    top: 6%;
+    width: 44%;
+  }
+  .rhythm-2 .pr-collage .p-contrast {
+    left: 52%;
+    top: 4%;
+    width: 20%;
+  }
+  .rhythm-2 .pr-collage .p-photoA {
+    left: 75%;
+    top: 8%;
+    width: 18%;
+  }
+  .rhythm-2 .pr-collage .p-photoB {
+    left: 51%;
+    top: 31%;
+    width: 19%;
+  }
+  .rhythm-2 .pr-collage .p-photoC {
+    left: 74%;
+    top: 37%;
+    width: 19%;
+  }
+  .rhythm-2 .pr-collage .p-shot {
+    left: 46%;
+    top: 66%;
+    width: 40%;
+  }
+  .rhythm-2 .pr-collage .p-fonts {
+    left: 5%;
+    top: 49%;
+    width: 32%;
+  }
+  .rhythm-2 .pr-collage .p-ruler {
+    left: 7%;
+    top: 40%;
+  }
+  .rhythm-2 .pr-collage .p-sticky {
+    left: 12%;
+    top: 74%;
+    width: 32%;
+  }
+  .rhythm-2 .pr-collage .p-hex1 {
+    left: 80%;
+    top: 74%;
+  }
+  .rhythm-2 .pr-collage .p-hex2 {
+    left: 37%;
+    top: 45%;
+  }
+  .rhythm-2 .pr-collage .p-hex3 {
+    left: 50%;
+    top: 89%;
+  }
+  .rhythm-2 .pr-collage .p-deco {
+    right: 3%;
+    bottom: 3%;
+    width: 11%;
+  }
 }
 
 /* ---------- [02] How it works: numbers in their own small boxes, arrows on the stage ---------- */
-.rhythm-2 .how__step { grid-template-columns: 2.75rem 1fr; gap: var(--space-4); }
+.rhythm-2 .how__step {
+  grid-template-columns: 2.75rem 1fr;
+  gap: var(--space-4);
+}
 .rhythm-2 .how__num,
 .rhythm-2 .how__step[aria-selected="false"] .how__num {
-  position: relative; display: grid; place-items: center; width: 2.75rem; height: 2.75rem;
-  font: 500 0.875rem/1 var(--font-mono); letter-spacing: 0.02em; color: var(--color-text-muted);
-  background: var(--color-void); border: 1px solid var(--color-line-strong);
-  transition: background var(--dur-base), color var(--dur-base), box-shadow var(--dur-base), transform var(--dur-base);
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  font: 500 0.875rem/1 var(--font-mono);
+  letter-spacing: 0.02em;
+  color: var(--color-text-muted);
+  background: var(--color-void);
+  border: 1px solid var(--color-line-strong);
+  transition:
+    background var(--dur-base),
+    color var(--dur-base),
+    box-shadow var(--dur-base),
+    transform var(--dur-base);
 }
-.rhythm-2 .how__step:hover .how__num { border-color: var(--step, var(--color-pulsar)); color: var(--color-text); }
+.rhythm-2 .how__step:hover .how__num {
+  border-color: var(--step, var(--color-pulsar));
+  color: var(--color-text);
+}
 .rhythm-2 .how__step[aria-selected="true"] .how__num {
-  color: var(--color-on-accent); background: var(--step, var(--color-pulsar)); border-color: var(--step, var(--color-pulsar));
-  box-shadow: 4px 4px 0 0 var(--color-void), 4px 4px 0 1px var(--step, var(--color-pulsar));
+  color: var(--color-on-accent);
+  background: var(--step, var(--color-pulsar));
+  border-color: var(--step, var(--color-pulsar));
+  box-shadow:
+    4px 4px 0 0 var(--color-void),
+    4px 4px 0 1px var(--step, var(--color-pulsar));
   transform: translate(-2px, -2px);
 }
 
 .rhythm-2 .how__nav {
-  position: absolute; right: var(--tile-pad); bottom: var(--tile-pad); z-index: 3;
-  display: flex; align-items: center; gap: 0.25rem; padding: 0.25rem;
-  background: rgba(11, 16, 18, 0.85); border: 1px solid var(--color-line-strong);
-  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  position: absolute;
+  right: var(--tile-pad);
+  bottom: var(--tile-pad);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  background: rgba(11, 16, 18, 0.85);
+  border: 1px solid var(--color-line-strong);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 .rhythm-2 .how__navbtn {
-  display: grid; place-items: center; width: 2.75rem; height: 2.75rem; padding: 0; cursor: pointer;
-  color: var(--color-text); background: transparent; border: 1px solid transparent; border-radius: 0;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  cursor: pointer;
+  color: var(--color-text);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 0;
 }
-.rhythm-2 .how__navbtn:hover { border-color: var(--color-outline); background: var(--color-surface-2); }
-.rhythm-2 .how__navbtn:focus-visible { outline: 2px solid var(--color-pulsar); outline-offset: 2px; }
-.rhythm-2 .how__navbtn svg { width: 1.1rem; height: 1.1rem; }
-.rhythm-2 .how__navbtn--prev svg { transform: rotate(180deg); }
-.rhythm-2 .how__count { min-width: 4.5rem; text-align: center; font: 500 0.8rem/1 var(--font-mono); color: var(--color-text-muted); }
-.rhythm-2 .how__count b { color: var(--color-text); font-weight: 500; }
+.rhythm-2 .how__navbtn:hover {
+  border-color: var(--color-outline);
+  background: var(--color-surface-2);
+}
+.rhythm-2 .how__navbtn:focus-visible {
+  outline: 2px solid var(--color-pulsar);
+  outline-offset: 2px;
+}
+.rhythm-2 .how__navbtn svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+.rhythm-2 .how__navbtn--prev svg {
+  transform: rotate(180deg);
+}
+.rhythm-2 .how__count {
+  min-width: 4.5rem;
+  text-align: center;
+  font: 500 0.8rem/1 var(--font-mono);
+  color: var(--color-text-muted);
+}
+.rhythm-2 .how__count b {
+  color: var(--color-text);
+  font-weight: 500;
+}
 
 /* ---------- [03] Features: title on 2 lines ---------- */
-.rhythm-2 #features-title { max-width: none; }
-.rhythm-2 #features-title .grad-text { display: block; }
-.rhythm-2 .hv { padding-bottom: calc(var(--tile-pad) + 3.75rem); }
+.rhythm-2 #features-title {
+  max-width: none;
+}
+.rhythm-2 #features-title .grad-text {
+  display: block;
+}
+.rhythm-2 .hv {
+  padding-bottom: calc(var(--tile-pad) + 3.75rem);
+}
 
 /* ---------- [01] Problem: the head rule lines up with the top of the collage ---------- */
-@media (min-width: 60rem) { .rhythm-2 #problem > .container { align-items: start; } }
+@media (min-width: 60rem) {
+  .rhythm-2 #problem > .container {
+    align-items: start;
+  }
+}
 
 /* ---------- [07] Trust: card heads line up; 1, then 2×2, then 4 columns ---------- */
-.rhythm-2 .tr { grid-template-columns: 1fr; }
-@media (min-width: 36rem) { .rhythm-2 .tr { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (min-width: 64rem) { .rhythm-2 .tr { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
-.rhythm-2 .tr .tile { min-height: 0; justify-content: flex-start; }
-.rhythm-2 .tr .tile__foot { margin-top: var(--space-6); }
+.rhythm-2 .tr {
+  grid-template-columns: 1fr;
+}
+@media (min-width: 36rem) {
+  .rhythm-2 .tr {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 64rem) {
+  .rhythm-2 .tr {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+.rhythm-2 .tr .tile {
+  min-height: 0;
+  justify-content: flex-start;
+}
+.rhythm-2 .tr .tile__foot {
+  margin-top: var(--space-6);
+}
