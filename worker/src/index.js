@@ -89,6 +89,36 @@ export function buildEmail(data, env) {
   };
 }
 
+/* Feedback email to the submitter. It never repeats the submitted message. */
+export function buildConfirmation(data, env) {
+  const brand = env.BRAND_NAME || "RONA";
+  const isContact = data.type === "contact";
+  const subject = isContact ? `We got your message` : `You are on the ${brand} waitlist`;
+  const text = isContact
+    ? `Hi ${data.name},\n\nThanks for writing to ${brand}. We got your message and will reply by email.\n\n${brand}`
+    : `Thanks for joining the ${brand} waitlist.\n\nWe will email you when access opens.\n\n${brand}`;
+  return {
+    sender: { email: env.SENDER_EMAIL, name: brand },
+    to: [{ email: data.email }],
+    replyTo: { email: env.RECIPIENT_EMAIL },
+    subject,
+    textContent: text,
+    htmlContent: `<p>${escapeHtml(text).replace(/\n/g, "<br>")}</p>`,
+  };
+}
+
+async function brevoSend(payload, env) {
+  return fetch(BREVO_URL, {
+    method: "POST",
+    headers: {
+      "api-key": env.BREVO_API_KEY,
+      "content-type": "application/json",
+      accept: "application/json",
+    },
+    body: JSON.stringify(payload),
+  });
+}
+
 export default {
   async fetch(request, env) {
     const origin = request.headers.get("Origin");
@@ -137,10 +167,17 @@ export default {
     const { data, error } = validate(input);
     if (error) return json(400, { error }, corsOrigin);
 
+    // Each form has its own Turnstile widget, so each has its own secret.
+    const secret =
+      data.type === "contact" ? env.TURNSTILE_SECRET_KEY : env.TURNSTILE_WAITLIST_SECRET_KEY;
+    if (!secret) {
+      console.error("Missing Turnstile secret for", data.type);
+      return json(500, { error: "Server is not configured." }, corsOrigin);
+    }
     const ip = request.headers.get("CF-Connecting-IP");
     let human = false;
     try {
-      human = await verifyTurnstile(data.token, env.TURNSTILE_SECRET_KEY, ip);
+      human = await verifyTurnstile(data.token, secret, ip);
     } catch {
       return json(502, { error: "Spam check unavailable. Try again later." }, corsOrigin);
     }
@@ -148,21 +185,22 @@ export default {
 
     let res;
     try {
-      res = await fetch(BREVO_URL, {
-        method: "POST",
-        headers: {
-          "api-key": env.BREVO_API_KEY,
-          "content-type": "application/json",
-          accept: "application/json",
-        },
-        body: JSON.stringify(buildEmail(data, env)),
-      });
+      res = await brevoSend(buildEmail(data, env), env);
     } catch {
       return json(502, { error: "Could not send. Try again later." }, corsOrigin);
     }
     if (!res.ok) {
       console.error("Brevo error", res.status, await res.text());
       return json(502, { error: "Could not send. Try again later." }, corsOrigin);
+    }
+
+    // Feedback email to the submitter. The owner already has the submission, so a failure
+    // here is logged and does not fail the request.
+    try {
+      const conf = await brevoSend(buildConfirmation(data, env), env);
+      if (!conf.ok) console.error("Brevo confirmation error", conf.status, await conf.text());
+    } catch (err) {
+      console.error("Brevo confirmation failed", err);
     }
     return json(200, { ok: true }, corsOrigin);
   },

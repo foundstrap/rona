@@ -82,7 +82,7 @@
               guideline you can adjust, preview and export.
             </p>
             <div id="waitlist" data-waitlist-wrap>
-              <form class="waitlist is-soon" data-form-type="waitlist" novalidate>
+              <form class="waitlist" data-form-type="waitlist" novalidate>
                 <label class="visually-hidden" for="wl-hero">Email address</label>
                 <div class="waitlist__row">
                   <input
@@ -92,18 +92,19 @@
                     name="email"
                     placeholder="you@company.com"
                     autocomplete="email"
-                    disabled
-                    aria-describedby="wl-hero-soon"
+                    maxlength="254"
+                    required
+                    aria-describedby="wl-hero-note"
                   />
-                  <button class="btn" type="submit" disabled>Join the waitlist</button>
+                  <button class="btn" type="submit">Join the waitlist</button>
                 </div>
                 <div class="visually-hidden" aria-hidden="true">
                   <input name="website" type="text" tabindex="-1" autocomplete="off" />
                 </div>
                 <div data-turnstile></div>
                 <p class="field__hint" data-form-status role="status" hidden></p>
-                <p class="waitlist__micro" id="wl-hero-soon">
-                  <strong>Waitlist opens soon.</strong>
+                <p class="waitlist__micro" id="wl-hero-note">
+                  <strong>Join the waitlist.</strong> We email you when access opens.
                 </p>
               </form>
             </div>
@@ -1289,9 +1290,9 @@
             <h2 id="join-title">
               Your brand system starts with <span class="grad-text">one board.</span>
             </h2>
-            <p>The waitlist for <span data-brand>RONA</span> opens soon.</p>
+            <p>Join the <span data-brand>RONA</span> waitlist. We email you when access opens.</p>
             <div>
-              <form class="waitlist is-soon" data-form-type="waitlist" novalidate>
+              <form class="waitlist" data-form-type="waitlist" novalidate>
                 <label class="visually-hidden" for="wl-final">Email address</label>
                 <div class="waitlist__row">
                   <input
@@ -1301,18 +1302,19 @@
                     name="email"
                     placeholder="you@company.com"
                     autocomplete="email"
-                    disabled
-                    aria-describedby="wl-final-soon"
+                    maxlength="254"
+                    required
+                    aria-describedby="wl-final-note"
                   />
-                  <button class="btn" type="submit" disabled>Join the waitlist</button>
+                  <button class="btn" type="submit">Join the waitlist</button>
                 </div>
                 <div class="visually-hidden" aria-hidden="true">
                   <input name="website" type="text" tabindex="-1" autocomplete="off" />
                 </div>
                 <div data-turnstile></div>
                 <p class="field__hint" data-form-status role="status" hidden></p>
-                <p class="waitlist__micro" id="wl-final-soon">
-                  <strong>Waitlist opens soon.</strong>
+                <p class="waitlist__micro" id="wl-final-note">
+                  <strong>Join the waitlist.</strong> We email you when access opens.
                 </p>
               </form>
             </div>
@@ -1380,11 +1382,11 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/hero.js"></script>
     <script src="assets/js/sections.js"></script>
+    <script src="assets/js/forms.js"></script>
     <script
       src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
       async
       defer
     ></script>
-    <script src="assets/js/forms.js"></script>
   </body>
 </html>

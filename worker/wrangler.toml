@@ -15,4 +15,5 @@ ALLOWED_ORIGINS = "https://rona.foundstrap.com"
 
 # Secrets: configure using Wrangler, never commit them.
 # BREVO_API_KEY
-# TURNSTILE_SECRET_KEY
+# TURNSTILE_SECRET_KEY           (contact widget)
+# TURNSTILE_WAITLIST_SECRET_KEY  (waitlist invisible widget)
